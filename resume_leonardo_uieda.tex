@@ -1,187 +1,124 @@
-
-%________________________________________________________________________________________
-% @brief    LaTeX2e Resume for Leonardo Uieda
-% @author   Leonardo Uieda
-% @url      http://linux.dsplabs.com.au/?p=54
-% @date     March 2008
-% @info     Based on Latex Resume Template by Chris Paciorek 
-%           http://www.biostat.harvard.edu/~paciorek/
-
-
-%________________________________________________________________________________________
 \documentclass[margin,line]{resume}
 \usepackage[brazilian]{babel}
 \usepackage[ansinew]{inputenc}
 \usepackage[T1]{fontenc}
 
 \begin{document}
-\name{{\Large Leonardo Uieda}\newline \textit{\normalsize Curriculum Vitae}}
+\name{{\Large Leonardo Uieda}\newline
+\textit{\normalsize Curriculum Vitae}}
 \begin{resume}
 
+%_______________________________________________________________________________
+% Contact Information
+\section{\mysidestyle Contact}\vspace{2mm}
+\begin{tabular}{@{} l @{\hspace{38mm}} r}
+Website:   &   www.fatiando.org/people/uieda\\
+E-mail:     &   leouieda@gmail.com\\
+Phone:      &   +55 21 8363 6761\\
+Address:    &   Rua General Jose Cristino, 77\\
+	    &   20921-400, Rio de Janeiro, RJ, Brazil
+\end{tabular}
 
-    %____________________________________________________________________________________
-    % Contact Information
-    \section{\mysidestyle Contact\\Information}\vspace{2mm}
+%_______________________________________________________________________________
+% Research Interests
+\section{\mysidestyle Research\\Interests}
+Geophysical inverse problems;\\
+Potential fields;\\
+Open-source scientific software development;
 
-    \begin{tabular}{@{} l @{\hspace{38mm}} r}
-    Personal e-mail:		  &   leouieda@gmail.com\\
-    Professional e-mail:      &   uieda@on.br\\
-    Phone number:        &   +55 21 2589 9221\\
-    Home address:             &   Rua General Jose Cristino, 77\\
-                              &   Rio de Janeiro, Rio de Janeiro, Brazil\\
-                              &   20921-400\\
-    \end{tabular}
+%_______________________________________________________________________________
+% Education
+\section{\mysidestyle Education}
+\begin{list1}
+\item[] \textit{PhD in Geophysics}, 2011--Present\\
+    Observatório Nacional, Rio de Janeiro, Brazil\\
+    Dissertation topic:
+	\textit{3D inversion of gravitational fields in spherical coordinates.
+	}\\
+    Advisor: \textit{Dr. Valéria C. F. Barbosa}\\
+    Expected graduation date: \textit{Oct, 2015}
+\vspace{2mm}
+\item[] \textit{MSc in Geophysics}, 2010--2011\\
+    Observatório Nacional, Rio de Janeiro, Brazil\\
+    Dissertation topic:
+	\textit{3D inversion of gravity gradient data by planting density
+	anomalies.}\\
+    Advisor: \textit{Dr. Valéria C. F. Barbosa}
+\vspace{2mm}
+\item[] \textit{International Exchange}, September, 2008--June, 2009\\
+    York University, Toronto, Ontario, Canada
+\vspace{2mm}
+\item[] \textit{BSc in Geophysics}, 2004--2009\\
+    Universidade de São Paulo, São Paulo, Brazil\\
+    Dissertation topic:
+	\textit{Usage of tesseroids in the modeling of gravity gradiometry
+	data.}\\
+    Advisor: \textit{Dr. Naomi Ussami}
+\vspace{2mm}
+\end{list1}
 
-    %____________________________________________________________________________________
-    % Education
-    \section{\mysidestyle Education}
-		
-        \begin{list1}
-        
-        \item[] \textit{Master of Sciences degree in Geophysics}, February 2010 - Present\\
-        Observatório Nacional, Rio de Janeiro, Brazil\\	
-	Dissertation topic: \textit{3D inversion of gravity gradient data by planting density anomalies.}\\
-	Advisors: \textit{Dr. Valéria Cristina Ferreira Barbosa}\\
-	Expected graduation date: \textit{Feb 2012}
-	\vspace{2mm}%
-		
-        \item[] \textit{International Exchange Program}, September 2008 - June 2009\\
-        York University, Toronto, Ontario, Canada
-	\vspace{2mm}%
-
-        \item[] \textit{Bachelor's degree in Geophysics}, recieved in January 2010\\
-        Universidade de São Paulo, São Paulo, Brazil\\
-	Dissertation topic: \textit{Usage of tesseroids in the modeling of gravity gradiometry data.}\\
-	Advisors: \textit{Dr. Naomi Ussami}
-	\vspace{2mm}%
-
-
-	\end{list1}
-
-
-    %____________________________________________________________________________________
-    % Research Interests
-    %\section{\mysidestyle Research Interests}
-
-
-
-
-		%____________________________________________________________________________________
-    % Academic Activities
-	\section{\mysidestyle Academic\\Activities}
-	
-	\begin{list1}	
-
-	\item[] Oral presentation: \textit{Computation of the gravity gradient tensor due to topographic masses using tesseroids.}\\ 
-		Authors: \textit{Uieda, L., Ussami, N. and Braitenberg, C.}\\
-		Event: \textit{2010 AGU Meeting of the Americas, Foz do Iguaçu, Brazil}
-	\vspace{2mm}%
-
-	\item[] Research project (02/2008 - 12/2009): \textit{Usage of tesseroids in the modeling of gravity gradiometry data.}\\
-		Funding: \textit{SBGf (Brazilian Geophysical Society)}\\
-		Coordinating professor: \textit{Dr. Naomi Ussami}
-	\vspace{2mm}%
-
-	\item[] Poster presentation: \textit{Usage of tesseroids in the modeling of gravity gradiometry data.}\\ 
-		Event: \textit{XII Simposio de Iniciacao Cientifica do IAG, São Paulo, Brazil}
-	\vspace{2mm}%
-
-	\item[] Research project (07/2005 - 06/2006): \textit{Paleomagnetism and magnetic mineralogy of cambrian dikes from Maravilhas and Prata.}\\
-		Funding: \textit{FAPESP (Fundacao de Amparo a Pesquisa do Estado de São Paulo)}\\
-		Coordinating professor: \textit{Dr. Manoel S. D'Agrella Filho}
-	\vspace{2mm}%
-
-	\item[] Poster presentation: \textit{Paleomagnetism and magnetic mineralogy of cambrian dikes from Maravilhas and Prata.}\\ 
-		Event: \textit{XI Simposio de Iniciacao Cientifica do IAG, São Paulo, Brazil}      
-	\vspace{2mm}%
-
-	\item[] Short Course: \textit{Digital Seismology}\\
-		Event: \textit{$10^{th}$ International Congress of the Brazilian Geophysical Society, Rio de Janeiro, Brazil}
-	\vspace{2mm}%
-
-	\end{list1}
-	
-	
-	\section{\mysidestyle Software\\Production}
-	
-	\begin{list1}
-	
-
-	\item[] Name: \textit{Tesseroids v1.0}\\
-		Description: \textit{Direct modeling of gravitational fields in spherical coordinates using tesseroids. 
-			      Can handle the gravitational acceleration and gradient tensor. }\\
-		Website: http://code.google.com/p/tesseroids \\
-		License: \textit{GNU General Public License v3}
-		
-	\end{list1}
-		
-		%____________________________________________________________________________________
-    % Language Skills
-      \section{\mysidestyle Language\\Skills}
-      
-      \begin{list1}
-	  \item[] Fluent Portuguese (native)
-	  \item[] Fluent English - IBT TOEFL score of 115 out of 120 (received 10/2007)
-	  \item[] Basic Spanish			
-      \end{list1}
-
-    %____________________________________________________________________________________
-    % Honours and Awards
-    %\section{\mysidestyle Honours and\\Awards} 
-
-    
-    %____________________________________________________________________________________
-    % Publications
-    %\section{\mysidestyle Publications}
-
-    
-
-    %____________________________________________________________________________________
-    % Professional Experience
-    %\section{\mysidestyle Professional\\Experience}
-
-    %____________________________________________________________________________________
-    % Computer Skills
-%     \section{\mysidestyle Computer\\Skills} 
-% 
-%       Programming Languages:
-%       \begin{itemize}
-%           \item Advanced: C, C++, Python;
-%           \item Intermediate: Java;
-%           \item Basic: Matlab/Octave;
-%       \end{itemize}    
+%_______________________________________________________________________________
+% Software
+\section{\mysidestyle Free software\\I develop}
+\begin{list1}
+\item[] Name: \textit{Tesseroids v1.1}\\
+	Description:
+	    \textit{Forward modeling of gravitational fields in spherical
+	    coordinates using tesseroids.}\\
+	Website: http://fatiando.org/software/tesseroids \\
+	License: \textit{BSD License}
+\vspace{2mm}
+\item[] Name: \textit{Fatiando a Terra v0.0.1}\\
+	Description:
+	    \textit{An open source toolkit for geophysical modeling and
+	    inversion.}\\
+	Website: http://fatiando.org/software/fatiando \\
+	License: \textit{BSD License}
+\end{list1}
 
 
-		%____________________________________________________________________________________
-    % Travels
-   % \section{\mysidestyle Travels}
-		
-	%	\begin {list1}
-		
-	%		\item[] Ithaca, NY U.S.A. (08/1996 - 01/1998): \textit{My mother and father went to Cornell University for their postdoctoral degree. Meanwhile, I took the $5^{th}$ and half of the $6^{th}$ grade at U.S.A. public schools.} \\
-			
-	%		\item[] Chile (12/2005 - 1/2006): \textit{Traveling with a friend to visit his family}\\ 
-		
-		
-	%	\end{list1}
-
-		%____________________________________________________________________________________
-    % Miscellaneous
-    \section{\mysidestyle Miscellaneous}
-     \begin {list1}
-     	\item[] Gender: Male
-     	\item[] Date of birth: 07/29/1986
-     	\item[] Citizenship: Brazil
-      \item[]
-     \end{list1}
-   
-   
+%_______________________________________________________________________________
+% Honours and Awards
+%\section{\mysidestyle Honours and\\Awards}
 
 
-%________________________________________________________________________________________
+%_______________________________________________________________________________
+% Publications
+\section{\mysidestyle Selected\\Publications}
+\begin{list1}
+\item[] Uieda, L., and V. C. F. Barbosa (2012), Robust 3D gravity gradient
+    inversion by planting anomalous densities, {\it Geophysics}, 77(4),
+    G55--G66, doi:10.1190/geo2011-0388.1
+\vspace{2mm}
+\item[] Uieda, L., and V. C. F. Barbosa (2012), Use of the
+    ``shape-of-anomaly'' data misfit in 3D inversion by planting anomalous
+    densities, {\it SEG Expanded Abstracts}.
+\vspace{2mm}
+\item[] Carlos, D. U., L. Uieda, V. C. F. Barbosa, M. A. Braga, and A. A. S.
+    Gomes (2011), In-depth imaging of an iron orebody from Quadrilatero
+    Ferrifero using 3D gravity gradient inversion, {\it SEG Expanded Abstracts},
+    30, 902--906, doi:10.1190/1.3628219
+\vspace{2mm}
+\item[] Uieda, L., E. P. Bomfim, C. Braitenberg, and E. Molina (2011), Optimal
+    forward calculation method of the Marussi tensor due to a geologic
+    structure at GOCE height, {\it Proc. of ``4th International GOCE User
+    Workshop.''}
+\end{list1}
+
+
+%_______________________________________________________________________________
+% Professional Experience
+%\section{\mysidestyle Professional\\Experience}
+
+
+%_______________________________________________________________________________
+% Language Skills
+\section{\mysidestyle Languages\\I speak}
+\begin{list1}
+  \item[] Fluent Portuguese (native)
+  \item[] Fluent English - IBT TOEFL 115/120 (received 10/2007)
+  \item[] Basic Spanish
+\end{list1}
+
 \end{resume}
 \end{document}
-
-%________________________________________________________________________________________
-% EOF
-
