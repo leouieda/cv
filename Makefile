@@ -5,5 +5,11 @@ $(RESUME).pdf: $(RESUME).tex
 	pdflatex $<
 	pdflatex $<
 
+spellcheck:
+	aspell check $(RESUME).tex
+
+show: $(RESUME).pdf
+	evince $(RESUME).pdf
+
 clean:
 	rm -rf $(RESUME).log $(RESUME).pdf
