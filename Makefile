@@ -19,7 +19,6 @@ OUTPUT = output
 
 ### File Types (for dependencies)
 TEX_FILES = $(shell find $(SRC) -maxdepth 1 -name '*.tex')
-BIB_FILES = $(shell find $(BIB) -maxdepth 1 -name '*.bib')
 STY_FILES = $(shell find $(STYLES) -maxdepth 1 -name '*.sty')
 CLS_FILES = $(shell find $(STYLES) -maxdepth 1 -name '*.cls')
 BST_FILES = $(shell find $(STYLES) -maxdepth 1 -name '*.bst')
@@ -64,10 +63,5 @@ $(OUTPUT)/$(PROJECT).aux: $(TEX_FILES) $(STY_FILES) $(CLS_FILES) $(PNG_FILES) $(
 	cp $@ .
 	# Copy the aux file next to the tex file for Vim completion purposes
 
-$(OUTPUT)/$(PROJECT).bbl: $(BIB_FILES) $(BST_FILES) | $(OUTPUT)/$(PROJECT).aux
-	cp $(BIB_FILES) $(BST_FILES) $(OUTPUT)
-	cd $(OUTPUT) && bibtex $(PROJECT)
-	pdflatex $(LATEX_FLAGS) $(SRC)/$(PROJECT)
-
-$(OUTPUT)/$(PROJECT).pdf: $(OUTPUT)/$(PROJECT).aux $(OUTPUT)/$(PROJECT).bbl
+$(OUTPUT)/$(PROJECT).pdf: $(OUTPUT)/$(PROJECT).aux
 	pdflatex $(LATEX_FLAGS) $(SRC)/$(PROJECT) 1>/dev/null

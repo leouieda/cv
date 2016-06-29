@@ -1,89 +1,63 @@
-\documentclass[11pt,a4paper,helvetica]{moderncv}
-\moderncvtheme[blue]{classic}
+\documentclass[10pt,helvetica,twocolumn]{article}
 \usepackage[scale=0.85,top=1.5cm,bottom=0.6cm]{geometry}
-\usepackage{natbib}
 
-\firstname{Leonardo}
-\familyname{Uieda}
-\photo[70pt][0.4pt]{picture}
-\title{Geophysicist}
-\address{Rua General Jose Cristino, 77}{20921-400 Rio de Janeiro - RJ - Brazil}{}
-\mobile{(+55)~(21)~8363~6761}
-\email{leouieda@gmail.com}
-\homepage{www.fatiando.org}
-\extrainfo{\\[-0.3cm]
-\includegraphics[height=10pt]{twitter}~\href{https://twitter.com/leouieda}{@leouieda} |
-\includegraphics[height=10pt]{linkedin}~\href{http://www.linkedin.com/in/uieda}{linkedin.com/in/uieda} \\
-\includegraphics[height=10pt]{github}~\href{https://github.com/leouieda}{github.com/leouieda} |
-\includegraphics[height=10pt]{figshare}~\href{http://figshare.com/authors/Leonardo Uieda/97471}{figshare.com}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[round]{natbib}
+\usepackage[utf8]{inputenc}
+% To generate dummy text
+\usepackage{lipsum}
+% Metadata for the generated PDF
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\hypersetup{
+    allcolors=blue,
 }
 
 \begin{document}
 
+\title{Curriculum Vit\ae}
+\author{Leonardo Uieda}
+
 \maketitle
 
-\vspace{-1cm}
-
-\section{Research interests}
-\cvlistdoubleitem{Inverse problems}{Potential fields}
-\cvlistdoubleitem{Open-source software}{Numerical modeling}
+\section{Contact}
 
 \section{Education}
-\cventry{2011--Present}{PhD in Geophysics}{Observat\'orio Nacional}{Rio de Janeiro}{}{Thesis topic:
-    \textit{Potential field inversion in spherical coordinates}}
-\cventry{2010--2011}{MSc in Geophysics}{Observat\'orio Nacional}{Rio de Janeiro}{}{Dissertation topic:
-    \textit{3D gravity gradient inversion by planting anomalous densities}}
-\cventry{2008--2009}{International Exchange}{York University}{Toronto, Canada}{}{}
-\cventry{2004--2009}{BSc in Geophysics}{Universidade de S\~ao Paulo}{S\~ao Paulo}{}{Dissertation topic:
-        \textit{Use of tesseroids in the modeling of gravity gradiometry data}}
+
+\section{Research interests}
+
+\section{Professional experience}
+
+\section{Publications}
+
+Peer-reviewed articles (include in press and accepted, links to github code
+etc).
+
+Peer-reviewed full conference papers:
+
+Other:
+
+
+\section{Grants}
+
+List QUALITEC grant.
+
 
 \section{Open-source software}
-\cventry{\raisebox{-1.5cm}{\includegraphics[height=1.5cm]{fatiando.png}}}{Fatiando a Terra}{}{}{}{
-    Python toolkit for geophysical modeling and inversion\\
-    Website: \url{http://fatiando.org} \\
-    Language: Python \\
-    License: BSD}
-\vspace{0.3cm}
-\cventry{\raisebox{-1.5cm}{\includegraphics[height=1.5cm]{tesseroids.png}}}{Tesseroids}{}{}{}{
-    Forward modeling of gravitational fields in spherical coordinates\\
-    Website: \url{http://leouieda.github.com/tesseroids}\\
-    Language: C \\
-    License: BSD}
 
-\section{Languages}
-\cvitemwithcomment{Fluent}{Portuguese}{Native}
-\cvitemwithcomment{Fluent}{English}{TOEFL score: 115/120 (received 10/2007)}
-\cvitemwithcomment{Basic}{Spanish}{}
+\section{Invited talks}
 
-%\nocite{*}
-%\bibliographystyle{chicago}
-%\bibliography{publications}
+\section{Teaching}
 
-\begin{thebibliography}{}
-%\itemsep0pt
+\section{Student supervision}
 
-\bibitem[Uieda, 2013]{meh} {\small See
-\url{http://fatiando.org/people/uieda} for a full list and access to PDFs.}
+\section{Professional activities}
 
-\bibitem[Uieda and Barbosa, 2012a]{Uieda2012a}
-Uieda, L., and V.~C.~F. Barbosa,  2012, {Robust 3D gravity gradient inversion
-  by planting anomalous densities}: Geophysics, 77, G55--G66,
-  doi:10.1190/geo2011-0388.1.
+Reviewer for journals etc.
 
-\bibitem[{Oliveira Jr.} et~al., 2012]{OliveiraJr.2012}
-{Oliveira Jr.}, V.~C., V.~C.~F. Barbosa, and L. Uieda,  2012, {Polynomial
-  equivalent layer}: Geophysics, 78, G1--G13, doi:10.1190/geo2012-0196.1.
+\section{Personal}
 
-\bibitem[Uieda and Barbosa, 2012b]{Uieda2012d}
-Uieda, L., and V.~C.~F. Barbosa, 2012, {Use of the ``shape-of-anomaly'' data
-  misfit in 3D inversion by
-  planting anomalous densities}: SEG Technical Program Expanded Abstracts,
-  1--6, doi:10.1190/segam2012-0383.1.
+\section{References}
 
-\bibitem[Uieda et~al., 2011]{Uieda2011b}
-Uieda, L., E.~P. Bomfim, C. Braitenberg, and E. Molina,  2011, {Optimal forward
-  calculation method of the Marussi tensor due to a geologic structure at GOCE
-  height}: Proc. of ``4th International GOCE User Workshop'', 1--5.
-
-\end{thebibliography}
 \end{document}
