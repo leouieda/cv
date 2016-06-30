@@ -6,6 +6,9 @@
 \usepackage{url}
 \usepackage[utf8]{inputenc}
 
+\definecolor{color1}{rgb}{0.25,0.25,0.25} % Headers
+\definecolor{color2}{rgb}{0.45,0.45,0.45} % Title and information
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -41,8 +44,18 @@
 
 \section{Research interests}
 
-\cvlistdoubleitem{Inverse problems}{Potential fields}
-\cvlistdoubleitem{Open-source software}{Numerical modeling}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}
+    \item Open-source scientific software
+    \item Gravity and magnetics
+    \item Reproducibility of computations
+  \end{itemize}}
+  \cvcolumn{}{\begin{itemize}
+    \item Inverse problem theory
+    \item Large-scale gravity interpretation
+    \item Numerical modeling
+  \end{itemize}}
+\end{cvcolumns}
 
 
 \section{Education}
@@ -58,9 +71,7 @@
 
 \section{Professional experience}
 
-\section{Research interests}
-
-\section{Open-source software}
+\section{Software}
 
 \section{Publications}
 
@@ -68,7 +79,7 @@ Peer-reviewed articles (including links to PDFs and source-code repositories
 hosted on \href{https://www.github.com}{\texttt{github.com}}):
 \\
 
-\cvitem{Under review}{\textbf{Uieda, L} and VCF Barbosa, Fast non-linear
+\cvitem{Submitted}{\textbf{Uieda, L} and VCF Barbosa, Fast non-linear
     gravity inversion in spherical coordinates with application to the South
     American Moho.
     \texttt{[\href{http://www.leouieda.com/papers/paper-moho-inversion-tesseroids-2016.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}{code}]}
@@ -115,9 +126,10 @@ List QUALITEC grant.
 
 Reviewer for journals etc.
 
-\section{Personal}
+\section{Languages}
 
-\vspace{10cm}
+\cvitem{Portuguese}{Native}
+\cvitem{English}{Fluent (TOEFL iBT score 115 out of 120 obtained 14 Sep 2007)}
 
 \section{References}
 
