@@ -1,81 +1,125 @@
-\documentclass[12pt]{article}
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\documentclass[12pt]{moderncv}
+\moderncvtheme[grey]{classic}
+\usepackage[scale=0.85,top=3cm,bottom=3cm]{geometry}
 
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage[utf8]{inputenc}
-% Metadata for the generated PDF
-\usepackage[pdftex,colorlinks=true]{hyperref}
-\hypersetup{
-    allcolors=blue,
-}
-\usepackage{fancyhdr}
 
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Leonardo Uieda}
+\chead{Leonardo Uieda}
 \rhead{\thepage}
 
-\usepackage{titlesec}
+\firstname{Leonardo}
+\familyname{Uieda}
+\title{\emph{Curriculum Vit\ae\ - 06/2016}}
+\address{
+    Universidade do Estado do Rio de Janeiro
+    }{
+    R. São Francisco Xavier, 524/2019A
+    }{
+    20550-900 Rio de Janeiro - Brazil
+}{}
+\extrainfo{
+    +55~21~983636761
+    \\
+    \href{mailto:leouieda@gmail.com}{\emph{\texttt{leouieda@gmail.com}}}
+    \\
+    \href{http://www.leouieda.com}{\emph{\texttt{www.leouieda.com}}}
+}
 
-\titleformat{\section}
-  {\normalfont\large\bfseries}{\thesection}{1em}{}[{\titlerule[1px]}]
 
 \begin{document}
 
 \thispagestyle{empty}
-\begin{center}
-    \textbf{\LARGE Leonardo Uieda}
-    \\\vspace{0.3cm}
-    {\large Curriculum Vit\ae}
-    \\\vspace{0.3cm}
-    {\large 2016}
-    \\\vspace{0.3cm}
-    Department of Applied Geology\\
-    Universidade do Estado do Rio de Janeiro\\
-    R. São Francisco Xavier, 524/2019A\\
-    Rio de Janeiro 20550-900 Brazil
-    \\\vspace{0.3cm}
-    \href{mailto:leouieda@gmail.com}{leouieda@gmail.com} \hspace{2cm}
-    \href{http://www.leouieda.com}{www.leouieda.com}
-\end{center}
+\maketitle
+
+\vspace{-1.5cm}
+\hrulefill
+
+\section{Research interests}
+
+\cvlistdoubleitem{Inverse problems}{Potential fields}
+\cvlistdoubleitem{Open-source software}{Numerical modeling}
 
 
-\section*{Education}
+\section{Education}
+
+\cventry{2011--2016}{PhD in Geophysics}{Observat\'orio Nacional}{Rio de Janeiro}{}{Thesis topic:
+    \textit{Potential field inversion in spherical coordinates}}
+\cventry{2010--2011}{MSc in Geophysics}{Observat\'orio Nacional}{Rio de Janeiro}{}{Dissertation topic:
+    \textit{3D gravity gradient inversion by planting anomalous densities}}
+\cventry{2008--2009}{International Exchange}{York University}{Toronto, Canada}{}{}
+\cventry{2004--2009}{BSc in Geophysics}{Universidade de S\~ao Paulo}{S\~ao Paulo}{}{Dissertation topic:
+        \textit{Use of tesseroids in the modeling of gravity gradiometry data}}
 
 
-\section*{Professional experience}
+\section{Professional experience}
 
-\section*{Research interests}
+\section{Research interests}
 
-\section*{Open-source software}
+\section{Open-source software}
 
-\section*{Publications}
+\section{Publications}
 
-Peer-reviewed articles (include in press and accepted, links to github code
-etc).
+Peer-reviewed articles (including links to PDFs and source-code repositories
+hosted on \href{https://www.github.com}{\texttt{github.com}}):
+\\
 
+\cvitem{Under review}{\textbf{Uieda, L} and VCF Barbosa, Fast non-linear
+    gravity inversion in spherical coordinates with application to the South
+    American Moho.
+    \texttt{[\href{http://www.leouieda.com/papers/paper-moho-inversion-tesseroids-2016.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}{code}]}
+}
+
+\cvitem{2016}{Carlos, DU, \textbf{L Uieda}, and VCF Barbosa, How two
+    gravity-gradient inversion methods can be used to reveal different geologic
+    features of ore deposit - A case study from the Quadrilátero Ferrífero
+    (Brazil), \emph{Journal of Applied Geophysics},
+    doi:10.1016/j.jappgeo.2016.04.011.
+\texttt{[\href{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}{pdf}]}}
+
+\vspace{0.3cm}
 Peer-reviewed full conference papers:
+\\
 
+\cvitem{2016}{Carlos, D. U., L. Uieda, and V. C. F. Barbosa, How two
+gravity-gradient inversion methods can be used to reveal different geologic
+features of ore deposit - A case study from the Quadrilátero Ferrífero
+(Brazil), \emph{Journal of Applied Geophysics},
+doi:10.1016/j.jappgeo.2016.04.011. \texttt{[\href{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}{pdf}]}}
+
+\vspace{0.3cm}
 Other:
+\\
 
+\cvitem{2016}{Carlos, D. U., L. Uieda, and V. C. F. Barbosa, How two
+gravity-gradient inversion methods can be used to reveal different geologic
+features of ore deposit - A case study from the Quadrilátero Ferrífero
+(Brazil), \emph{Journal of Applied Geophysics},
+doi:10.1016/j.jappgeo.2016.04.011. \texttt{[\href{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}{pdf}]}}
 
-\section*{Grants}
+\section{Grants}
 
 List QUALITEC grant.
 
-\section*{Invited talks}
+\section{Invited talks}
 
-\section*{Teaching}
+\section{Teaching}
 
-\section*{Student supervision}
+\section{Student supervision}
 
-\section*{Professional activities}
+\section{Professional activities}
 
 Reviewer for journals etc.
 
-\section*{Personal}
+\section{Personal}
 
-\section*{References}
+\vspace{10cm}
+
+\section{References}
+
 
 \end{document}
