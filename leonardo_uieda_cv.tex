@@ -1,6 +1,6 @@
 \documentclass[12pt]{moderncv}
 \moderncvtheme[grey]{classic}
-\usepackage[scale=0.85,top=3cm,bottom=3cm]{geometry}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 
 \usepackage{graphicx}
 \usepackage{url}
@@ -43,6 +43,8 @@
 
 \vspace{-1.5cm}
 \hrulefill
+\vspace{0.5cm}
+
 
 \section{Research interests}
 
@@ -69,10 +71,6 @@
     Source-code and PDF:
     \href{http://www.leouieda.com/about/phd.html}{\texttt{leouieda.com/about/phd.html}}}
 
-\cventry{Feb 2011}{Visiting researcher}{}{University of Trieste}{Trieste, Italy}{
-    Working with professor Carla Braitenberg to develop version 1.0 of my
-    open-source software Tesseroids.}
-
 \cventry{2010--2011}{MSc in Geophysics}{}{Observat\'orio Nacional}{Rio de Janeiro, Brazil}{Dissertation:
     3D gravity gradient inversion by planting anomalous densities\\
     Advisor: Valéria C. F. Barbosa\\
@@ -90,7 +88,49 @@
 
 \section{Professional experience}
 
+\cventry{2014--present}{Assistant Professor}{}{Universidade do Estado do Rio de
+    Janeiro}{Brazil}{Professor of Geophysics at the Department of Applied
+    Geology. Responsible for the Laboratory of Exploration Geophysics (LAGEX).
+    My position is the Brazilian equivalent of a tenure-track position.}
+
+\cventry{Feb 2011}{Visiting researcher}{}{University of Trieste}{Trieste, Italy}{
+    Working with professor Carla Braitenberg to develop version 1.0 of my
+    open-source software Tesseroids.}
+
+
+\section{Grants}
+
+\cvitem{2014--2017}{QUALITEC/UERJ program for training a technician for the
+    Laboratory of Exploration Geophysics (LAGEX).
+    Total BRL \$154,800 as a scholarship for the technician.}
+
+
 \section{Software}
+
+I am the creator and main developer of the following open-source software:
+\\
+
+\cventry{\raisebox{-1.7cm}{\includegraphics[width=1.8cm]{figures/fatiando.png}}
+    }{Fatiando a Terra
+    {\normalfont (\href{http://www.fatiando.org}{\texttt{www.fatiando.org})}}}{}{}{}{
+    \emph{A Python library for modeling and inversion in geophysics.}\\
+    Provides tools for geophysical data analysis (mainly potential fields),
+    forward modeling, and prototyping and implementing new inversion methods.\\
+    Source-code:
+    \href{https://github.com/fatiando/fatiando}{\texttt{github.com/fatiando/fatiando}}
+}
+
+\vspace{0.3cm}
+\cventry{\raisebox{-1.7cm}{\includegraphics[height=1.7cm]{figures/tesseroids.png}}
+    }{Tesseroids
+    {\normalfont (\href{http://tesseroids.leouieda.com}{\texttt{tesseroids.leouieda.com})}}}{}{}{}{
+    \emph{Forward modeling of gravitational fields in spherical coordinates.}\\
+    Command-line programs (written in C) for modeling the gravitational potential,
+    acceleration, and gradient tensor in Cartesian and spherical coordinates.\\
+    Source-code:
+    \href{https://github.com/leouieda/tesseroids}{\texttt{github.com/leouieda/tesseroids}}
+}
+
 
 \section{Publications}
 
@@ -130,10 +170,6 @@ gravity-gradient inversion methods can be used to reveal different geologic
 features of ore deposit - A case study from the Quadrilátero Ferrífero
 (Brazil), \emph{Journal of Applied Geophysics},
 doi:10.1016/j.jappgeo.2016.04.011. \texttt{[\href{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}{pdf}]}}
-
-\section{Grants}
-
-List QUALITEC grant.
 
 \section{Invited talks}
 
