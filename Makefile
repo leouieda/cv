@@ -60,8 +60,6 @@ $(OUTPUT)/:
 
 $(OUTPUT)/$(PROJECT).aux: $(TEX_FILES) $(STY_FILES) $(CLS_FILES) $(PNG_FILES) $(EPS_FILES) | $(OUTPUT)/
 	pdflatex $(LATEX_FLAGS) $(SRC)/$(PROJECT)
-	cp $@ .
-	# Copy the aux file next to the tex file for Vim completion purposes
 
 $(OUTPUT)/$(PROJECT).pdf: $(OUTPUT)/$(PROJECT).aux
 	pdflatex $(LATEX_FLAGS) $(SRC)/$(PROJECT) 1>/dev/null
