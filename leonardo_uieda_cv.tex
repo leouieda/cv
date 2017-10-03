@@ -6,13 +6,17 @@
 \newcommand{\MyName}{\FirstName\ \LastName}
 \newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\Email}{leouieda@gmail.com}
+\newcommand{\ORCID}{0000-0001-6123-9515}
 \newcommand{\TablePad}{\vspace{-0.4cm}}
+\newcommand{\SoftwareTitle}[1]{{\fontsize{13pt}{0}\selectfont \bfseries #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \mdseries #1}}
 % Macros to add links to code and PDF versions of articles
-\newcommand{\Code}[1]{\href{#1}{\fontsize{10}{0}\selectfont [code]}}
-\newcommand{\PDF}[1]{\href{#1}{\fontsize{10}{0}\selectfont [pdf]}}
+\newcommand{\Code}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [code]}}
+\newcommand{\PDF}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [pdf]}}
+\newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}}
 % Macros to set the year and duration
-\newcommand{\Duration}[2]{\fontsize{10}{0}\selectfont #1\ --\ #2}
-\newcommand{\Year}[1]{\fontsize{10}{0}\selectfont #1}
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
 
 
 \usepackage{graphicx}
@@ -25,7 +29,7 @@
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 
 % Set the page margins
-\usepackage[left=0.7in,right=0.7in,top=0.7in,bottom=1in]{geometry}
+\usepackage[left=0.7in,right=0.7in,top=1in,bottom=1in]{geometry}
 
 % No indentation
 \setlength\parindent{0cm}
@@ -47,17 +51,25 @@
 \setmonofont{Source Code Pro}
 % Configure the font style for sections
 \usepackage{sectsty}
-\sectionfont{\vspace{0.2cm}\mdseries\fontsize{16}{0}\selectfont\uppercase}
-\subsectionfont{\mdseries\uppercase}
+\sectionfont{\vspace{0.2cm}\mdseries\fontsize{16pt}{0}\selectfont\uppercase}
+\subsectionfont{\mdseries\fontsize{14pt}{0}\selectfont}
 % Control the font size
 \usepackage{anyfontsize}
 
 % Set headers
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%\fancyhf{}
-%\chead{\MyName \hspace{0.2cm} | \hspace{0.2cm} \Title}
-%\cfoot{\thepage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{
+    \fontsize{10pt}{12pt}\selectfont
+    \MyName
+    \hspace{0.2cm} | \hspace{0.2cm}
+    \Title
+    \hspace{0.2cm} | \hspace{0.2cm}
+    \monthyear\today
+}
+\rhead{\fontsize{10pt}{12pt}\selectfont \thepage}
+\cfoot{}
 
 % Metadata for the PDF output and control of hyperlinks
 \usepackage[colorlinks=true]{hyperref}
@@ -74,10 +86,11 @@
 
 \begin{document}
 
-
 % No header for the first page
-%\thispagestyle{plain}
+\thispagestyle{empty}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
 \begin{tabular}{@{}l c@{}}
     \parbox{0.6\textwidth}{
         {\fontsize{36pt}{0}\selectfont \MyName}
@@ -93,6 +106,8 @@
         1680 East-West Rd, POST 804
         \\
         96822 Honolulu, HI, USA
+        \\
+        ORCID: \href{http://orcid.org/\ORCID}{\ORCID}
         \\
         \href{mailto:\Email}{\Email}
         \, | \,
@@ -198,18 +213,6 @@
     QUALITEC/UERJ program for training a technician for the Laboratory of
     Exploration Geophysics (LAGEX). Total BRL \$154,800 as a scholarship for
     the technician.
-    \\
-    \Duration{11/2014}{11/2017}  &
-    CAPES PhD
-    \\
-    \Duration{11/2014}{11/2017}  &
-    CAPES MSc
-    \\
-    \Duration{11/2014}{11/2017}  &
-    SBGf
-    \\
-    \Duration{11/2014}{11/2017}  &
-    FAPESP
 \end{tabularx}
 
 
@@ -219,12 +222,28 @@
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l p{0.9\textwidth}}
     \Year{2017}  &
-    SBGf
-    \\
-    ~ & meh
+    SBGf Premio tese
     \\
     \Year{2016}  &
     Paraninfo
+    \\
+    \Duration{2011}{2015}  &
+    CAPES PhD
+    \\
+    \Year{2011}  &
+    EAGE Travel grant
+    \\
+    \Year{2011}  &
+    SEG Travel grant
+    \\
+    \Duration{2010}{2011}  &
+    CAPES MSc
+    \\
+    \Year{2008}  &
+    SBGf
+    \\
+    \Year{2005}  &
+    FAPESP
 \end{tabularx}
 
 
@@ -232,31 +251,64 @@
 \section*{Open-source Software}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}p{2.3cm} X}
-    \raisebox{-1.9cm}{\includegraphics[width=2cm]{figures/fatiando.png}}  &
-    \textbf{Fatiando a Terra}
-    (\href{http://www.fatiando.org}{www.fatiando.org})
+\begin{tabularx}{\textwidth}{@{}X X X@{}}
+    \SoftwareTitle{Fatiando a Terra}
     \newline
-    \emph{A Python library for modeling and inversion in geophysics.}
+    \emph{A Python library for geophysical data analysis, modeling, and
+    inversion.}
     \newline
-    Provides tools for geophysical data analysis (mainly potential fields),
-    forward modeling, and developing new inversion methods.
-    \newline
-    Source-code:
     \href{https://github.com/fatiando/fatiando}{github.com/fatiando/fatiando}
-    \\
-    \raisebox{-1.9cm}{\includegraphics[width=2cm]{figures/tesseroids.png}} &
-    \textbf{Tesseroids}
-    (\href{http://tesseroids.leouieda.com}{tesseroids.leouieda.com})
+    &
+    \SoftwareTitle{Tesseroids}
     \newline
-    \emph{Forward modeling of gravitational fields in spherical coordinates.}
+    \emph{Command-line programs written in C for forward modeling of
+    gravitational fields in spherical coordinates.}
     \newline
-    Command-line programs written in C for modeling the gravitational
-    potential, acceleration, and gradient tensor in Cartesian and spherical
-    coordinates.
-    \newline
-    Source-code:
     \href{https://github.com/leouieda/tesseroids}{github.com/leouieda/tesseroids}
+    &
+    \SoftwareTitle{GMT/Python}
+    \newline
+    \emph{A Python interface for the Generic Mapping Tools.}
+    \newline
+    \href{https://github.com/GenericMappingTools/gmt-python}{github.com/GenericMappingTools/\newline gmt-python}
+\end{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Teaching}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+    \TableTitle{Undergraduate} & \TableTitle{Short-courses/Workshops}
+    \\[0.1cm]
+    \begin{tabular}{@{}l l}
+        \Duration{2014}{2016}  &
+         matesp
+        \hspace{10cm}
+        \\
+        \Duration{2014}{2016}  &
+         Geofisica 1
+        \\
+        \Duration{2014}{2016}  &
+         Geofisica 2
+        \\
+        \Year{2015}  &
+         Intro Geology
+    \end{tabular}
+    &
+    \begin{tabular}{@{}l l}
+        \Year{2017}  &
+        Short course Python UH
+        \\
+        \Year{2016}  &
+        Python USP
+        \\
+        \Year{2014}  &
+        Inversion UnB
+        \\
+        \Year{2011}  &
+        Inversion USP
+    \end{tabular}
 \end{tabularx}
 
 

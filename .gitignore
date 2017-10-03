@@ -1,4 +1,10 @@
 *~
-output/
-*.aux
 .*.swp
+output/
+*.bbl
+*.toc
+*.aux
+*.blg
+*.log
+*.out
+*.pdf
