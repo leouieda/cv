@@ -1,7 +1,4 @@
-# The name of the main .tex file to build.
-# Other files can be included into this one.
-DOCUMENT = leonardo_uieda_cv
-PDF = $(DOCUMENT).pdf
+PDF = research_statement.pdf skills_statement.pdf
 
 LATEX_FLAGS = -halt-on-error
 LATEX = xelatex

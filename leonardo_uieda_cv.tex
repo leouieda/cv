@@ -1,333 +1,263 @@
-\documentclass[12pt]{moderncv}
-\moderncvtheme[grey]{classic}
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\documentclass[11pt, a4paper]{article}
+
+
+\newcommand{\FirstName}{Leonardo}
+\newcommand{\LastName}{Uieda}
+\newcommand{\MyName}{\FirstName\ \LastName}
+\newcommand{\Title}{Curriculum Vit\ae}
+\newcommand{\Email}{leouieda@gmail.com}
+\newcommand{\TablePad}{\vspace{-0.4cm}}
+% Macros to add links to code and PDF versions of articles
+\newcommand{\Code}[1]{\href{#1}{\fontsize{10}{0}\selectfont [code]}}
+\newcommand{\PDF}[1]{\href{#1}{\fontsize{10}{0}\selectfont [pdf]}}
+% Macros to set the year and duration
+\newcommand{\Duration}[2]{\fontsize{10}{0}\selectfont #1\ --\ #2}
+\newcommand{\Year}[1]{\fontsize{10}{0}\selectfont #1}
+
 
 \usepackage{graphicx}
-\usepackage{url}
-\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+% For multipage tables
+\usepackage{ltablex}
 
-\definecolor{color1}{rgb}{0.08,0.27,0.47} % Headers
-%\definecolor{color1}{rgb}{0.25,0.25,0.25} % Headers
-%\definecolor{color1}{rgb}{0.30,0.30,0.30} % Headers
-\definecolor{color4}{rgb}{0.45,0.45,0.45} % Title and information
+% Define command to insert month name and year as date
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\chead{Leonardo Uieda}
-\rhead{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
+% Set the page margins
+\usepackage[left=0.7in,right=0.7in,top=0.7in,bottom=1in]{geometry}
 
-\firstname{Leonardo}
-\familyname{Uieda}
-\title{\emph{Curriculum Vit\ae\ - 03/2017}}
-\address{
-    Universidade do Estado do Rio de Janeiro
-    }{
-    R. São Francisco Xavier, 524/2019A
-    }{
-    20550-900 Rio de Janeiro - Brazil
-}{}
-\extrainfo{
-    \href{mailto:leouieda@gmail.com}{\emph{\texttt{leouieda@gmail.com}}}
-    \\
-    \href{http://www.leouieda.com}{\emph{\texttt{www.leouieda.com}}}
+% No indentation
+\setlength\parindent{0cm}
+
+% Increase the line spacing
+\renewcommand{\baselinestretch}{1.1}
+\renewcommand{\arraystretch}{1.3}
+
+% Remove space between items in itemize and enumerate
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Use custom colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Set fonts. Requires compilation with xelatex
+\usepackage{fontspec}
+\setmainfont[BoldFont=SourceSansPro-Semibold]{SourceSansPro-Light}
+\setmonofont{Source Code Pro}
+% Configure the font style for sections
+\usepackage{sectsty}
+\sectionfont{\vspace{0.2cm}\mdseries\fontsize{16}{0}\selectfont\uppercase}
+\subsectionfont{\mdseries\uppercase}
+% Control the font size
+\usepackage{anyfontsize}
+
+% Set headers
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\chead{\MyName \hspace{0.2cm} | \hspace{0.2cm} \Title}
+%\cfoot{\thepage}
+
+% Metadata for the PDF output and control of hyperlinks
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    pdftitle={\MyName\ - \Title},
+    pdfauthor={\MyName},
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=black,
+    urlcolor=MidnightBlue
 }
+
 
 
 \begin{document}
 
-\thispagestyle{empty}
-\maketitle
 
-\vspace{-1.5cm}
-\hrulefill
+% No header for the first page
+%\thispagestyle{plain}
+
+\begin{tabular}{@{}l c@{}}
+    \parbox{0.6\textwidth}{
+        {\fontsize{36pt}{0}\selectfont \MyName}
+        \\[0.5cm]
+        {\fontsize{13pt}{0}\selectfont \Title \, | \, \monthyear\today}
+    } &
+    \parbox{0.4\textwidth}{
+        \fontsize{10pt}{12pt}\selectfont
+        Department of Geology and Geophysics, SOEST
+        \\
+        University of Hawai'i at Manoa
+        \\
+        1680 East-West Rd, POST 804
+        \\
+        96822 Honolulu, HI, USA
+        \\
+        \href{mailto:\Email}{\Email}
+        \, | \,
+        \href{http://www.leouieda.com}{www.leouieda.com}
+    }
+\end{tabular}
+
 \vspace{0.5cm}
 
 
-\section{Research interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Research interests}
 
-\begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}
-    \item Open-source scientific software
-    \item Gravity and magnetics
-    \item Reproducibility of computations
-  \end{itemize}}
-  \cvcolumn{}{\begin{itemize}
-    \item Inverse problem theory
-    \item Large-scale gravity interpretation
-    \item Numerical modeling
-  \end{itemize}}
-\end{cvcolumns}
-
-
-\section{Education}
-
-\cventry{2011--2016}{PhD in Geophysics}{}{Observat\'orio Nacional}{Rio de Janeiro, Brazil}{Thesis:
-    Forward modeling and inversion of gravitational fields in spherical coordinates\\
-    Advisor: Valéria C. F. Barbosa\\
-    Source-code and PDF:
-    \href{http://www.leouieda.com/about/phd.html}{\texttt{leouieda.com/about/phd.html}}}
-
-\cventry{2010--2011}{MSc in Geophysics}{}{Observat\'orio Nacional}{Rio de Janeiro, Brazil}{Dissertation:
-    Robust 3D gravity gradient inversion by planting anomalous densities\\
-    Advisor: Valéria C. F. Barbosa\\
-    Source-code and PDF:
-    \href{http://www.leouieda.com/about/masters.html}{\texttt{leouieda.com/about/masters.html}}}
-
-\cventry{2008--2009}{International Exchange}{}{York University}{Toronto, Canada}{}
-
-\cventry{2004--2009}{BSc in Geophysics}{}{Universidade de S\~ao Paulo}{S\~ao Paulo, Brazil}{Dissertation:
-    Forward modeling of the gravity gradient tensor using tesseroids\\
-    Advisor: Naomi Ussami\\
-    Source-code and PDF:
-    \href{http://www.leouieda.com/about/bachelors.html}{\texttt{leouieda.com/about/bachelors.html}}}
+\TablePad
+\begin{tabularx}{\textwidth}{rr}
+    \parbox{0.5\textwidth}{
+        \begin{itemize}
+        \item Gravity and magnetics
+        \item Inverse problem theory
+        \end{itemize}
+    }
+    &
+    \parbox{0.5\textwidth}{
+        \begin{itemize}
+        \item Open-source scientific software
+        \item Reproducibility of computations
+        \end{itemize}
+    }
+\end{tabularx}
 
 
-\section{Professional experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Professional experience}
 
-\cventry{2017--present}{Visiting Research Scholar}{}{University of Hawaii at
-    Manoa}{USA}{Visiting researcher (postdoc) at the Department of Geology and
-    Geophysics building a Python interface for the Generic Mapping Tools.
-}
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l X}
+    \Duration{02/2017}{present}  &
+    \textbf{Visiting Research Scholar} (postdoc),
+    University of Hawaii at Manoa, USA
+    \newline
+    \textit{Working with Prof. Paul Wessel to build a Python interface for
+    the Generic Mapping Tools}
+    \\
+    \Duration{02/2014}{present}  &
+    \textbf{Assistant Professor},
+    Universidade do Estado do Rio de Janeiro, Brazil
+    \newline
+    \textit{Professor of Geophysics at the Department of Applied Geology.
+    Responsible for the Laboratory of Exploration Geophysics (LAGEX).}
+    \\
+    \Duration{02/2011}{03/2011}  &
+    \textbf{Visiting Researcher},
+    University of Trieste, Italy
+    \newline
+    \textit{Working with professor Carla Braitenberg to develop version 1.0 of
+    the open-source software Tesseroids.}
+\end{tabularx}
 
-\cventry{2014--present}{Assistant Professor}{}{Universidade do Estado do Rio de
-    Janeiro}{Brazil}{Professor of Geophysics at the Department of Applied
-    Geology. Responsible for the Laboratory of Exploration Geophysics (LAGEX).
-}
 
-\cventry{Feb 2011}{Visiting researcher}{}{University of Trieste}{Trieste, Italy}{
-    Working with professor Carla Braitenberg to develop version 1.0 of my
-    open-source software Tesseroids.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l X}
+    \Duration{11/2011}{04/2016}  &
+    \textbf{PhD in Geophysics}, Observatório Nacional, Brazil
+    \newline
+    Thesis: \textit{Forward modeling and inversion of gravitational fields in
+    spherical coordinates}
+    \newline
+    \Code{https://github.com/leouieda/phd-thesis}
+    \PDF{http://www.leouieda.com/about/phd.html}
+    \\
+    \Duration{03/2010}{10/2011}  &
+    \textbf{MSc in Geophysics}, Observatório Nacional, Brazil
+    \newline
+    Thesis: \textit{Robust 3D gravity gradient inversion by planting anomalous
+    densities}
+    \newline
+    \Code{https://github.com/pinga-lab/paper-planting-densities}
+    \PDF{http://www.leouieda.com/about/masters.html}
+    \\
+    \Duration{08/2008}{05/2009}  &
+    \textbf{International Exchange}, York University, Canada
+    \\
+    \Duration{03/2004}{12/2009}  &
+    \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
+    \newline
+    Thesis: \textit{Forward modeling of the gravity gradient tensor using
+    tesseroids}
+    \newline
+    \Code{https://github.com/leouieda/barchelor-thesis}
+    \PDF{http://www.leouieda.com/about/bachelors.html}
+\end{tabularx}
 
 
-\section{Grants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Funding}
 
-\cvitem{2014--2017}{QUALITEC/UERJ program for training a technician for the
-    Laboratory of Exploration Geophysics (LAGEX).
-    Total BRL \$154,800 as a scholarship for the technician.}
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l X}
+    \Duration{11/2014}{11/2017}  &
+    QUALITEC/UERJ program for training a technician for the Laboratory of
+    Exploration Geophysics (LAGEX). Total BRL \$154,800 as a scholarship for
+    the technician.
+    \\
+    \Duration{11/2014}{11/2017}  &
+    CAPES PhD
+    \\
+    \Duration{11/2014}{11/2017}  &
+    CAPES MSc
+    \\
+    \Duration{11/2014}{11/2017}  &
+    SBGf
+    \\
+    \Duration{11/2014}{11/2017}  &
+    FAPESP
+\end{tabularx}
 
-\newpage
-\section{Software}
 
-I am the creator and main developer of the following open-source software:
-\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Honors \& Awards}
 
-\cventry{\raisebox{-1.7cm}{\includegraphics[width=1.8cm]{figures/fatiando.png}}
-    }{Fatiando a Terra
-    {\normalfont (\href{http://www.fatiando.org}{\texttt{www.fatiando.org})}}}{}{}{}{
-    \emph{A Python library for modeling and inversion in geophysics.}\\
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l p{0.9\textwidth}}
+    \Year{2017}  &
+    SBGf
+    \\
+    ~ & meh
+    \\
+    \Year{2016}  &
+    Paraninfo
+\end{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Open-source Software}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{2.3cm} X}
+    \raisebox{-1.9cm}{\includegraphics[width=2cm]{figures/fatiando.png}}  &
+    \textbf{Fatiando a Terra}
+    (\href{http://www.fatiando.org}{www.fatiando.org})
+    \newline
+    \emph{A Python library for modeling and inversion in geophysics.}
+    \newline
     Provides tools for geophysical data analysis (mainly potential fields),
-    forward modeling, and prototyping and implementing new inversion methods.\\
+    forward modeling, and developing new inversion methods.
+    \newline
     Source-code:
-    \href{https://github.com/fatiando/fatiando}{\texttt{github.com/fatiando/fatiando}}
-}
-
-\vspace{0.3cm}
-\cventry{\raisebox{-1.7cm}{\includegraphics[height=1.7cm]{figures/tesseroids.png}}
-    }{Tesseroids
-    {\normalfont (\href{http://tesseroids.leouieda.com}{\texttt{tesseroids.leouieda.com})}}}{}{}{}{
-    \emph{Forward modeling of gravitational fields in spherical coordinates.}\\
-    Command-line programs (written in C) for modeling the gravitational potential,
-    acceleration, and gradient tensor in Cartesian and spherical coordinates.\\
+    \href{https://github.com/fatiando/fatiando}{github.com/fatiando/fatiando}
+    \\
+    \raisebox{-1.9cm}{\includegraphics[width=2cm]{figures/tesseroids.png}} &
+    \textbf{Tesseroids}
+    (\href{http://tesseroids.leouieda.com}{tesseroids.leouieda.com})
+    \newline
+    \emph{Forward modeling of gravitational fields in spherical coordinates.}
+    \newline
+    Command-line programs written in C for modeling the gravitational
+    potential, acceleration, and gradient tensor in Cartesian and spherical
+    coordinates.
+    \newline
     Source-code:
-    \href{https://github.com/leouieda/tesseroids}{\texttt{github.com/leouieda/tesseroids}}
-}
+    \href{https://github.com/leouieda/tesseroids}{github.com/leouieda/tesseroids}
+\end{tabularx}
 
-
-\section{Publications}
-
-Includes links to PDFs and source-code repositories
-hosted on \href{https://www.github.com}{\texttt{github.com}} (also found on my
-personal website).
-\\
-
-Articles:
-\\
-
-\cvitem{2017}{\textbf{Uieda, L}.
-    Step-by-step NMO correction,
-     \emph{The Leading Edge},
-    doi:10.1190/tle36020179.1.
-    \texttt{[\href{http://www.leouieda.com/papers/nmo-tutorial.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/nmo-tutorial}{code}]}
-}
-
-\cvitem{2017}{\textbf{Uieda, L} and Barbosa, VCF. Fast non-linear
-    gravity inversion in spherical coordinates with application to the South
-    American Moho, \emph{Geophysical Journal International},
-    doi:10.1093/gji/ggw390.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-moho-inversion-tesseroids-2016.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}{code}]}
-}
-
-\cvitem{2016}{\textbf{Uieda, L}, Barbosa, VCF and Braitenberg, C.
-    Tesseroids: forward modeling gravitational fields in spherical coordinates,
-    \emph{Geophysics}, doi:10.1190/geo2015-0204.1.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-tesseroids-2016.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/paper-tesseroids}{code}]}
-}
-
-\cvitem{2016}{Carlos, DU, \textbf{Uieda, L}, and Barbosa, VCF. How two
-    gravity-gradient inversion methods can be used to reveal different geologic
-    features of ore deposit - A case study from the Quadrilátero Ferrífero
-    (Brazil), \emph{Journal of Applied Geophysics},
-    doi:10.1016/j.jappgeo.2016.04.011.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}{pdf}]}
-}
-
-\cvitem{2015}{Oliveira Jr, VC, Sales, DP, Barbosa, VCF, and \textbf{Uieda, L}.
-    Estimation of the total magnetization direction of approximately spherical
-    bodies,
-    \emph{Nonlinear Processes in Geophysics},
-    doi: 10.5194/npg-22-215-2015.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-mag-dir-2015.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/Total-magnetization-of-spherical-bodies}{code}]}
-}
-
-\cvitem{2014}{\textbf{Uieda, L}, Oliveira Jr, VC, and Barbosa, VCF.
-    Geophysical tutorial: Euler deconvolution of potential-field data,
-    \emph{The Leading Edge},
-    doi: 10.1190/tle33040448.1.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-tle-euler-tutorial-2014.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/paper-tle-euler-tutorial}{code}]}
-}
-
-\cvitem{2014}{Carlos, DU, \textbf{Uieda, L}, and Barbosa, VCF.
-    Imaging iron ore from the Quadrilátero Ferrífero (Brazil) using geophysical
-    inversion and drill hole data,
-    \emph{Ore Geology Reviews},
-     doi: 10.1016/j.oregeorev.2014.02.011.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-quadrilatero-2014.html}{pdf}]}
-}
-
-\cvitem{2013}{Melo, FF, Barbosa, VCF, \textbf{Uieda, L}, Oliveira Jr, VC, and
-    Silva, JBC.
-    Estimating the nature and the horizontal and vertical positions of 3D
-    magnetic sources using Euler deconvolution,
-    \emph{Geophysics},
-    doi: 10.1190/geo2012-0515.1.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-euler-plateau-2013.html}{pdf}]}
-}
-
-\cvitem{2013}{Oliveira Jr, VC, Barbosa, VCF, and \textbf{Uieda, L}.
-    Polynomial equivalent layer,
-    \emph{Geophysics},
-    doi: 10.1190/geo2012-0196.1.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-polynomial-eqlayer-2013.html}{pdf}]}
-}
-
-\cvitem{2012}{\textbf{Uieda, L} and Barbosa, VCF.
-    Robust 3D gravity gradient inversion by planting anomalous densities,
-    \emph{Geophysics},
-    doi: 10.1190/geo2011-0388.1.
-    \texttt{[\href{http://www.leouieda.com/papers/paper-planting-anomalous-densities-2012.html}{pdf}]}\texttt{[\href{https://github.com/pinga-lab/paper-planting-densities}{code}]}
-}
-
-%\vspace{0.3cm}
-Full conference papers:
-\\
-
-\cvitem{2013}{\textbf{Uieda, L}, Oliveira Jr, VC, Barbosa, VCF.
-    Modeling the Earth with Fatiando a Terra,
-    \emph{Proceedings of the 12th Python in Science Conference}, pp. 90-96.
-    \texttt{[\href{http://www.leouieda.com/talks/scipy2013.html}{pdf}]}\texttt{[\href{https://github.com/leouieda/scipy2013}{code}]}
-}
-
-\cvitem{2012}{\textbf{Uieda, L} and Barbosa, VCF.
-    Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
-    anomalous densities,
-    \emph{SEG Technical Program Expanded Abstracts}, pp. 1-6,
-    doi:10.1190/segam2012-0383.1.
-    \texttt{[\href{http://www.leouieda.com/talks/seg2012.html}{pdf}]}\texttt{[\href{https://github.com/leouieda/seg2012}{code}]}
-}
-
-\cvitem{2011}{\textbf{Uieda, L}, Bomfim, EP, Braitenberg, C, Molina, E.
-    Optimal forward calculation method of the Marussi tensor due to a geologic
-    structure at GOCE height,
-    \emph{Proc. of 4th International GOCE User Workshop}, pp. 1–5.
-    \texttt{[\href{http://www.leouieda.com/talks/goce2011.html}{pdf}]}\texttt{[\href{https://github.com/leouieda/goce2011}{code}]}
-}
-
-
-\section{Invited talks}
-
-\cvitem{10 Mar 2017}{University of Hawaii at Manoa, Honolulu - HI, USA.
-    ``Inverting gravity to map the Moho: A new method and the open source
-software that made it possible''}
-
-\cvitem{22 Jun 2016}{Observatório Nacional, Rio de Janeiro, Brazil.
-    ``Fatiando a Terra: construindo uma base para ensino e pesquisa de
-geofísica''}
-
-\cvitem{16 Apr 2015}{Universidade de São Paulo, São Paulo, Brazil.
-    ``Fatiando a Terra: construindo uma base para ensino e pesquisa de
-geofísica''}
-
-
-\section{Teaching}
-
-University courses (Universidade do Estado do Rio de Janeiro):
-\\
-
-\cvitem{2015--Present}{``Special Mathematics I: Programming and Numerical
-    Analysis''.
-    Undergraduate level course for Oceanography majors.
-    Online material:
-    \href{https://github.com/leouieda/matematica-especial}{\texttt{github.com/leouieda/matematica-especial}}}
-
-\cvitem{2015--Present}{``Geophysics II: Seismology''.
-    Undergraduate level course for Geology majors.
-    Online material:
-    \href{https://github.com/leouieda/geofisica2}{\texttt{github.com/leouieda/geofisica2}}}
-
-\cvitem{2014--Present}{``Geophysics I: Gravity and magnetic methods''.
-    Undergraduate level course for Geology majors.
-    Online material:
-    \href{https://github.com/leouieda/geofisica1}{\texttt{github.com/leouieda/geofisica1}}}
-
-\vspace{0.3cm}
-Short courses:
-\\
-
-\cvitem{Feb 2016}{``Python for Earth Science''.
-    Universidade de São Paulo, Brazil.
-    Online material:
-    \href{https://github.com/leouieda/verao2016}{\texttt{github.com/leouieda/verao2016}}}
-
-\cvitem{Nov 2014}{``Introduction to Geophysical Inversion''.
-    Universidade de Brasília, Brazil.
-    Online material:
-    \href{https://github.com/pinga-lab/inversao-unb-2014}{\texttt{github.com/pinga-lab/inversao-unb-2014}}}
-
-\cvitem{Feb 2012}{``Introduction to Geophysical Inversion''.
-    Universidade de São Paulo, Brazil.
-    Online material:
-    \href{https://github.com/pinga-lab/inversao-iag-2012}{\texttt{github.com/pinga-lab/inversao-iag-2012}}}
-
-\newpage
-\section{Student supervision}
-
-\cvitem{2015--Present}{Vinicius Vianna Riguête. Undergraduate. Project:
-    ``Gravimetric study of Eo-Cretaceous intrusions in Namibia''.}
-
-\cvitem{2016--Present}{Fernanda Vianna Gatts. Undergraduate. Project:
-    ``Detecting variations in water volume of the Guarani Aquifer from GRACE
-    satellite gravity measurements''.}
-
-
-\section{Reviewer}
-
-\begin{cvcolumns}
-    \cvcolumn{}{\begin{itemize}
-        \item Computers and Geosciences (since 2011)
-        \item Geophysics (since 2013)
-        \item Central European Journal of Geosciences (since 2013)
-        \item Pure and Applied Geophysics (since 2015)
-        \item Journal of Applied Geophysics (since 2015)
-        \item Geophysical Prospecting (since 2015)
-    \end{itemize}}
-\end{cvcolumns}
-
-
-\section{Languages}
-
-\cvitem{Portuguese}{Native}
-\cvitem{English}{Fluent (TOEFL iBT score 115 out of 120 obtained 14 Sep 2007)}
 
 \end{document}
