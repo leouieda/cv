@@ -13,11 +13,11 @@
 \newcommand{\SoftwareTitle}[1]{{\fontsize{13pt}{0}\selectfont \bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
 % Macros to add links to code and PDF versions of articles
-\newcommand{\Code}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [code]}}
-\newcommand{\PDF}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [pdf]}}
-\newcommand{\Slides}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [slides]}}
-\newcommand{\Poster}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [poster]}}
-\newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}}
+\newcommand{\Code}[1]{[\href{#1}{code}]}
+\newcommand{\PDF}[1]{[\href{#1}{pdf}]}
+\newcommand{\Slides}[1]{[\href{#1}{slides}]}
+\newcommand{\Poster}[1]{[\href{#1}{poster}]}
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 % Macros to set the year and duration
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
@@ -33,14 +33,14 @@
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 
 % Set the page margins
-\usepackage[left=0.7in,right=0.7in,top=1in,bottom=1in]{geometry}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 
 % No indentation
 \setlength\parindent{0cm}
 
 % Increase the line spacing
 \renewcommand{\baselinestretch}{1.1}
-\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.5}
 
 % Remove space between items in itemize and enumerate
 \usepackage{enumitem}
@@ -65,15 +65,17 @@
 \pagestyle{fancy}
 \fancyhf{}
 \chead{
+    \itshape
     \fontsize{10pt}{12pt}\selectfont
     \MyName
-    \hspace{0.2cm} | \hspace{0.2cm}
+    \hspace{0.2cm} - \hspace{0.2cm}
     \Title
-    \hspace{0.2cm} | \hspace{0.2cm}
+    \hspace{0.2cm} - \hspace{0.2cm}
     \monthyear\today
 }
-\rhead{\fontsize{10pt}{12pt}\selectfont \thepage}
-\cfoot{}
+\rhead{}
+\cfoot{\fontsize{10pt}{0}\selectfont \thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 % Metadata for the PDF output and control of hyperlinks
 \usepackage[colorlinks=true]{hyperref}
@@ -179,7 +181,7 @@
     \newline
     Thesis: \textit{Forward modeling and inversion of gravitational fields in
     spherical coordinates}
-    \newline
+    %\newline
     \Code{https://github.com/leouieda/phd-thesis}
     \PDF{http://www.leouieda.com/about/phd.html}
     \\
@@ -188,7 +190,7 @@
     \newline
     Thesis: \textit{Robust 3D gravity gradient inversion by planting anomalous
     densities}
-    \newline
+    %\newline
     \Code{https://github.com/pinga-lab/paper-planting-densities}
     \PDF{http://www.leouieda.com/about/masters.html}
     \\
@@ -200,7 +202,7 @@
     \newline
     Thesis: \textit{Forward modeling of the gravity gradient tensor using
     tesseroids}
-    \newline
+    %\newline
     \Code{https://github.com/leouieda/barchelor-thesis}
     \PDF{http://www.leouieda.com/about/bachelors.html}
 \end{tabularx}
@@ -222,31 +224,38 @@
 \section*{Honors \& Awards}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}l X}
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}}
     \Year{2017}  &
-    SBGf Premio tese
-    \hspace{0.9\textwidth}
+    Brazilian Geophysical Society (SBGf) Award for \textbf{Best PhD Thesis}
+    of 2015-2017
     \\
     \Year{2016}  &
-    Paraninfo
+    Universidade do Estado do Rio de Janeiro, Brazil, School of Geology
+    \textbf{Teaching Award} given by the graduating class of 2016
     \\
     \Duration{2011}{2015}  &
-    CAPES PhD
+    Brazilian Ministry of Education CAPES \textbf{PhD Scholarship} (4 years)
+    with Professor Valéria C. F. Barbosa
     \\
     \Year{2011}  &
-    EAGE Travel grant
+    SEG Near Surface Geophysics Section \textbf{Student Travel Grant} to
+    present at the SEG Annual Meeting, San Antornio, TX, USA
     \\
     \Year{2011}  &
-    SEG Travel grant
+    EAGE \textbf{PACE Student Travel Grant} to present at the 73rd EAGE
+    Conference \& Exhibition, Vienna, Austria
     \\
     \Duration{2010}{2011}  &
-    CAPES MSc
+    Brazilian Ministry of Education CAPES \textbf{Masters Scholarship} (2
+    years) with Professor Valéria C. F. Barbosa
     \\
     \Year{2008}  &
-    SBGf
+    Brazilian Geophysical Society (SBGf) \textbf{Undergraduate Research
+    Scholarship} (1 year) with Professor Naomi Ussami
     \\
     \Year{2005}  &
-    FAPESP
+    São Paulo Research Foundation (FAPESP) \textbf{Undergraduate Research
+    Scholarship} (1 year) with Professor Manoel S. D'Agrella Filho
 \end{tabularx}
 
 
@@ -257,21 +266,21 @@
 \begin{tabularx}{\textwidth}{@{}X X X@{}}
     \SoftwareTitle{Fatiando a Terra}
     \newline
-    \emph{A Python library for geophysical data analysis, modeling, and
-    inversion.}
+    A Python library for geophysical data analysis, modeling, and
+    inversion.
     \newline
     \href{https://github.com/fatiando/fatiando}{github.com/fatiando/fatiando}
     &
     \SoftwareTitle{Tesseroids}
     \newline
-    \emph{Command-line programs written in C for forward modeling of
-    gravitational fields in spherical coordinates.}
+    Command-line programs for forward modeling of gravitational fields in
+    spherical coordinates.
     \newline
     \href{https://github.com/leouieda/tesseroids}{github.com/leouieda/tesseroids}
     &
     \SoftwareTitle{GMT/Python}
     \newline
-    \emph{A Python interface for the Generic Mapping Tools.}
+    A Python interface for the Generic Mapping Tools.
     \newline
     \href{https://github.com/GenericMappingTools/gmt-python}{github.com/GenericMappingTools/\newline gmt-python}
 \end{tabularx}
@@ -282,7 +291,7 @@
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}X X@{}}
-    \TableTitle{Undergraduate} & \TableTitle{Short-courses/Workshops}
+    \TableTitle{Undergraduate} & \TableTitle{Workshops/Short courses}
     \\[0.1cm]
     \begin{tabular}{@{}l l}
         \Duration{2014}{2016}  &
@@ -322,12 +331,87 @@
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
-    \Year{2017}  &
-    SBGf Premio tese
-    \hspace{0.9\textwidth}
+\Year{2017}  &
+    \textbf{Uieda, L}.
+    Step-by-step NMO correction,
+    \emph{The Leading Edge},
+    \DOI{10.1190/tle36020179.1}.
+    \PDF{http://www.leouieda.com/papers/nmo-tutorial.html}
+    \Code{https://github.com/pinga-lab/nmo-tutorial}
     \\
-    \Year{2016}  &
-    Paraninfo
+    ~ &
+    \textbf{Uieda, L} and Barbosa, VCF.
+    Fast non-linear gravity inversion in spherical coordinates with application
+    to the South American Moho,
+    \emph{Geophysical Journal International},
+    \DOI{10.1093/gji/ggw390}.
+    \PDF{http://www.leouieda.com/papers/paper-moho-inversion-tesseroids-2016.html}
+    \Code{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}
+    \\
+\Year{2016}  &
+    \textbf{Uieda, L}, Barbosa, VCF and Braitenberg, C.
+    Tesseroids: forward modeling gravitational fields in spherical coordinates,
+    \emph{Geophysics},
+    \DOI{10.1190/geo2015-0204.1}.
+    \PDF{http://www.leouieda.com/papers/paper-tesseroids-2016.html}
+    \Code{https://github.com/pinga-lab/paper-tesseroids}
+    \\
+    ~ &
+    Carlos, DU, \textbf{Uieda, L}, and Barbosa, VCF.
+    How two gravity-gradient inversion methods can be used to reveal different
+    geologic features of ore deposit - A case study from the Quadrilátero
+    Ferrífero (Brazil),
+    \emph{Journal of Applied Geophysics},
+    \DOI{10.1016/j.jappgeo.2016.04.011}.
+    \PDF{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}
+    \\
+\Year{2015}  &
+    Oliveira Jr, VC, Sales, DP, Barbosa, VCF, and \textbf{Uieda, L}.
+    Estimation of the total magnetization direction of approximately spherical
+    bodies,
+    \emph{Nonlinear Processes in Geophysics},
+    \DOI{10.5194/npg-22-215-2015}.
+    \PDF{http://www.leouieda.com/papers/paper-mag-dir-2015.html}
+    \Code{https://github.com/pinga-lab/Total-magnetization-of-spherical-bodies}
+    \\
+\Year{2014}  &
+    \textbf{Uieda, L}, Oliveira Jr, VC, and Barbosa, VCF.
+    Geophysical tutorial: Euler deconvolution of potential-field data,
+    \emph{The Leading Edge},
+    \DOI{10.1190/tle33040448.1}.
+    \PDF{http://www.leouieda.com/papers/paper-tle-euler-tutorial-2014.html}
+    \Code{https://github.com/pinga-lab/paper-tle-euler-tutorial}
+    \\
+    ~ &
+    Carlos, DU, \textbf{Uieda, L}, and Barbosa, VCF.
+    Imaging iron ore from the Quadrilátero Ferrífero (Brazil) using geophysical
+    inversion and drill hole data,
+    \emph{Ore Geology Reviews},
+    \DOI{10.1016/j.oregeorev.2014.02.011}.
+    \PDF{http://www.leouieda.com/papers/paper-quadrilatero-2014.html}
+    \\
+\Year{2013}  &
+    Melo, FF, Barbosa, VCF, \textbf{Uieda, L}, Oliveira Jr, VC, and Silva, JBC.
+    Estimating the nature and the horizontal and vertical positions of 3D
+    magnetic sources using Euler deconvolution,
+    \emph{Geophysics},
+    \DOI{10.1190/geo2012-0515.1}.
+    \PDF{http://www.leouieda.com/papers/paper-euler-plateau-2013.html}
+    \\
+    ~ &
+    Oliveira Jr, VC, Barbosa, VCF, and \textbf{Uieda, L}.
+    Polynomial equivalent layer,
+    \emph{Geophysics},
+    \DOI{10.1190/geo2012-0196.1}.
+    \PDF{http://www.leouieda.com/papers/paper-polynomial-eqlayer-2013.html}
+    \\
+\Year{2012}  &
+    \textbf{Uieda, L} and Barbosa, VCF.
+    Robust 3D gravity gradient inversion by planting anomalous densities,
+    \emph{Geophysics},
+    \DOI{10.1190/geo2011-0388.1}.
+    \PDF{http://www.leouieda.com/papers/paper-planting-anomalous-densities-2012.html}
+    \Code{https://github.com/pinga-lab/paper-planting-densities}
 \end{tabularx}
 
 
@@ -335,12 +419,32 @@
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
-    \Year{2017}  &
-    SBGf Premio tese
-    \hspace{0.9\textwidth}
-    \\
-    \Year{2016}  &
-    Paraninfo
+%Melo, F. F., Barbosa, V. C. F., Uieda, L., Jr, V. C. O., and Silva, J. B. C. (2014). A Single Euler Solution Per Anomaly. In 76th EAGE Conference and Exhibition 2014. https://doi.org/10.3997/2214-4609.20140891
+
+%Uieda, L., Oliveira Jr, V. C., and Barbosa, V. C. F. (2013). Modeling the Earth with Fatiando a Terra. In S. van der Walt, J. Millman, and K. Huff (Eds.), Proceedings of the 12th Python in Science Conference (pp. 91–98). Retrieved from http://conference.scipy.org/proceedings/scipy2013/uieda.html
+
+%Uieda, L., and Barbosa, V. C. F. (2012). Use of the “shape-of-anomaly” data misfit in 3D inversion by planting anomalous densities (pp. 1–6). Society of Exploration Geophysicists. https://doi.org/10.1190/segam2012-0383.1
+
+%Carlos, D. U., Uieda, L., Li, Y., Barbosa, V. C. F., Braga, M. A., Angeli, G., and Peres, G. (2012). Iron ore interpretation using gravity-gradient inversions in the Carajás, Brazil. In SEG Annual Meeting (pp. 1–5). Society of Exploration Geophysicists. https://doi.org/10.1190/segam2012-0525.1
+
+%Oliveira Jr., V. C., Barbosa, V. C. F., and Uieda, L. (2012). Camada Equivalente Polinomial. In V Simpósio Brasileiro de Geofísica. Retrieved from http://www.earthdoc.org/publication/publicationdetails/?publication=67523
+
+%Uieda, L., Bomfim, E. P., Braitenberg, C., and Molina, E. (2011). Optimal forward calculation method of the Marussi tensor due to a geologic structure at GOCE height. In Proceedings of the 4th International GOCE User Workshop. Retrieved from http://www.lithoflex.org/bib/Munich2011_GOCEU.pdf
+
+%Uieda, L., and Barbosa, V. C. F. (2011c). Robust 3D gravity gradient inversion by planting anomalous densities. In SEG Annual Meeting. https://doi.org/10.1190/1.3628201
+
+%Uieda, L., and Barbosa, V. C. (2011a). 3D gravity inversion by planting anomalous densities. In 12th International Congress of the Brazilian Geophysical Society. Retrieved from http://www.earthdoc.org/publication/publicationdetails/?publication=55052
+
+%Uieda, L., and Barbosa, V. C. F. (2011b). 3D gravity gradient inversion by planting density anomalies. In 73th EAGE Conference and Exhibition incorporating SPE EUROPEC. https://doi.org/10.3997/2214-4609.20149567
+
+%Carlos, D. U., Uieda, L., Barbosa, V. C. F., Braga, M. A., and Gomes, A. A. S. (2011). In-depth imaging of an iron orebody from Quadrilatero Ferrifero using 3D gravity gradient inversion. In SEG Annual Meeting (pp. 902–906). Society of Exploration Geophysicists. https://doi.org/10.1190/1.3628219
+
+\Year{2011}  &
+    Carlos, DU, Barbosa, VCF, Uieda, L, and Braga, MA.
+    Inversão de Dados de Aerogradiometria Gravimétrica 3D-FTG Aplicada a
+    Exploração Mineral na Região do Quadrilátero Ferrífero.
+    \emph{12th International Congress of the Brazilian Geophysical Society}.
+    \DOI{10.1190/sbgf2011-243}.
 \end{tabularx}
 
 
