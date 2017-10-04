@@ -8,11 +8,15 @@
 \newcommand{\Email}{leouieda@gmail.com}
 \newcommand{\ORCID}{0000-0001-6123-9515}
 \newcommand{\TablePad}{\vspace{-0.4cm}}
+%\newcommand{\Item}{$\bullet$ \hspace{0.1cm}}
+\newcommand{\Item}{}
 \newcommand{\SoftwareTitle}[1]{{\fontsize{13pt}{0}\selectfont \bfseries #1}}
-\newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \mdseries #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
 % Macros to add links to code and PDF versions of articles
 \newcommand{\Code}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [code]}}
 \newcommand{\PDF}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [pdf]}}
+\newcommand{\Slides}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [slides]}}
+\newcommand{\Poster}[1]{\href{#1}{\fontsize{10pt}{0}\selectfont [poster]}}
 \newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}}
 % Macros to set the year and duration
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
@@ -52,7 +56,7 @@
 % Configure the font style for sections
 \usepackage{sectsty}
 \sectionfont{\vspace{0.2cm}\mdseries\fontsize{16pt}{0}\selectfont\uppercase}
-\subsectionfont{\mdseries\fontsize{14pt}{0}\selectfont}
+\subsectionfont{\itshape\mdseries\fontsize{14pt}{0}\selectfont}
 % Control the font size
 \usepackage{anyfontsize}
 
@@ -122,20 +126,18 @@
 \section*{Research interests}
 
 \TablePad
-\begin{tabularx}{\textwidth}{rr}
-    \parbox{0.5\textwidth}{
-        \begin{itemize}
-        \item Gravity and magnetics
-        \item Inverse problem theory
-        \end{itemize}
-    }
+\begin{tabularx}{\textwidth}{@{}X X X@{}}
+    \Item Gravity and magnetics
     &
-    \parbox{0.5\textwidth}{
-        \begin{itemize}
-        \item Open-source scientific software
-        \item Reproducibility of computations
-        \end{itemize}
-    }
+    \Item Open-source scientific software
+    &
+    ~
+    \\
+    \Item Inverse problem theory
+    &
+    \Item Reproducibility of computations
+    &
+    ~
 \end{tabularx}
 
 
@@ -211,8 +213,8 @@
 \begin{tabularx}{\textwidth}{@{}l X}
     \Duration{11/2014}{11/2017}  &
     QUALITEC/UERJ program for training a technician for the Laboratory of
-    Exploration Geophysics (LAGEX). Total BRL \$154,800 as a scholarship for
-    the technician.
+    Exploration Geophysics
+    \textbf{(BRL \$154,800 as a scholarship for the technician)}.
 \end{tabularx}
 
 
@@ -220,9 +222,10 @@
 \section*{Honors \& Awards}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}l p{0.9\textwidth}}
+\begin{tabularx}{\textwidth}{@{}l X}
     \Year{2017}  &
     SBGf Premio tese
+    \hspace{0.9\textwidth}
     \\
     \Year{2016}  &
     Paraninfo
@@ -311,5 +314,117 @@
     \end{tabular}
 \end{tabularx}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Publications}
+
+\subsection*{Journal articles}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l X}
+    \Year{2017}  &
+    SBGf Premio tese
+    \hspace{0.9\textwidth}
+    \\
+    \Year{2016}  &
+    Paraninfo
+\end{tabularx}
+
+
+\subsection*{Conference proceedings}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l X}
+    \Year{2017}  &
+    SBGf Premio tese
+    \hspace{0.9\textwidth}
+    \\
+    \Year{2016}  &
+    Paraninfo
+\end{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Presentations
+          \lowercase{\fontsize{11pt}{0}\selectfont (first author only)}}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}l X}
+    \Year{2017}  &
+    SBGf Premio tese
+    \hspace{0.9\textwidth}
+    \\
+    \Year{2016}  &
+    Paraninfo
+\end{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Skills}
+
+\TablePad
+\begin{tabularx}{\textwidth}[t]{@{}p{0.5\textwidth} p{0.5\textwidth}@{}}
+    \TableTitle{Languages} &
+    \TableTitle{Programming}
+    \\[0.1cm]
+    \begin{tabular}[t]{@{}l}
+        \Item English: fluent (TOEFL iBT score 115/120)
+        \\
+        \Item Portuguese: native
+        \\
+        \Item Spanish: basic
+    \end{tabular}
+    &
+    \begin{tabular}[t]{@{}l}
+        \Item Python (main language since 2008)
+        \\
+        \Item C
+        \\
+        \Item Bash
+        \\
+        \Item Version control (git, mercurial, subversion)
+        \\
+        \Item HTML \& CSS
+        \\
+        \Item LaTeX
+    \end{tabular}
+\end{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Service}
+
+\TablePad
+\begin{tabularx}{\textwidth}[t]{@{}p{0.5\textwidth} p{0.5\textwidth}@{}}
+    \TableTitle{Affiliations}
+    &
+    \TableTitle{Reviewer}
+    \\[0.1cm]
+    \begin{tabular}[t]{@{}l}
+        \Item American Geophysical Union
+        \\
+        \Item Society of Exploration Geophysicists
+        \\
+        \Item Geological Society of America
+    \end{tabular}
+    &
+    \begin{tabular}[t]{@{}l}
+        \Item Computers \& Geosciences
+        \\
+        \Item Geophysics
+        \\
+        \Item Central European Journal of Geosciences
+        \\
+        \Item Pure and Applied Geophysics
+        \\
+        \Item Journal of Applied Geophysics
+        \\
+        \Item Geophysical Prospecting
+        \\
+        \Item Geophysical Journal International
+        \\
+        \Item Journal of Geodesy
+    \end{tabular}
+\end{tabularx}
 
 \end{document}
