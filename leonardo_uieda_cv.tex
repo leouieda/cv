@@ -1,6 +1,5 @@
 \documentclass[11pt, a4paper]{article}
 
-
 \newcommand{\FirstName}{Leonardo}
 \newcommand{\LastName}{Uieda}
 \newcommand{\Initials}{L}
@@ -13,12 +12,14 @@
 \newcommand{\Item}{}
 \newcommand{\SoftwareTitle}[1]{{\fontsize{13pt}{0}\selectfont \bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
+\newcommand{\Invited}{[\textbf{invited}]}
 % Macros to add links to code and PDF versions of articles
 \newcommand{\Code}[1]{[\href{#1}{code}]}
 \newcommand{\PDF}[1]{[\href{#1}{pdf}]}
 \newcommand{\Slides}[1]{[\href{#1}{slides}]}
 \newcommand{\Poster}[1]{[\href{#1}{poster}]}
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+\newcommand{\Youtube}[1]{[\textbf{recording:} \href{https://youtu.be/#1}{youtu.be/#1}]}
 % Macros to set the year and duration
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
@@ -115,13 +116,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
-\begin{tabular}{@{}l c@{}}
-    \parbox{0.6\textwidth}{
+\begin{tabular}{@{}l l@{}}
+    \parbox{0.55\textwidth}{
         {\fontsize{36pt}{0}\selectfont \MyName}
         \\[0.5cm]
         {\fontsize{13pt}{0}\selectfont \Title \, | \, \monthyear\today}
     } &
-    \parbox{0.4\textwidth}{
+    \parbox{0.45\textwidth}{
+        \begin{flushright}
         \fontsize{10pt}{12pt}\selectfont
         Department of Geology and Geophysics, SOEST
         \\
@@ -136,6 +138,7 @@
         \href{mailto:\Email}{\Email}
         \, | \,
         \href{http://www.leouieda.com}{www.leouieda.com}
+        \end{flushright}
     }
 \end{tabular}
 
@@ -143,19 +146,19 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Research interests}
+\section*{interests}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}X X X@{}}
     \Item Gravity and magnetics
     &
-    \Item Open-source scientific software
+    \Item Open-source software
     &
     ~
     \\
-    \Item Inverse problem theory
+    \Item Inverse problems
     &
-    \Item Reproducibility of computations
+    \Item Reproducibility
     &
     ~
 \end{tabularx}
@@ -514,17 +517,141 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Conference Presentations
+\section*{Presentations
           \lowercase{\fontsize{11pt}{0}\selectfont (presenting author only)}}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
-    \Year{2017}  &
-    SBGf Premio tese
-    \hspace{0.9\textwidth}
+\Year{2017}  &
+    \Me, et al.
+    Bringing the Generic Mapping Tools to Python,
+    \emph{Scipy 2017},
+    Austin, USA.
+    \Youtube{93M4How7R24}
+    \Slides{http://www.leouieda.com/talks/scipy2017.html}
     \\
-    \Year{2016}  &
-    Paraninfo
+    ~ &
+    \Me.
+    Inverting gravity to map the Moho: A new method and the open source
+    software that made it possible,
+    \emph{University of Hawaii},
+    Honolulu, USA.
+    \Invited{}
+    \Slides{http://www.leouieda.com/talks/tgif-2017.html}
+    \\
+\Year{2015}  &
+    \Me.
+    Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
+    \emph{Universidade de São Paulo},
+    São Paulo, Brazil.
+    \Invited{}
+    \Slides{http://www.leouieda.com/talks/iag-04-2015.html}
+    \\
+\Year{2014}  &
+    \Me, et al.
+    Using Fatiando a Terra to solve inverse problems in geophysics,
+    \emph{Scipy 2014},
+    Austin, USA.
+    \Poster{http://www.leouieda.com/posters/scipy2014.html}
+    \\
+    ~ &
+    \Me, et al.
+    Gravity inversion in spherical coordinates using tesseroids,
+    \emph{EGU General Assembly 2014},
+    Vienna, Austria.
+    \Slides{http://www.leouieda.com/talks/egu2014.html}
+    \\
+\Year{2013}  &
+    \Me, et al.
+    Modeling the Earth with Fatiando a Terra,
+    \emph{Scipy 2013},
+    Austin, USA.
+    \Youtube{Ec38h1oB8cc}
+    \Slides{http://www.leouieda.com/talks/scipy2013.html}
+    \\
+    ~ &
+    \Me, et al.
+    3D magnetic inversion by planting anomalous densities,
+    \emph{AGU Meeting of the Americas},
+    Cancun, Mexico.
+    \Slides{http://www.leouieda.com/talks/agu-cancun2013.html}
+    \\
+\Year{2012}  &
+    \Dio, \Me, et al.
+    Iron ore interpretation using gravity-gradient inversions in the Carajás,
+    Brazil,
+    \emph{SEG Annual Meeting 2012},
+    Las Vegas, USA.
+    \Slides{http://www.leouieda.com/talks/seg-carlos2012.html}
+    \\
+    ~ &
+    \Me, et al.
+    Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
+    anomalous densities,
+    \emph{SEG Annual Meeting 2012},
+    Las Vegas, USA.
+    \Slides{http://www.leouieda.com/talks/seg2012.html}
+    \\
+    ~ &
+    \Me, et al.
+    Rapid 3D inversion of gravity and gravity gradient data to test geologic
+    hypotheses,
+    \emph{International Symposium on Gravity, Geoid and Height Systems},
+    Venice, Italy.
+    \Slides{http://www.leouieda.com/talks/gghs2012.html}
+    \\
+\Year{2011}  &
+    \Me, et al.
+    Robust 3D gravity gradient inversion by planting anomalous densities,
+    \emph{SEG Annual Meeting 2011},
+    San Antonio, USA.
+    \Slides{http://www.leouieda.com/talks/seg2011.html}
+    \\
+    ~ &
+    \Me, et al.
+    3D gravity inversion by planting anomalous densities,
+    \emph{Internation Congress of the Brazilian Geophysical Society},
+    Rio de Janeiro, Brazil.
+    \Slides{http://www.leouieda.com/talks/sbgf2011.html}
+    \\
+    ~ &
+    \Me, et al.
+    Optimal forward calculation method of the Marussi tensor due to a geologic
+    structure at GOCE height,
+    \emph{4th International GOCE User Workshop},
+    Munich, Germany.
+    \Poster{http://www.leouieda.com/posters/goce2011.html}
+    \\
+    ~ &
+    \Me, et al.
+    3D gravity gradient inversion by planting density anomalies,
+    \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
+    Vienna, Austria.
+    \Poster{http://www.leouieda.com/posters/eage2011.html}
+    \\
+\Year{2010}  &
+    \Me, et al.
+    Computation of the gravity gradient tensor due to topographic masses using
+    tesseroids,
+    \emph{AGU Meeting of the Americas},
+    Foz do Iguaçu, Brazil.
+    \Slides{http://www.leouieda.com/talks/agu2010.html}
+    \\
+\Year{2008}  &
+    \Me, et al.
+    Utilização de tesseróides na modelagem de dados de gradiometria
+    gravimétrica,
+    \emph{XIII Simpósio de Iniciação Científica do IAG-USP},
+    São Paulo, Brazil.
+    \Poster{http://www.leouieda.com/posters/simposio-iag-2008.html}
+    \\
+\Year{2006}  &
+    \Me, et al.
+    Paleomagnetismo e mineralogia magnética dos diques cambrianos de Maravilhas
+    e Prata (PB),
+    \emph{XI Simpósio de Iniciação Científica do IAG/USP},
+    São Paulo, Brazil.
+    \Poster{http://www.leouieda.com/posters/simposio-iag-2006.html}
 \end{tabularx}
 
 
