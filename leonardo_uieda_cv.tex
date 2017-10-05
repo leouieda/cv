@@ -3,6 +3,7 @@
 
 \newcommand{\FirstName}{Leonardo}
 \newcommand{\LastName}{Uieda}
+\newcommand{\Initials}{L}
 \newcommand{\MyName}{\FirstName\ \LastName}
 \newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\Email}{leouieda@gmail.com}
@@ -22,6 +23,23 @@
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
 
+% Names for citing coauthors
+\newcommand{\Me}{\textbf{\LastName, \Initials}}
+\newcommand{\Val}{Barbosa, VCF}
+\newcommand{\Bi}{Oliveira Jr, VC}
+\newcommand{\Paul}{Wessel, P}
+\newcommand{\Carla}{Braitenberg, C}
+\newcommand{\JB}{Silva, JBC}
+\newcommand{\Dai}{Sales, DP}
+\newcommand{\Figura}{Melo, FF}
+\newcommand{\Dio}{Carlos, DU}
+\newcommand{\BragaVale}{Braga, MA}
+\newcommand{\YLi}{Li, Y}
+\newcommand{\Angeli}{Angeli, G}
+\newcommand{\Peres}{Peres, G}
+\newcommand{\Everton}{Bomfim, EP}
+\newcommand{\Eder}{Molina, E}
+\newcommand{\Gomes}{Gomes, AAS}
 
 \usepackage{graphicx}
 \usepackage{tabularx}
@@ -332,7 +350,7 @@
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
 \Year{2017}  &
-    \textbf{Uieda, L}.
+    \Me.
     Step-by-step NMO correction,
     \emph{The Leading Edge},
     \DOI{10.1190/tle36020179.1}.
@@ -340,7 +358,7 @@
     \Code{https://github.com/pinga-lab/nmo-tutorial}
     \\
     ~ &
-    \textbf{Uieda, L} and Barbosa, VCF.
+    \Me, \Val.
     Fast non-linear gravity inversion in spherical coordinates with application
     to the South American Moho,
     \emph{Geophysical Journal International},
@@ -349,7 +367,7 @@
     \Code{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}
     \\
 \Year{2016}  &
-    \textbf{Uieda, L}, Barbosa, VCF and Braitenberg, C.
+    \Me, \Val, \Carla.
     Tesseroids: forward modeling gravitational fields in spherical coordinates,
     \emph{Geophysics},
     \DOI{10.1190/geo2015-0204.1}.
@@ -357,7 +375,7 @@
     \Code{https://github.com/pinga-lab/paper-tesseroids}
     \\
     ~ &
-    Carlos, DU, \textbf{Uieda, L}, and Barbosa, VCF.
+    \Dio, \Me, \Val.
     How two gravity-gradient inversion methods can be used to reveal different
     geologic features of ore deposit - A case study from the Quadrilátero
     Ferrífero (Brazil),
@@ -366,7 +384,7 @@
     \PDF{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}
     \\
 \Year{2015}  &
-    Oliveira Jr, VC, Sales, DP, Barbosa, VCF, and \textbf{Uieda, L}.
+    \Bi, \Dai, \Val, \Me.
     Estimation of the total magnetization direction of approximately spherical
     bodies,
     \emph{Nonlinear Processes in Geophysics},
@@ -375,7 +393,7 @@
     \Code{https://github.com/pinga-lab/Total-magnetization-of-spherical-bodies}
     \\
 \Year{2014}  &
-    \textbf{Uieda, L}, Oliveira Jr, VC, and Barbosa, VCF.
+    \Me, \Bi, \Val.
     Geophysical tutorial: Euler deconvolution of potential-field data,
     \emph{The Leading Edge},
     \DOI{10.1190/tle33040448.1}.
@@ -383,7 +401,7 @@
     \Code{https://github.com/pinga-lab/paper-tle-euler-tutorial}
     \\
     ~ &
-    Carlos, DU, \textbf{Uieda, L}, and Barbosa, VCF.
+    \Dio, \Me, \Val.
     Imaging iron ore from the Quadrilátero Ferrífero (Brazil) using geophysical
     inversion and drill hole data,
     \emph{Ore Geology Reviews},
@@ -391,7 +409,7 @@
     \PDF{http://www.leouieda.com/papers/paper-quadrilatero-2014.html}
     \\
 \Year{2013}  &
-    Melo, FF, Barbosa, VCF, \textbf{Uieda, L}, Oliveira Jr, VC, and Silva, JBC.
+    \Figura, \Val, \Me, \Bi, \JB.
     Estimating the nature and the horizontal and vertical positions of 3D
     magnetic sources using Euler deconvolution,
     \emph{Geophysics},
@@ -399,14 +417,14 @@
     \PDF{http://www.leouieda.com/papers/paper-euler-plateau-2013.html}
     \\
     ~ &
-    Oliveira Jr, VC, Barbosa, VCF, and \textbf{Uieda, L}.
+    \Bi, \Val, \Me.
     Polynomial equivalent layer,
     \emph{Geophysics},
     \DOI{10.1190/geo2012-0196.1}.
     \PDF{http://www.leouieda.com/papers/paper-polynomial-eqlayer-2013.html}
     \\
 \Year{2012}  &
-    \textbf{Uieda, L} and Barbosa, VCF.
+    \Me, \Val.
     Robust 3D gravity gradient inversion by planting anomalous densities,
     \emph{Geophysics},
     \DOI{10.1190/geo2011-0388.1}.
@@ -419,38 +437,85 @@
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
-%Melo, F. F., Barbosa, V. C. F., Uieda, L., Jr, V. C. O., and Silva, J. B. C. (2014). A Single Euler Solution Per Anomaly. In 76th EAGE Conference and Exhibition 2014. https://doi.org/10.3997/2214-4609.20140891
-
-%Uieda, L., Oliveira Jr, V. C., and Barbosa, V. C. F. (2013). Modeling the Earth with Fatiando a Terra. In S. van der Walt, J. Millman, and K. Huff (Eds.), Proceedings of the 12th Python in Science Conference (pp. 91–98). Retrieved from http://conference.scipy.org/proceedings/scipy2013/uieda.html
-
-%Uieda, L., and Barbosa, V. C. F. (2012). Use of the “shape-of-anomaly” data misfit in 3D inversion by planting anomalous densities (pp. 1–6). Society of Exploration Geophysicists. https://doi.org/10.1190/segam2012-0383.1
-
-%Carlos, D. U., Uieda, L., Li, Y., Barbosa, V. C. F., Braga, M. A., Angeli, G., and Peres, G. (2012). Iron ore interpretation using gravity-gradient inversions in the Carajás, Brazil. In SEG Annual Meeting (pp. 1–5). Society of Exploration Geophysicists. https://doi.org/10.1190/segam2012-0525.1
-
-%Oliveira Jr., V. C., Barbosa, V. C. F., and Uieda, L. (2012). Camada Equivalente Polinomial. In V Simpósio Brasileiro de Geofísica. Retrieved from http://www.earthdoc.org/publication/publicationdetails/?publication=67523
-
-%Uieda, L., Bomfim, E. P., Braitenberg, C., and Molina, E. (2011). Optimal forward calculation method of the Marussi tensor due to a geologic structure at GOCE height. In Proceedings of the 4th International GOCE User Workshop. Retrieved from http://www.lithoflex.org/bib/Munich2011_GOCEU.pdf
-
-%Uieda, L., and Barbosa, V. C. F. (2011c). Robust 3D gravity gradient inversion by planting anomalous densities. In SEG Annual Meeting. https://doi.org/10.1190/1.3628201
-
-%Uieda, L., and Barbosa, V. C. (2011a). 3D gravity inversion by planting anomalous densities. In 12th International Congress of the Brazilian Geophysical Society. Retrieved from http://www.earthdoc.org/publication/publicationdetails/?publication=55052
-
-%Uieda, L., and Barbosa, V. C. F. (2011b). 3D gravity gradient inversion by planting density anomalies. In 73th EAGE Conference and Exhibition incorporating SPE EUROPEC. https://doi.org/10.3997/2214-4609.20149567
-
-%Carlos, D. U., Uieda, L., Barbosa, V. C. F., Braga, M. A., and Gomes, A. A. S. (2011). In-depth imaging of an iron orebody from Quadrilatero Ferrifero using 3D gravity gradient inversion. In SEG Annual Meeting (pp. 902–906). Society of Exploration Geophysicists. https://doi.org/10.1190/1.3628219
-
+\Year{2014}  &
+    \Figura, \Val, \Me, \Bi, \JB.
+    A Single Euler Solution Per Anomaly,
+    \emph{76th EAGE Conference and Exhibition 2014},
+    \DOI{10.3997/2214-4609.20140891}.
+    \\
+\Year{2013}  &
+    \Me, \Bi, \Val.
+    Modeling the Earth with Fatiando a Terra,
+    \emph{Proceedings of the 12th Python in Science Conference}.
+    \PDF{http://www.leouieda.com/talks/scipy2013.html}
+    \Code{https://github.com/leouieda/scipy2013}
+    \\
+\Year{2012}  &
+    \Me, \Val.
+    Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
+    anomalous densities,
+    \emph{SEG Technical Program Expanded Abstracts},
+    \DOI{10.1190/segam2012-0383.1}.
+    \PDF{http://www.leouieda.com/talks/seg2012.html}
+    \Code{https://github.com/leouieda/seg2012}
+    \\
+    ~ &
+    \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
+    Iron ore interpretation using gravity-gradient inversions in the Carajás, Brazil.
+    \emph{SEG Technical Program Expanded Abstracts},
+    \DOI{10.1190/segam2012-0525.1}.
+    \\
 \Year{2011}  &
-    Carlos, DU, Barbosa, VCF, Uieda, L, and Braga, MA.
+    \Me, \Everton, \Carla, \Eder.
+    Optimal forward calculation method of the Marussi tensor due to a geologic
+    structure at GOCE height,
+    \emph{Proceedings of the 4th International GOCE User Workshop}.
+    \PDF{http://www.leouieda.com/posters/goce2011.html}
+    \Code{https://github.com/leouieda/goce2011}
+    \\
+    ~ &
+    \Me, \Val.
+    Robust 3D gravity gradient inversion by planting anomalous densities,
+    \emph{SEG Technical Program Expanded Abstracts},
+    \DOI{10.1190/1.3628201}.
+    \PDF{http://www.leouieda.com/talks/seg2011.html}
+    \Code{https://github.com/leouieda/seg2011}
+    \\
+    ~ &
+    \Me, \Val.
+    3D gravity inversion by planting anomalous densities.
+    \emph{12th International Congress of the Brazilian Geophysical Society},
+    \DOI{10.1190/sbgf2011-179}.
+    \PDF{http://www.leouieda.com/talks/sbgf2011.html}
+    \Code{https://github.com/leouieda/sbgf2011}
+    \\
+    ~ &
+    \Me, \Val.
+    3D gravity gradient inversion by planting density anomalies.
+    \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
+    \DOI{10.3997/2214-4609.20149567}.
+    \PDF{http://www.leouieda.com/posters/eage2011.html}
+    \Code{https://github.com/leouieda/eage2011}
+    \\
+    ~ &
+    \Dio, \Me, \Val, \BragaVale, \Gomes.
+    In-depth imaging of an iron orebody from Quadrilatero Ferrifero using 3D
+    gravity gradient inversion,
+    \emph{SEG Technical Program Expanded Abstracts},
+    \DOI{10.1190/1.3628219}.
+    \\
+    ~ &
+    \Dio, \Val, \Me, \BragaVale.
     Inversão de Dados de Aerogradiometria Gravimétrica 3D-FTG Aplicada a
-    Exploração Mineral na Região do Quadrilátero Ferrífero.
-    \emph{12th International Congress of the Brazilian Geophysical Society}.
+    Exploração Mineral na Região do Quadrilátero Ferrífero,
+    \emph{12th International Congress of the Brazilian Geophysical Society},
     \DOI{10.1190/sbgf2011-243}.
 \end{tabularx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Presentations
-          \lowercase{\fontsize{11pt}{0}\selectfont (first author only)}}
+\section*{Conference Presentations
+          \lowercase{\fontsize{11pt}{0}\selectfont (presenting author only)}}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
