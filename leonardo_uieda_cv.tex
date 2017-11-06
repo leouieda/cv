@@ -1,27 +1,24 @@
 \documentclass[11pt, a4paper]{article}
 
+% Identifying information
+\newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\FirstName}{Leonardo}
 \newcommand{\LastName}{Uieda}
 \newcommand{\Initials}{L}
 \newcommand{\MyName}{\FirstName\ \LastName}
-\newcommand{\Title}{Curriculum Vit\ae}
+\newcommand{\Me}{\textbf{\LastName, \Initials}}  % For citations
 \newcommand{\Email}{leouieda@gmail.com}
+\newcommand{\Website}{www.leouieda.com}
 \newcommand{\ORCID}{0000-0001-6123-9515}
-\newcommand{\TablePad}{\vspace{-0.4cm}}
-%\newcommand{\Item}{$\bullet$ \hspace{0.1cm}}
-\newcommand{\Item}{}
-\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
-\newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
-\newcommand{\Invited}{[\textbf{Invited}] -- }
-% Macros to add links to code and PDF versions of articles
-\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-\newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
-% Macros to set the year and duration
-\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
-\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
+\newcommand{\Affiliation}{
+    Department of Geology and Geophysics
+    -- SOEST -- University of Hawai'i at Manoa
+}
+\newcommand{\Address}{
+    1680 East-West Rd -- POST 804, 96822 Honolulu, HI, USA
+}
 
 % Names for citing coauthors
-\newcommand{\Me}{\textbf{\LastName, \Initials}}
 \newcommand{\Val}{Barbosa, VCF}
 \newcommand{\Bi}{Oliveira Jr, VC}
 \newcommand{\Paul}{Wessel, P}
@@ -41,9 +38,28 @@
 \newcommand{\Agustina}{Pesce, A}
 \newcommand{\Gimenez}{Gimenez, ME}
 
-\usepackage{graphicx}
+
+% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Control the font size
+\usepackage{anyfontsize}
+
+% Template variables for styling
+\newcommand{\TablePad}{\vspace{-0.4cm}}
+\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
+\newcommand{\Invited}{[\textbf{Invited}] -- }
+
+% Macros to add links
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+\newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
+
+% For fancy and multipage tables
 \usepackage{tabularx}
-% For multipage tables
 \usepackage{ltablex}
 
 % Define command to insert month name and year as date
@@ -71,14 +87,13 @@
 \usepackage{fontspec}
 \setmainfont[BoldFont=SourceSansPro-Semibold]{SourceSansPro-Light}
 \setmonofont{Source Code Pro}
+
 % Configure the font style for sections
 \usepackage{sectsty}
 \sectionfont{\vspace{0.5cm}\mdseries\fontsize{16pt}{0}\selectfont\uppercase}
 \subsectionfont{\vspace{0.2cm}\mdseries\fontsize{12pt}{0}\selectfont\uppercase}
-% Control the font size
-\usepackage{anyfontsize}
 
-% Set headers
+% Set fancy headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -86,9 +101,9 @@
     \itshape
     \fontsize{10pt}{12pt}\selectfont
     \MyName
-    \hspace{0.2cm} - \hspace{0.2cm}
+    \hspace{0.2cm} -- \hspace{0.2cm}
     \Title
-    \hspace{0.2cm} - \hspace{0.2cm}
+    \hspace{0.2cm} -- \hspace{0.2cm}
     \monthyear\today
 }
 \rhead{}
@@ -105,6 +120,7 @@
     filecolor=black,
     urlcolor=MidnightBlue
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -113,35 +129,26 @@
 % No header for the first page
 \thispagestyle{empty}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
-\begin{tabular}{@{}l l@{}}
-    \parbox{0.55\textwidth}{
-        {\fontsize{36pt}{0}\selectfont \MyName}
-        \\[0.5cm]
-        {\fontsize{13pt}{0}\selectfont \Title \, | \, \monthyear\today}
-    } &
-    \parbox{0.45\textwidth}{
-        \begin{flushright}
-        \fontsize{10pt}{12pt}\selectfont
-        Department of Geology and Geophysics, SOEST
-        \\
-        University of Hawai'i at Manoa
-        \\
-        1680 East-West Rd, POST 804
-        \\
-        96822 Honolulu, HI, USA
-        \\
+\begin{center}
+    {\fontsize{36pt}{0}\selectfont \MyName}
+    \\[0.5cm]
+    {\fontsize{13pt}{0}\selectfont \Title \, | \, \monthyear\today}
+    \\[0.5cm]
+    {\fontsize{10pt}{0}\selectfont
+        \Affiliation
+        \\[0.2cm]
+        \Address
+        \\[0.08cm]
         ORCID: \href{http://orcid.org/\ORCID}{\ORCID}
-        \\
+        \, | \,
         \href{mailto:\Email}{\Email}
         \, | \,
-        \href{http://www.leouieda.com}{www.leouieda.com}
-        \end{flushright}
+        \href{http://\Website}{\Website}
     }
-\end{tabular}
-
-\vspace{0.5cm}
+\end{center}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,22 +160,21 @@
     \textbf{Visiting Research Scholar} (postdoc),
     University of Hawaii at Manoa, USA
     \newline
-    \textit{Developing a Python interface for
-    the Generic Mapping Tools open-source software with Professor Paul Wessel.}
+    Developing a Python interface for the Generic Mapping Tools open-source
+    software with Professor Paul Wessel.
     \\
     \Duration{2014}{present}  &
     \textbf{Assistant Professor} (on leave),
     Universidade do Estado do Rio de Janeiro, Brazil
     \newline
-    \textit{Professor of Geophysics at the Department of Applied Geology.
-    Responsible for the Laboratory of Exploration Geophysics.}
+    Professor of Geophysics at the Department of Applied Geology.
     \\
     \Year{Feb 2011}  &
     \textbf{Visiting Researcher},
     University of Trieste, Italy
     \newline
-    \textit{Developing version 1.0 of the open-source software Tesseroids
-    with Professor Carla Braitenberg.}
+    Developing version 1.0 of the open-source software Tesseroids
+    with Professor Carla Braitenberg.
 \end{tabularx}
 
 
@@ -328,7 +334,7 @@ All educational material developed for these courses is available at
 Source code, data, and PDFs for most articles are available
 at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
 
-\subsection*{Journal articles}
+\subsection*{Peer-Reviewed Journal articles}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
@@ -344,12 +350,6 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
 %\Year{Submitted}  &
     %\\
 \Year{2017}  &
-    \Me.
-    Step-by-step NMO correction,
-    \emph{The Leading Edge},
-    \DOI{10.1190/tle36020179.1}.
-    \\
-    ~ &
     \Me, \Val.
     Fast non-linear gravity inversion in spherical coordinates with application
     to the South American Moho,
@@ -378,12 +378,6 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
     \DOI{10.5194/npg-22-215-2015}.
     \\
 \Year{2014}  &
-    \Me, \Bi, \Val.
-    Geophysical tutorial: Euler deconvolution of potential-field data,
-    \emph{The Leading Edge},
-    \DOI{10.1190/tle33040448.1}.
-    \\
-    ~ &
     \Dio, \Me, \Val.
     Imaging iron ore from the Quadrilátero Ferrífero (Brazil) using geophysical
     inversion and drill hole data,
@@ -411,7 +405,29 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
 \end{tabularx}
 
 
-\subsection*{Conference proceedings}
+\subsection*{Non Peer-Reviewed Journal articles}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+%\Year{In preparation}  &
+    %\\
+%\Year{Submitted}  &
+    %\\
+\Year{2017}  &
+    \Me.
+    Step-by-step NMO correction,
+    \emph{The Leading Edge},
+    \DOI{10.1190/tle36020179.1}.
+    \\
+\Year{2014}  &
+    \Me, \Bi, \Val.
+    Geophysical tutorial: Euler deconvolution of potential-field data,
+    \emph{The Leading Edge},
+    \DOI{10.1190/tle33040448.1}.
+\end{tabularx}
+
+
+\subsection*{Peer-Reviewed Conference proceedings}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
