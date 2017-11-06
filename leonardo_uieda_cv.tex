@@ -51,6 +51,16 @@
 \newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
 \newcommand{\Invited}{[\textbf{Invited}] -- }
 
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\usepackage{environ}
+\NewEnviron{EntriesTable}{
+    \TablePad
+    \begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}@{}}
+        \BODY
+    \end{tabularx}
+}
+
 % Macros to add links
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
@@ -154,8 +164,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Professional experience}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Duration{2017}{present}  &
     \textbf{Visiting Research Scholar} (postdoc),
     University of Hawaii at Manoa, USA
@@ -175,14 +184,13 @@
     \newline
     Developing version 1.0 of the open-source software Tesseroids
     with Professor Carla Braitenberg.
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Education}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Year{2016}  &
     \textbf{PhD in Geophysics}, Observatório Nacional, Brazil
     \newline
@@ -203,14 +211,13 @@
     \\
     \Year{2008}  &
     \textbf{International Exchange}, York University, Canada
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Honors \& Awards}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Year{2017}  &
     Brazilian Geophysical Society (SBGf) Award for \textbf{Best PhD Thesis}
     of 2015 -- 2017
@@ -242,26 +249,24 @@
     \Year{2005}  &
     São Paulo Research Foundation (FAPESP) \textbf{Undergraduate Research
     Scholarship} (1 year) with Professor Manoel S. D'Agrella Filho
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Funding}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Duration{2014}{2018}  &
     QUALITEC/UERJ program for training a technician for the Laboratory of
     Exploration Geophysics
     (BRL \$154,800 as a scholarship for the technician).
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Open-source Software}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Duration{2017}{present}  &
     \SoftwareTitle{GMT/Python}
     --
@@ -284,7 +289,7 @@
     \newline
     Command-line programs for forward modeling of gravitational fields in
     spherical coordinates.
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,8 +300,7 @@ All educational material developed for these courses is available at
 
 \subsection*{Undergraduate -- Universidade do Estado do Rio de Janeiro}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Duration{2014}{2016}  &
      matesp
     \\
@@ -308,12 +312,12 @@ All educational material developed for these courses is available at
     \\
     \Year{2015}  &
      Intro Geology
-\end{tabularx}
+\end{EntriesTable}
+
 
 \subsection*{Workshops and Short Courses}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
         \Year{2017}  &
         Short course Python UH
         \\
@@ -325,7 +329,7 @@ All educational material developed for these courses is available at
         \\
         \Year{2011}  &
         Inversion USP
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -336,8 +340,7 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
 
 \subsection*{Peer-Reviewed Journal articles}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
 \Year{In preparation}  &
     \Santiago, \Agustina, \Me, \Gimenez.
     Tesseroid gravity field calculations using variable densities in depth.
@@ -402,13 +405,12 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
     Robust 3D gravity gradient inversion by planting anomalous densities,
     \emph{Geophysics},
     \DOI{10.1190/geo2011-0388.1}.
-\end{tabularx}
+\end{EntriesTable}
 
 
 \subsection*{Non Peer-Reviewed Journal articles}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
 %\Year{In preparation}  &
     %\\
 %\Year{Submitted}  &
@@ -424,13 +426,12 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
     Geophysical tutorial: Euler deconvolution of potential-field data,
     \emph{The Leading Edge},
     \DOI{10.1190/tle33040448.1}.
-\end{tabularx}
+\end{EntriesTable}
 
 
 \subsection*{Peer-Reviewed Conference proceedings}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
 \Year{2014}  &
     \Figura, \Val, \Me, \Bi, \JB.
     A Single Euler Solution Per Anomaly,
@@ -492,7 +493,7 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
     Exploração Mineral na Região do Quadrilátero Ferrífero,
     \emph{12th International Congress of the Brazilian Geophysical Society},
     \DOI{10.1190/sbgf2011-243}.
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -504,10 +505,7 @@ and
 \\
 \href{http://www.leouieda.com/posters/}{www.leouieda.com/posters}
 \\
-
-\TablePad
-%\begin{tabularx}{\textwidth}{@{}l X}
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
 \Year{Future}  &
     \Invited{}
     \Me, et al.
@@ -641,7 +639,7 @@ and
     e Prata (PB),
     \emph{XI Simpósio de Iniciação Científica do IAG/USP},
     São Paulo, Brazil.
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -651,9 +649,7 @@ and
 
 * Year indicates the date of first completed review.
 \\
-
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Year{2017} &
     Geophysical Journal International
     \\
@@ -677,12 +673,12 @@ and
     \\
     \Year{2011} &
     Computers \& Geosciences
-\end{tabularx}
+\end{EntriesTable}
+
 
 \subsection*{Affiliations}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     \Duration{2017}{present} &
     Geological Society of America
     \\
@@ -691,19 +687,18 @@ and
     \\
     \Duration{2010}{present} &
     Society of Exploration Geophysicists
-\end{tabularx}
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Languages}
 
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+\begin{EntriesTable}
     Portuguese & Native
     \\
     English & Fluent (TOEFL iBT score 115/120)
     \\
     Spanish & Basic reading
-\end{tabularx}
+\end{EntriesTable}
 
 \end{document}
