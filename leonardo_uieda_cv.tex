@@ -12,12 +12,8 @@
 \newcommand{\Item}{}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
-\newcommand{\Invited}{[\textbf{invited}]}
+\newcommand{\Invited}{[\textbf{Invited}] -- }
 % Macros to add links to code and PDF versions of articles
-\newcommand{\Code}[1]{[\href{#1}{code}]}
-\newcommand{\PDF}[1]{[\href{#1}{pdf}]}
-\newcommand{\Slides}[1]{[\href{#1}{slides}]}
-\newcommand{\Poster}[1]{[\href{#1}{poster}]}
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
 % Macros to set the year and duration
@@ -41,6 +37,9 @@
 \newcommand{\Everton}{Bomfim, EP}
 \newcommand{\Eder}{Molina, E}
 \newcommand{\Gomes}{Gomes, AAS}
+\newcommand{\Santiago}{Soler, SR}
+\newcommand{\Agustina}{Pesce, A}
+\newcommand{\Gimenez}{Gimenez, ME}
 
 \usepackage{graphicx}
 \usepackage{tabularx}
@@ -183,27 +182,18 @@
     \newline
     Thesis: \textit{Forward modeling and inversion of gravitational fields in
     spherical coordinates}
-    %\newline
-    \Code{https://github.com/leouieda/phd-thesis}
-    \PDF{http://www.leouieda.com/about/phd.html}
     \\
     \Year{2011}  &
     \textbf{MSc in Geophysics}, Observatório Nacional, Brazil
     \newline
     Thesis: \textit{Robust 3D gravity gradient inversion by planting anomalous
     densities}
-    %\newline
-    \Code{https://github.com/pinga-lab/paper-planting-densities}
-    \PDF{http://www.leouieda.com/about/masters.html}
     \\
     \Year{2009}  &
     \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
     \newline
     Thesis: \textit{Forward modeling of the gravity gradient tensor using
     tesseroids}
-    %\newline
-    \Code{https://github.com/leouieda/barchelor-thesis}
-    \PDF{http://www.leouieda.com/about/bachelors.html}
     \\
     \Year{2008}  &
     \textbf{International Exchange}, York University, Canada
@@ -294,6 +284,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Teaching}
 
+All educational material developed for these courses is available at
+\href{http://www.leouieda.com/teaching}{www.leouieda.com/teaching}
+
 \subsection*{Undergraduate -- Universidade do Estado do Rio de Janeiro}
 
 \TablePad
@@ -332,15 +325,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Publications}
 
+Source code, data, and PDFs for most articles are available
+at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
+
 \subsection*{Journal articles}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
 \Year{In preparation}  &
-    Santiago.
+    \Santiago, \Agustina, \Me, \Gimenez.
+    Tesseroid gravity field calculations using variable densities in depth.
     \\
     ~ &
-    Zhao.
+    Zhao, G, Liu, J, \Me, Chen, B, Guo, R, Chen, L.
+    A fast algorithm for forward modeling of gravitational fields in
+    spherical coordinates with 3D Gauss-Legendre Quadrature.
     \\
 %\Year{Submitted}  &
     %\\
@@ -349,8 +348,6 @@
     Step-by-step NMO correction,
     \emph{The Leading Edge},
     \DOI{10.1190/tle36020179.1}.
-    \PDF{http://www.leouieda.com/papers/nmo-tutorial.html}
-    \Code{https://github.com/pinga-lab/nmo-tutorial}
     \\
     ~ &
     \Me, \Val.
@@ -358,16 +355,12 @@
     to the South American Moho,
     \emph{Geophysical Journal International},
     \DOI{10.1093/gji/ggw390}.
-    \PDF{http://www.leouieda.com/papers/paper-moho-inversion-tesseroids-2016.html}
-    \Code{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}
     \\
 \Year{2016}  &
     \Me, \Val, \Carla.
     Tesseroids: forward modeling gravitational fields in spherical coordinates,
     \emph{Geophysics},
     \DOI{10.1190/geo2015-0204.1}.
-    \PDF{http://www.leouieda.com/papers/paper-tesseroids-2016.html}
-    \Code{https://github.com/pinga-lab/paper-tesseroids}
     \\
     ~ &
     \Dio, \Me, \Val.
@@ -376,7 +369,6 @@
     Ferrífero (Brazil),
     \emph{Journal of Applied Geophysics},
     \DOI{10.1016/j.jappgeo.2016.04.011}.
-    \PDF{http://www.leouieda.com/papers/paper-quadrilatero2-2016.html}
     \\
 \Year{2015}  &
     \Bi, \Dai, \Val, \Me.
@@ -384,16 +376,12 @@
     bodies,
     \emph{Nonlinear Processes in Geophysics},
     \DOI{10.5194/npg-22-215-2015}.
-    \PDF{http://www.leouieda.com/papers/paper-mag-dir-2015.html}
-    \Code{https://github.com/pinga-lab/Total-magnetization-of-spherical-bodies}
     \\
 \Year{2014}  &
     \Me, \Bi, \Val.
     Geophysical tutorial: Euler deconvolution of potential-field data,
     \emph{The Leading Edge},
     \DOI{10.1190/tle33040448.1}.
-    \PDF{http://www.leouieda.com/papers/paper-tle-euler-tutorial-2014.html}
-    \Code{https://github.com/pinga-lab/paper-tle-euler-tutorial}
     \\
     ~ &
     \Dio, \Me, \Val.
@@ -401,7 +389,6 @@
     inversion and drill hole data,
     \emph{Ore Geology Reviews},
     \DOI{10.1016/j.oregeorev.2014.02.011}.
-    \PDF{http://www.leouieda.com/papers/paper-quadrilatero-2014.html}
     \\
 \Year{2013}  &
     \Figura, \Val, \Me, \Bi, \JB.
@@ -409,22 +396,18 @@
     magnetic sources using Euler deconvolution,
     \emph{Geophysics},
     \DOI{10.1190/geo2012-0515.1}.
-    \PDF{http://www.leouieda.com/papers/paper-euler-plateau-2013.html}
     \\
     ~ &
     \Bi, \Val, \Me.
     Polynomial equivalent layer,
     \emph{Geophysics},
     \DOI{10.1190/geo2012-0196.1}.
-    \PDF{http://www.leouieda.com/papers/paper-polynomial-eqlayer-2013.html}
     \\
 \Year{2012}  &
     \Me, \Val.
     Robust 3D gravity gradient inversion by planting anomalous densities,
     \emph{Geophysics},
     \DOI{10.1190/geo2011-0388.1}.
-    \PDF{http://www.leouieda.com/papers/paper-planting-anomalous-densities-2012.html}
-    \Code{https://github.com/pinga-lab/paper-planting-densities}
 \end{tabularx}
 
 
@@ -442,8 +425,6 @@
     \Me, \Bi, \Val.
     Modeling the Earth with Fatiando a Terra,
     \emph{Proceedings of the 12th Python in Science Conference}.
-    \PDF{http://www.leouieda.com/talks/scipy2013.html}
-    \Code{https://github.com/leouieda/scipy2013}
     \\
 \Year{2012}  &
     \Me, \Val.
@@ -451,8 +432,6 @@
     anomalous densities,
     \emph{SEG Technical Program Expanded Abstracts},
     \DOI{10.1190/segam2012-0383.1}.
-    \PDF{http://www.leouieda.com/talks/seg2012.html}
-    \Code{https://github.com/leouieda/seg2012}
     \\
     ~ &
     \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
@@ -465,32 +444,24 @@
     Optimal forward calculation method of the Marussi tensor due to a geologic
     structure at GOCE height,
     \emph{Proceedings of the 4th International GOCE User Workshop}.
-    \PDF{http://www.leouieda.com/posters/goce2011.html}
-    \Code{https://github.com/leouieda/goce2011}
     \\
     ~ &
     \Me, \Val.
     Robust 3D gravity gradient inversion by planting anomalous densities,
     \emph{SEG Technical Program Expanded Abstracts},
     \DOI{10.1190/1.3628201}.
-    \PDF{http://www.leouieda.com/talks/seg2011.html}
-    \Code{https://github.com/leouieda/seg2011}
     \\
     ~ &
     \Me, \Val.
     3D gravity inversion by planting anomalous densities.
     \emph{12th International Congress of the Brazilian Geophysical Society},
     \DOI{10.1190/sbgf2011-179}.
-    \PDF{http://www.leouieda.com/talks/sbgf2011.html}
-    \Code{https://github.com/leouieda/sbgf2011}
     \\
     ~ &
     \Me, \Val.
     3D gravity gradient inversion by planting density anomalies.
     \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
     \DOI{10.3997/2214-4609.20149567}.
-    \PDF{http://www.leouieda.com/posters/eage2011.html}
-    \Code{https://github.com/leouieda/eage2011}
     \\
     ~ &
     \Dio, \Me, \Val, \BragaVale, \Gomes.
@@ -511,11 +482,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Presentations}
 
+Slides, posters, and abstracts for all presentations are available at
+\href{http://www.leouieda.com/talks/}{www.leouieda.com/talks}
+and
+\\
+\href{http://www.leouieda.com/posters/}{www.leouieda.com/posters}
+\\
+
 \TablePad
 %\begin{tabularx}{\textwidth}{@{}l X}
 \begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
 \Year{Future}  &
-    AGU
+    \Invited{}
+    \Me, et al.
+    Nurturing reliable and robust open-source scientific software,
+    \emph{AGU Fall Meeting 2017},
+    New Orleans, USA.
+    \\
+    ~  &
+    \Me, et al.
+    A modern Python interface for the Generic Mapping Tools,
+    \emph{AGU Fall Meeting 2017},
+    New Orleans, USA.
     \\
 \Year{2017}  &
     \Me, et al.
@@ -523,46 +511,40 @@
     \emph{Scipy 2017},
     Austin, USA.
     \Youtube{93M4How7R24}
-    \Slides{http://www.leouieda.com/talks/scipy2017.html}
     \\
     ~ &
+    \Invited{}
     \Me.
     Inverting gravity to map the Moho: A new method and the open source
     software that made it possible,
     \emph{University of Hawaii},
     Honolulu, USA.
-    \Invited{}
-    \Slides{http://www.leouieda.com/talks/tgif-2017.html}
     \\
 \Year{2016}  &
+    \Invited{}
     \Me.
     Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
     \emph{Observatório Nacional},
     Rio de Janeiro, Brazil.
-    \Invited{}
-    \Slides{http://www.leouieda.com/talks/iag-04-2015.html}
     \\
 \Year{2015}  &
+    \Invited{}
     \Me.
     Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
     \emph{Universidade de São Paulo},
     São Paulo, Brazil.
-    \Invited{}
-    \Slides{http://www.leouieda.com/talks/iag-04-2015.html}
     \\
 \Year{2014}  &
     \Me, et al.
     Using Fatiando a Terra to solve inverse problems in geophysics,
     \emph{Scipy 2014},
     Austin, USA.
-    \Poster{http://www.leouieda.com/posters/scipy2014.html}
     \\
     ~ &
     \Me, et al.
     Gravity inversion in spherical coordinates using tesseroids,
     \emph{EGU General Assembly 2014},
     Vienna, Austria.
-    \Slides{http://www.leouieda.com/talks/egu2014.html}
     \\
 \Year{2013}  &
     \Me, et al.
@@ -570,14 +552,12 @@
     \emph{Scipy 2013},
     Austin, USA.
     \Youtube{Ec38h1oB8cc}
-    \Slides{http://www.leouieda.com/talks/scipy2013.html}
     \\
     ~ &
     \Me, et al.
     3D magnetic inversion by planting anomalous densities,
     \emph{AGU Meeting of the Americas},
     Cancun, Mexico.
-    \Slides{http://www.leouieda.com/talks/agu-cancun2013.html}
     \\
 \Year{2012}  &
     \Dio, \Me, et al.
@@ -585,7 +565,6 @@
     Brazil,
     \emph{SEG Annual Meeting 2012},
     Las Vegas, USA.
-    \Slides{http://www.leouieda.com/talks/seg-carlos2012.html}
     \\
     ~ &
     \Me, et al.
@@ -593,7 +572,6 @@
     anomalous densities,
     \emph{SEG Annual Meeting 2012},
     Las Vegas, USA.
-    \Slides{http://www.leouieda.com/talks/seg2012.html}
     \\
     ~ &
     \Me, et al.
@@ -601,21 +579,18 @@
     hypotheses,
     \emph{International Symposium on Gravity, Geoid and Height Systems},
     Venice, Italy.
-    \Slides{http://www.leouieda.com/talks/gghs2012.html}
     \\
 \Year{2011}  &
     \Me, et al.
     Robust 3D gravity gradient inversion by planting anomalous densities,
     \emph{SEG Annual Meeting 2011},
     San Antonio, USA.
-    \Slides{http://www.leouieda.com/talks/seg2011.html}
     \\
     ~ &
     \Me, et al.
     3D gravity inversion by planting anomalous densities,
     \emph{Internation Congress of the Brazilian Geophysical Society},
     Rio de Janeiro, Brazil.
-    \Slides{http://www.leouieda.com/talks/sbgf2011.html}
     \\
     ~ &
     \Me, et al.
@@ -623,14 +598,12 @@
     structure at GOCE height,
     \emph{4th International GOCE User Workshop},
     Munich, Germany.
-    \Poster{http://www.leouieda.com/posters/goce2011.html}
     \\
     ~ &
     \Me, et al.
     3D gravity gradient inversion by planting density anomalies,
     \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
     Vienna, Austria.
-    \Poster{http://www.leouieda.com/posters/eage2011.html}
     \\
 \Year{2010}  &
     \Me, et al.
@@ -638,7 +611,6 @@
     tesseroids,
     \emph{AGU Meeting of the Americas},
     Foz do Iguaçu, Brazil.
-    \Slides{http://www.leouieda.com/talks/agu2010.html}
     \\
 \Year{2008}  &
     \Me, et al.
@@ -646,7 +618,6 @@
     gravimétrica,
     \emph{XIII Simpósio de Iniciação Científica do IAG-USP},
     São Paulo, Brazil.
-    \Poster{http://www.leouieda.com/posters/simposio-iag-2008.html}
     \\
 \Year{2006}  &
     \Me, et al.
@@ -654,7 +625,6 @@
     e Prata (PB),
     \emph{XI Simpósio de Iniciação Científica do IAG/USP},
     São Paulo, Brazil.
-    \Poster{http://www.leouieda.com/posters/simposio-iag-2006.html}
 \end{tabularx}
 
 
