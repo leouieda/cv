@@ -10,7 +10,7 @@
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 %\newcommand{\Item}{$\bullet$ \hspace{0.1cm}}
 \newcommand{\Item}{}
-\newcommand{\SoftwareTitle}[1]{{\fontsize{13pt}{0}\selectfont \bfseries #1}}
+\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
 \newcommand{\Invited}{[\textbf{invited}]}
 % Macros to add links to code and PDF versions of articles
@@ -19,7 +19,7 @@
 \newcommand{\Slides}[1]{[\href{#1}{slides}]}
 \newcommand{\Poster}[1]{[\href{#1}{poster}]}
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-\newcommand{\Youtube}[1]{[\textbf{recording:} \href{https://youtu.be/#1}{youtu.be/#1}]}
+\newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
 % Macros to set the year and duration
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
@@ -74,8 +74,8 @@
 \setmonofont{Source Code Pro}
 % Configure the font style for sections
 \usepackage{sectsty}
-\sectionfont{\vspace{0.2cm}\mdseries\fontsize{16pt}{0}\selectfont\uppercase}
-\subsectionfont{\itshape\mdseries\fontsize{14pt}{0}\selectfont}
+\sectionfont{\vspace{0.5cm}\mdseries\fontsize{16pt}{0}\selectfont\uppercase}
+\subsectionfont{\vspace{0.2cm}\mdseries\fontsize{12pt}{0}\selectfont\uppercase}
 % Control the font size
 \usepackage{anyfontsize}
 
@@ -149,27 +149,27 @@
 \section*{Professional experience}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}l X}
-    \Duration{02/2017}{present}  &
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Duration{2017}{present}  &
     \textbf{Visiting Research Scholar} (postdoc),
     University of Hawaii at Manoa, USA
     \newline
-    \textit{Working with Prof. Paul Wessel to build a Python interface for
-    the Generic Mapping Tools}
+    \textit{Developing a Python interface for
+    the Generic Mapping Tools open-source software with Professor Paul Wessel.}
     \\
-    \Duration{02/2014}{present}  &
+    \Duration{2014}{present}  &
     \textbf{Assistant Professor},
     Universidade do Estado do Rio de Janeiro, Brazil
     \newline
     \textit{Professor of Geophysics at the Department of Applied Geology.
-    Responsible for the Laboratory of Exploration Geophysics (LAGEX).}
+    Responsible for the Laboratory of Exploration Geophysics.}
     \\
-    \Duration{02/2011}{03/2011}  &
+    \Year{Feb 2011}  &
     \textbf{Visiting Researcher},
     University of Trieste, Italy
     \newline
-    \textit{Working with professor Carla Braitenberg to develop version 1.0 of
-    the open-source software Tesseroids.}
+    \textit{Developing version 1.0 of the open-source software Tesseroids
+    with Professor Carla Braitenberg.}
 \end{tabularx}
 
 
@@ -177,8 +177,8 @@
 \section*{Education}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}l X}
-    \Duration{11/2011}{04/2016}  &
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Year{2016}  &
     \textbf{PhD in Geophysics}, Observatório Nacional, Brazil
     \newline
     Thesis: \textit{Forward modeling and inversion of gravitational fields in
@@ -187,7 +187,7 @@
     \Code{https://github.com/leouieda/phd-thesis}
     \PDF{http://www.leouieda.com/about/phd.html}
     \\
-    \Duration{03/2010}{10/2011}  &
+    \Year{2011}  &
     \textbf{MSc in Geophysics}, Observatório Nacional, Brazil
     \newline
     Thesis: \textit{Robust 3D gravity gradient inversion by planting anomalous
@@ -196,10 +196,7 @@
     \Code{https://github.com/pinga-lab/paper-planting-densities}
     \PDF{http://www.leouieda.com/about/masters.html}
     \\
-    \Duration{08/2008}{05/2009}  &
-    \textbf{International Exchange}, York University, Canada
-    \\
-    \Duration{03/2004}{12/2009}  &
+    \Year{2009}  &
     \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
     \newline
     Thesis: \textit{Forward modeling of the gravity gradient tensor using
@@ -207,6 +204,9 @@
     %\newline
     \Code{https://github.com/leouieda/barchelor-thesis}
     \PDF{http://www.leouieda.com/about/bachelors.html}
+    \\
+    \Year{2008}  &
+    \textbf{International Exchange}, York University, Canada
 \end{tabularx}
 
 
@@ -214,11 +214,11 @@
 \section*{Funding}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}l X}
-    \Duration{11/2014}{11/2017}  &
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Duration{2014}{2018}  &
     QUALITEC/UERJ program for training a technician for the Laboratory of
     Exploration Geophysics
-    \textbf{(BRL \$154,800 as a scholarship for the technician)}.
+    (BRL \$154,800 as a scholarship for the technician).
 \end{tabularx}
 
 
@@ -226,10 +226,10 @@
 \section*{Honors \& Awards}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}}
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
     \Year{2017}  &
     Brazilian Geophysical Society (SBGf) Award for \textbf{Best PhD Thesis}
-    of 2015-2017
+    of 2015 -- 2017
     \\
     \Year{2016}  &
     Universidade do Estado do Rio de Janeiro, Brazil, School of Geology
@@ -265,52 +265,56 @@
 \section*{Open-source Software}
 
 \TablePad
-\begin{tabularx}{\textwidth}{@{}X X X@{}}
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Duration{2017}{present}  &
+    \SoftwareTitle{GMT/Python}
+    --
+    \href{https://github.com/GenericMappingTools/gmt-python}{github.com/GenericMappingTools/gmt-python}
+    \newline
+    A Python interface for the Generic Mapping Tools.
+    \\
+    \Duration{2010}{present}  &
     \SoftwareTitle{Fatiando a Terra}
+    --
+    \href{http://www.fatiando.org}{www.fatiando.org}
     \newline
     A Python library for geophysical data analysis, modeling, and
     inversion.
-    \newline
-    \href{https://github.com/fatiando/fatiando}{github.com/fatiando/fatiando}
-    &
+    \\
+    \Duration{2008}{present}  &
     \SoftwareTitle{Tesseroids}
+    --
+    \href{http://tesseroids.leouieda.com}{tesseroids.leouieda.com}
     \newline
     Command-line programs for forward modeling of gravitational fields in
     spherical coordinates.
-    \newline
-    \href{https://github.com/leouieda/tesseroids}{github.com/leouieda/tesseroids}
-    &
-    \SoftwareTitle{GMT/Python}
-    \newline
-    A Python interface for the Generic Mapping Tools.
-    \newline
-    \href{https://github.com/GenericMappingTools/gmt-python}{github.com/GenericMappingTools/\newline gmt-python}
 \end{tabularx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Teaching}
 
+\subsection*{Undergraduate -- Universidade do Estado do Rio de Janeiro}
+
 \TablePad
-\begin{tabularx}{\textwidth}{@{}X X@{}}
-    \TableTitle{Undergraduate} & \TableTitle{Workshops/Short courses}
-    \\[0.1cm]
-    \begin{tabular}{@{}l l}
-        \Duration{2014}{2016}  &
-         matesp
-        \hspace{10cm}
-        \\
-        \Duration{2014}{2016}  &
-         Geofisica 1
-        \\
-        \Duration{2014}{2016}  &
-         Geofisica 2
-        \\
-        \Year{2015}  &
-         Intro Geology
-    \end{tabular}
-    &
-    \begin{tabular}{@{}l l}
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Duration{2014}{2016}  &
+     matesp
+    \\
+    \Duration{2014}{2016}  &
+     Geofisica 1
+    \\
+    \Duration{2014}{2016}  &
+     Geofisica 2
+    \\
+    \Year{2015}  &
+     Intro Geology
+\end{tabularx}
+
+\subsection*{Workshops and Short Courses}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
         \Year{2017}  &
         Short course Python UH
         \\
@@ -322,7 +326,6 @@
         \\
         \Year{2011}  &
         Inversion USP
-    \end{tabular}
 \end{tabularx}
 
 
@@ -498,8 +501,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Presentations
-          \lowercase{\fontsize{11pt}{0}\selectfont (presenting author only)}}
+\section*{Presentations}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}l X}
@@ -519,6 +521,14 @@
     Honolulu, USA.
     \Invited{}
     \Slides{http://www.leouieda.com/talks/tgif-2017.html}
+    \\
+\Year{2016}  &
+    \Me.
+    Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
+    \emph{Observatório Nacional},
+    Rio de Janeiro, Brazil.
+    \Invited{}
+    \Slides{http://www.leouieda.com/talks/iag-04-2015.html}
     \\
 \Year{2015}  &
     \Me.
@@ -637,71 +647,65 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Skills}
+\section*{Academic Service \& Affiliations}
+
+\subsection*{Reviewer}
+
+* Year indicates the date of first completed review.
+\\
 
 \TablePad
-\begin{tabularx}{\textwidth}[t]{@{}p{0.5\textwidth} p{0.5\textwidth}@{}}
-    \TableTitle{Languages} &
-    \TableTitle{Programming}
-    \\[0.1cm]
-    \begin{tabular}[t]{@{}l}
-        \Item English: fluent (TOEFL iBT score 115/120)
-        \\
-        \Item Portuguese: native
-        \\
-        \Item Spanish: basic
-    \end{tabular}
-    &
-    \begin{tabular}[t]{@{}l}
-        \Item Python (main language since 2008)
-        \\
-        \Item C
-        \\
-        \Item Bash
-        \\
-        \Item Version control (git, mercurial, subversion)
-        \\
-        \Item HTML \& CSS
-        \\
-        \Item LaTeX
-    \end{tabular}
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Year{2017} &
+    Geophysical Journal International
+    \\
+    ~ &
+    Journal of Geodesy
+    \\
+    \Year{2015} &
+    Pure and Applied Geophysics
+    \\
+    ~ &
+    Journal of Applied Geophysics
+    \\
+    ~ &
+    Geophysical Prospecting
+    \\
+    \Year{2013} &
+    Geophysics
+    \\
+    ~ &
+    Central European Journal of Geosciences
+    \\
+    \Year{2011} &
+    Computers \& Geosciences
+\end{tabularx}
+
+\subsection*{Affiliations}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    \Duration{2017}{present} &
+    Geological Society of America
+    \\
+    \Duration{2010}{present} &
+    American Geophysical Union
+    \\
+    \Duration{2010}{present} &
+    Society of Exploration Geophysicists
 \end{tabularx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Service}
+\section*{Languages}
 
 \TablePad
-\begin{tabularx}{\textwidth}[t]{@{}p{0.5\textwidth} p{0.5\textwidth}@{}}
-    \TableTitle{Affiliations}
-    &
-    \TableTitle{Reviewer}
-    \\[0.1cm]
-    \begin{tabular}[t]{@{}l}
-        \Item American Geophysical Union
-        \\
-        \Item Society of Exploration Geophysicists
-        \\
-        \Item Geological Society of America
-    \end{tabular}
-    &
-    \begin{tabular}[t]{@{}l}
-        \Item Computers \& Geosciences
-        \\
-        \Item Geophysics
-        \\
-        \Item Central European Journal of Geosciences
-        \\
-        \Item Pure and Applied Geophysics
-        \\
-        \Item Journal of Applied Geophysics
-        \\
-        \Item Geophysical Prospecting
-        \\
-        \Item Geophysical Journal International
-        \\
-        \Item Journal of Geodesy
-    \end{tabular}
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}}
+    Portuguese & Native
+    \\
+    English & Fluent (TOEFL iBT score 115/120)
+    \\
+    Spanish & Basic reading
 \end{tabularx}
 
 \end{document}
