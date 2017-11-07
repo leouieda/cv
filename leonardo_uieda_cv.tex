@@ -61,12 +61,16 @@
 \newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
 \newcommand{\Invited}{[\textbf{Invited}] -- }
 
+% For fancy and multipage tables
+\usepackage{tabularx}
+\usepackage{ltablex}
+
 % Define a new environment to place all CV entries in a 2-column table.
 % Left column are the dates, right column the entries.
 \usepackage{environ}
 \NewEnviron{EntriesTable}{
     \TablePad
-    \begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.87\textwidth}@{}}
+    \begin{tabularx}{\textwidth}{@{}p{0.10\textwidth} p{0.9\textwidth}@{}}
         \BODY
     \end{tabularx}
 }
@@ -75,12 +79,8 @@
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
 % Macros to set the year and duration on the left column
-\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1\ --\ #2}
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
-
-% For fancy and multipage tables
-\usepackage{tabularx}
-\usepackage{ltablex}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
@@ -174,20 +174,20 @@
 \section*{Professional experience}
 
 \begin{EntriesTable}
-    \Duration{2017}{present}  &
+    \Duration{2017}{2019}  &
     \textbf{Visiting Research Scholar} (postdoc),
     University of Hawaii at Manoa, USA
     \newline
     Developing a Python interface for the Generic Mapping Tools open-source
     software with Professor Paul Wessel.
     \\
-    \Duration{2014}{present}  &
+    \Duration{2014}{}  &
     \textbf{Assistant Professor} (on leave),
     Universidade do Estado do Rio de Janeiro, Brazil
     \newline
     Professor of Geophysics at the Department of Applied Geology.
     \\
-    \Year{Feb 2011}  &
+    \Duration{02}{3/2011}  &
     \textbf{Visiting Researcher},
     University of Trieste, Italy
     \newline
@@ -273,35 +273,6 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Open-source Software}
-
-\begin{EntriesTable}
-    \Duration{2017}{present}  &
-    \SoftwareTitle{GMT/Python}
-    --
-    \href{https://github.com/GenericMappingTools/gmt-python}{github.com/GenericMappingTools/gmt-python}
-    \newline
-    A Python interface for the Generic Mapping Tools.
-    \\
-    \Duration{2010}{present}  &
-    \SoftwareTitle{Fatiando a Terra}
-    --
-    \href{http://www.fatiando.org}{www.fatiando.org}
-    \newline
-    A Python library for geophysical data analysis, modeling, and
-    inversion.
-    \\
-    \Duration{2008}{present}  &
-    \SoftwareTitle{Tesseroids}
-    --
-    \href{http://tesseroids.leouieda.com}{tesseroids.leouieda.com}
-    \newline
-    Command-line programs for forward modeling of gravitational fields in
-    spherical coordinates.
-\end{EntriesTable}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Teaching}
 
 All educational material developed for these courses is available at
@@ -356,6 +327,51 @@ All educational material developed for these courses is available at
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Open-source Software}
+
+* Year indicates when the project was started.
+All projects are currently ongoing.
+\\
+\begin{EntriesTable}
+    \Year{2017}  &
+    \textbf{GMT/Python}
+    --
+    \href{https://github.com/GenericMappingTools/gmt-python}{github.com/GenericMappingTools/gmt-python}
+    \newline
+    A Python interface for the Generic Mapping Tools.
+    \\
+    \Year{2010}  &
+    \textbf{Fatiando a Terra}
+    --
+    \href{http://www.fatiando.org}{www.fatiando.org}
+    \newline
+    A Python library for geophysical data analysis, modeling, and
+    inversion.
+    \\
+    \Year{2008}  &
+    \textbf{Tesseroids}
+    --
+    \href{http://tesseroids.leouieda.com}{tesseroids.leouieda.com}
+    \newline
+    Command-line programs for forward modeling of gravitational fields in
+    spherical coordinates.
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Open Datasets}
+
+\begin{EntriesTable}
+\Year{2017}  &
+    \Me, \Val.
+    A gravity-derived Moho model for South America: source code, data, and
+    model results from ``Fast non-linear gravity inversion in spherical
+    coordinates with application to the South American Moho''.
+    \DOI{10.6084/m9.figshare.3987267}
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Publications}
 
 Source code, data, and PDFs for most articles are available
@@ -364,7 +380,7 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
 \subsection*{Peer-Reviewed Journal articles}
 
 \begin{EntriesTable}
-\Year{In preparation}  &
+\Year{In prep.}  &
     \Santiago, \Agustina, \Me, \Gimenez.
     Tesseroid gravity field calculations using variable densities in depth.
     \\
@@ -373,7 +389,7 @@ at \href{http://www.leouieda.com/papers}{www.leouieda.com/papers}
     A fast algorithm for forward modeling of gravitational fields in
     spherical coordinates with 3D Gauss-Legendre Quadrature.
     \\
-%\Year{Submitted}  &
+%\Year{Review}  &
     %\\
 \Year{2017}  &
     \Me, \Val.
@@ -702,13 +718,13 @@ and
 \subsection*{Affiliations}
 
 \begin{EntriesTable}
-    \Duration{2017}{present} &
+    \Duration{2017}{} &
     Geological Society of America
     \\
-    \Duration{2010}{present} &
+    \Duration{2010}{} &
     American Geophysical Union
     \\
-    \Duration{2010}{present} &
+    \Duration{2010}{} &
     Society of Exploration Geophysicists
 \end{EntriesTable}
 
@@ -716,12 +732,13 @@ and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Languages}
 
-\begin{EntriesTable}
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}@{}}
     Portuguese & Native
     \\
     English & Fluent (TOEFL iBT score 115/120)
     \\
-    Spanish & Basic reading
-\end{EntriesTable}
+    Spanish & Basic reading and listening
+\end{tabularx}
 
 \end{document}
