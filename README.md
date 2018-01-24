@@ -11,8 +11,7 @@ little).
 You're free to reuse and modify this template under the terms of the BSD
 3-clause License (see `LICENSE.txt`).
 
-The template uses some Google Fonts and must be compiled using XeLaTex.
-More information on the `.tex` source file.
+Compiled using XeLaTex. More information on the `.tex` source file.
 
 I highly recommend using the `Makefile` to build the PDF by running:
 
