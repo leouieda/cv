@@ -58,7 +58,7 @@
 % Template variables for styling
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
-\newcommand{\TableTitle}[1]{{\fontsize{14pt}{0}\selectfont \itshape #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
 \newcommand{\Invited}{[\textbf{Invited}] -- }
 
 % For fancy and multipage tables
@@ -104,13 +104,13 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 
 % Set fonts. Requires compilation with xelatex
-\usepackage{fontspec}
-\setmainfont[BoldFont=SourceSansPro-Semibold]{SourceSansPro-Light}
-\setmonofont{Source Code Pro}
+%\usepackage{fontspec}
+%\setmainfont[BoldFont=SourceSansPro-Semibold]{SourceSansPro-Light}
+%\setmonofont{Source Code Pro}
 
 % Configure the font style for sections
 \usepackage{sectsty}
-\sectionfont{\vspace{0.5cm}\mdseries\fontsize{16pt}{0}\selectfont\uppercase}
+\sectionfont{\vspace{0.5cm}\bfseries\fontsize{12pt}{0}\selectfont\uppercase}
 \subsectionfont{\vspace{0.2cm}\mdseries\fontsize{12pt}{0}\selectfont\uppercase}
 
 % Set fancy headers
@@ -152,9 +152,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
 \begin{center}
-    {\fontsize{36pt}{0}\selectfont \MyName}
+    {\fontsize{18pt}{0}\selectfont \MyName}
     \\[0.5cm]
-    {\fontsize{13pt}{0}\selectfont \Title \, | \, \monthyear\today}
+    {\fontsize{12pt}{0}\selectfont \Title \, | \, \monthyear\today}
     \\[0.5cm]
     {\fontsize{10pt}{0}\selectfont
         \Affiliation
@@ -168,32 +168,6 @@
         \href{http://\Website}{\Website}
     }
 \end{center}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Professional experience}
-
-\begin{EntriesTable}
-    \Duration{2017}{2019}  &
-    \textbf{Visiting Research Scholar},
-    University of Hawaii at Manoa, USA
-    \newline
-    Developing a Python interface for the Generic Mapping Tools open-source
-    software with Professor Paul Wessel.
-    \\
-    \Duration{2014}{}  &
-    \textbf{Assistant Professor} (on leave),
-    Universidade do Estado do Rio de Janeiro, Brazil
-    \newline
-    Professor of Geophysics at the Department of Applied Geology.
-    \\
-    \Duration{02}{3/2011}  &
-    \textbf{Visiting Researcher},
-    University of Trieste, Italy
-    \newline
-    Developing version 1.0 of the open-source software Tesseroids
-    with Professor Carla Braitenberg.
-\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,12 +188,23 @@
     \\
     \Year{2009}  &
     \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
-    \newline
-    Thesis: \textit{Forward modeling of the gravity gradient tensor using
-    tesseroids}
     \\
     \Year{2008}  &
     \textbf{International Exchange}, York University, Canada
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Professional experience}
+
+\begin{EntriesTable}
+    \Duration{2017}{}  &
+    \textbf{Visiting Research Scholar},
+    University of Hawaii at Manoa, USA
+    \\
+    \Duration{2014}{}  &
+    \textbf{Assistant Professor},
+    Universidade do Estado do Rio de Janeiro, Brazil
 \end{EntriesTable}
 
 
@@ -235,9 +220,12 @@
     Universidade do Estado do Rio de Janeiro, Brazil, School of Geology
     \textbf{Teaching Award} given by the graduating class of 2016
     \\
+    \Duration{2014}{2018}  &
+    QUALITEC/UERJ Grant for training a technician for the Laboratory of
+    Exploration Geophysics - Universidade do Estado do Rio de Janeiro
+    \\
     \Duration{2011}{2015}  &
-    Brazilian Ministry of Education CAPES \textbf{PhD Scholarship} (4 years)
-    with Professor Valéria C. F. Barbosa
+    Brazilian Ministry of Education CAPES \textbf{PhD Research Scholarship}
     \\
     \Year{2011}  &
     SEG Near Surface Geophysics Section \textbf{Student Travel Grant} to
@@ -248,126 +236,15 @@
     Conference \& Exhibition, Vienna, Austria
     \\
     \Duration{2010}{2011}  &
-    Brazilian Ministry of Education CAPES \textbf{Masters Scholarship} (2
-    years) with Professor Valéria C. F. Barbosa
+    Brazilian Ministry of Education CAPES \textbf{Masters Research Scholarship}
     \\
     \Year{2008}  &
     Brazilian Geophysical Society (SBGf) \textbf{Undergraduate Research
-    Scholarship} (1 year) with Professor Naomi Ussami
+    Scholarship}
     \\
     \Year{2005}  &
     São Paulo Research Foundation (FAPESP) \textbf{Undergraduate Research
-    Scholarship} (1 year) with Professor Manoel S. D'Agrella Filho
-\end{EntriesTable}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Funding}
-
-\begin{EntriesTable}
-    \Duration{2014}{2018}  &
-    QUALITEC/UERJ program for training a technician for the Laboratory of
-    Exploration Geophysics
-    (BRL \$154,800 as a scholarship for the technician).
-\end{EntriesTable}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Teaching}
-
-All educational material developed for these courses is available at
-\href{http://www.leouieda.com/teaching}{leouieda.com/teaching}
-
-\subsection*{Undergraduate -- Universidade do Estado do Rio de Janeiro}
-
-\begin{EntriesTable}
-    \Duration{2014}{2016}  &
-    Special Mathematics I: Introduction to Programming and Numerical Analysis
-    \\
-    \Duration{2014}{2016}  &
-    Geophysics I: Gravity and magnetic methods
-    \\
-    \Duration{2014}{2016}  &
-    Geophysics II: Exploration Seismology
-    \\
-    \Year{2015}  &
-    Introduction to Geology
-\end{EntriesTable}
-
-
-\subsection*{Workshops and Short Courses}
-
-\begin{EntriesTable}
-\Year{2017}  &
-    Introduction to Python (6 hour workshop)
-    \newline
-    Department of Geology and Geophysics -- University of Hawaii at Manoa,
-    USA
-    \\
-\Year{2016}  &
-    Python for Geologists (6 hour workshop)
-    \newline
-    School of Geology -- Universidade do Estado do Rio de Janeiro, Brazil
-    \\
-    ~  &
-    Python for Earth Scientists (30 hour short course)
-    \newline
-    Department of Geophysics -- Universidade de São Paulo, Brazil
-    \\
-\Year{2014}  &
-    Introduction to Geophysical Inversion (16 hour short course)
-    \newline
-    Institute of Geosciences -- Universidade de Brasília, Brazil
-    \\
-\Year{2011}  &
-    Introduction to Geophysical Inversion (30 hour short course)
-    \newline
-    Department of Geophysics -- Universidade de São Paulo, Brazil
-\end{EntriesTable}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Open-source Software}
-
-* Year indicates when the project was started.
-All projects are currently ongoing.
-\\
-\begin{EntriesTable}
-    \Year{2017}  &
-    \textbf{GMT/Python}
-    --
-    \href{http://www.gmtpython.xyz}{www.gmtpython.xyz}
-    \newline
-    A Python interface for the Generic Mapping Tools.
-    \\
-    \Year{2010}  &
-    \textbf{Fatiando a Terra}
-    --
-    \href{http://www.fatiando.org}{www.fatiando.org}
-    \newline
-    A Python library for geophysical data analysis, modeling, and
-    inversion.
-    \\
-    \Year{2008}  &
-    \textbf{Tesseroids}
-    --
-    \href{http://tesseroids.leouieda.com}{tesseroids.leouieda.com}
-    \newline
-    Command-line programs for forward modeling of gravitational fields in
-    spherical coordinates.
-\end{EntriesTable}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Open Datasets}
-
-\begin{EntriesTable}
-\Year{2017}  &
-    \Me, \Val.
-    A gravity-derived Moho model for South America: source code, data, and
-    model results from ``Fast non-linear gravity inversion in spherical
-    coordinates with application to the South American Moho''.
-    \DOI{10.6084/m9.figshare.3987267}
+    Scholarship}
 \end{EntriesTable}
 
 
@@ -536,6 +413,91 @@ at \href{http://www.leouieda.com/papers}{leouieda.com/papers}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Open Datasets}
+
+\begin{EntriesTable}
+\Year{2017}  &
+    \Me, \Val.
+    A gravity-derived Moho model for South America: source code, data, and
+    model results from ``Fast non-linear gravity inversion in spherical
+    coordinates with application to the South American Moho''.
+    \DOI{10.6084/m9.figshare.3987267}
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Open-source Software}
+
+\textbf{GMT/Python} -- \href{http://www.gmtpython.xyz}{www.gmtpython.xyz}
+\\
+A Python interface for the Generic Mapping Tools.
+\\[0.3cm]
+\textbf{Fatiando a Terra} -- \href{http://www.fatiando.org}{www.fatiando.org}
+\\
+A Python library for geophysical data analysis, modeling, and
+inversion.
+\\[0.3cm]
+\textbf{Tesseroids} -- \href{http://www.tesseroids.org}{www.tesseroids.org}
+\\
+Command-line programs for forward modeling of gravitational fields in
+spherical coordinates.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Teaching}
+
+All educational material developed for these courses is available at
+\href{http://www.leouieda.com/teaching}{leouieda.com/teaching}
+
+\subsection*{Undergraduate -- Universidade do Estado do Rio de Janeiro}
+
+\begin{EntriesTable}
+    \Duration{2014}{2016}  &
+    Special Mathematics I: Introduction to Programming and Numerical Analysis
+    \\
+    \Duration{2014}{2016}  &
+    Geophysics I: Gravity and magnetic methods
+    \\
+    \Duration{2014}{2016}  &
+    Geophysics II: Exploration Seismology
+    \\
+    \Year{2015}  &
+    Introduction to Geology
+\end{EntriesTable}
+
+
+\subsection*{Workshops and Short Courses}
+
+\begin{EntriesTable}
+\Year{2017}  &
+    Introduction to Python (6 hour workshop)
+    \newline
+    Department of Geology and Geophysics -- University of Hawaii at Manoa,
+    USA
+    \\
+\Year{2016}  &
+    Python for Geologists (6 hour workshop)
+    \newline
+    School of Geology -- Universidade do Estado do Rio de Janeiro, Brazil
+    \\
+    ~  &
+    Python for Earth Scientists (30 hour short course)
+    \newline
+    Department of Geophysics -- Universidade de São Paulo, Brazil
+    \\
+\Year{2014}  &
+    Introduction to Geophysical Inversion (16 hour short course)
+    \newline
+    Institute of Geosciences -- Universidade de Brasília, Brazil
+    \\
+\Year{2011}  &
+    Introduction to Geophysical Inversion (30 hour short course)
+    \newline
+    Department of Geophysics -- Universidade de São Paulo, Brazil
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Presentations}
 
 Slides, posters, and abstracts for all presentations are available at
@@ -567,7 +529,6 @@ and
     \Youtube{93M4How7R24}
     \\
     ~ &
-    \Invited{}
     \Me.
     Inverting gravity to map the Moho: A new method and the open source
     software that made it possible,
@@ -685,49 +646,41 @@ and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Academic Service \& Affiliations}
 
+\subsection*{Committees}
+
+\begin{EntriesTable}
+    \Year{2015} & Chairman of the Election Committee for the deans of the
+    University and the School of Geology, Universidade do Estado do Rio de
+    Janeiro
+\end{EntriesTable}
+
+
 \subsection*{Reviewer}
 
-* Year indicates the date of first completed review.
-\\
-\begin{EntriesTable}
-    \Year{2017} &
-    Geophysical Journal International
-    \\
-    ~ &
-    Journal of Geodesy
-    \\
-    \Year{2015} &
-    Pure and Applied Geophysics
-    \\
-    ~ &
-    Journal of Applied Geophysics
-    \\
-    ~ &
-    Geophysical Prospecting
-    \\
-    \Year{2013} &
-    Geophysics
-    \\
-    ~ &
-    Central European Journal of Geosciences
-    \\
-    \Year{2011} &
-    Computers \& Geosciences
-\end{EntriesTable}
+Geophysical Journal International
+--
+Journal of Geodesy
+--
+Pure and Applied Geophysics
+--
+Journal of Applied Geophysics
+--
+Geophysical Prospecting
+--
+Geophysics
+--
+Central European Journal of Geosciences
+--
+Computers \& Geosciences
 
 
 \subsection*{Affiliations}
 
-\begin{EntriesTable}
-    \Duration{2017}{} &
-    Geological Society of America
-    \\
-    \Duration{2010}{} &
-    American Geophysical Union
-    \\
-    \Duration{2010}{} &
-    Society of Exploration Geophysicists
-\end{EntriesTable}
+American Geophysical Union
+--
+Society of Exploration Geophysicists
+--
+Geological Society of America
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
