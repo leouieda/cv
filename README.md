@@ -18,3 +18,9 @@ I highly recommend using the `Makefile` to build the PDF by running:
     make
 
 Use `make clean` to remove all generated files.
+
+
+## License
+
+All LaTeX template source code is distributed under the [BSD 3-clause
+License](https://opensource.org/licenses/BSD-3-Clause).
