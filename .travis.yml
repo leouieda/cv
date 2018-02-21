@@ -1,0 +1,30 @@
+sudo: require
+
+language: bash
+
+branches:
+    only:
+        - master
+
+notifications:
+    email: false
+
+env:
+    global:
+        # Github Token for pushing the built docs (GH_TOKEN)
+        - secure: "N0Rt5VNq5rX2uwlltUws0Sj03elzpIeYP4hYQkimmBfUnU5Cjw1seWEXYFZghvr4YZhoTYrmDv1DZsity3go7UCFy5/ZLkYl418ev7sOdQT2yA1hjAoNgFyRyXoJZLmUVaEDUYv/QQUBnMtE44F58SdGBPKbkY/epU7AvmvUgSw="
+
+before_install:
+    - sudo apt-get -q update
+    - sudo apt-get install -y texlive-full
+
+script:
+    - make
+
+deploy:
+    # Push the PDF to a branch
+    - provider: script
+      script: ci/deploy-pdf.sh
+      skip_cleanup: true
+      on:
+          branch: master
