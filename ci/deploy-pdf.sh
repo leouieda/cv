@@ -14,7 +14,8 @@ CLONE_DIR=deploy
 
 echo -e "Preparing to push to branch ${BRANCH} of ${USER}/${REPO}"
 
-echo -e "Copying generated files."
+echo -e "Copying generated files to ${HOME}/keep."
+mkdir -p $HOME/keep
 cp *.pdf $HOME/keep
 
 # Go to home and setup git
@@ -31,9 +32,11 @@ git clone ${CLONE_ARGS} ${REPO_URL} $CLONE_DIR 2>&1 >/dev/null
 cd $CLONE_DIR
 
 # Move the old branch out of the way and create a new one:
-echo -e "Create an empty ${BRANCH} branch"
+echo -e "Checkout the ${BRANCH} branch"
 git checkout ${BRANCH}
+echo -e "Backup the branch to ${BRANCH}-old"
 git branch -m ${BRANCH}-old
+echo -e "Create an empty ${BRANCH} branch"
 git checkout --orphan ${BRANCH}
 
 # Delete all the files and replace with our good set
