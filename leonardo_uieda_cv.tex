@@ -2,13 +2,14 @@
 % A clean template for an academic CV
 %
 % Uses tabularx to create two column entries (date and job/edu/citation).
-% Requires the Google Fonts "Source Sans Pro" and "Source Code Pro".
-% You can install them on Linux using TypeCatcher.
-% Must be compiled with XeLaTex to use the custom fonts (see the Makefile).
+% Defines commands to make adding entries simpler.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt, a4paper]{article}
+
+% Make sure that Unicode is being used
+\usepackage[utf8]{inputenc}
 
 % Identifying information
 \newcommand{\Title}{Curriculum Vit\ae}
@@ -22,7 +23,7 @@
 \newcommand{\ORCID}{0000-0001-6123-9515}
 \newcommand{\Affiliation}{
     Department of Geology and Geophysics
-    -- SOEST -- University of Hawai'i at Manoa
+    -- SOEST -- University of Hawai'i at M\={a}noa
 }
 \newcommand{\Address}{
     1680 East-West Rd -- POST 804, 96822 Honolulu, HI, USA
@@ -200,7 +201,7 @@
 \begin{EntriesTable}
     \Duration{2017}{}  &
     \textbf{Visiting Research Scholar},
-    University of Hawaii at Manoa, USA
+    University of Hawai'i at M\={a}noa, USA
     \\
     \Duration{2014}{2018}  &
     \textbf{Assistant Professor},
@@ -475,7 +476,7 @@ All educational material developed for these courses is available at
 \Year{2017}  &
     Introduction to Python (6 hour workshop)
     \newline
-    Department of Geology and Geophysics -- University of Hawaii at Manoa,
+    Department of Geology and Geophysics -- University of Hawai'i at M\={a}noa,
     USA
     \\
 \Year{2016}  &
@@ -548,7 +549,8 @@ and
     \Me.
     Inverting gravity to map the Moho: A new method and the open source
     software that made it possible,
-    \emph{University of Hawaii},
+    \emph{Department of Geology and Geophysics, University of Hawai'i at
+    M\={a}noa},
     Honolulu, USA.
     \\
 \Year{2016}  &
