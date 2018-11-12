@@ -1,0 +1,204 @@
+\documentclass[11pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+% Control the font size
+\usepackage{anyfontsize}
+
+% Set the color of hyperlinks
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    pdftitle={Cover Letter},
+    pdfauthor={Leonardo Uieda},
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black
+}
+
+\longindentation=0pt
+
+% Redefine the empty style so the front page also has a header.
+\fancypagestyle{empty}{ %
+    \fancyhf{} % remove everything
+    \lhead{}
+    %\cfoot{\thepage}
+    \cfoot{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \setlength\headheight{31pt}
+}
+\pagestyle{empty}
+
+\signature{ Leonardo Uieda }
+\address{
+    1680 East-West Road, POST 804
+    \\
+    Honolulu, HI, USA, 96822
+    \\
+    email: \href{mailto:leouieda@gmail.com}{leouieda@gmail.com}
+    \\
+    phone: +1 808 428 4521
+}
+
+\begin{document}
+
+\begin{letter}{
+    Department of Statistics, Faculty of Science
+    \\
+    3182 Earth Sciences Building, 2207 Main Mall
+    \\
+    Vancouver, BC, Canada, V6T1Z4
+}
+\opening{Dear Members of the Search Committee:}
+
+I am writing to apply for the position of Lecturer in the Masters of Data
+Science Program of the University of British Columbia, as advertised on the
+website of the Department of Statistics.
+I am currently a Visiting Research Scholar at the University of Hawai'i in the
+Department of Geology and Geophysics.
+My research interests include geophysical inverse problems, scientific
+software development, and geospatial data visualization.
+
+% Research
+My research training was in the development of computationally efficient
+algorithms for solving geophysical inverse problems.
+The focus of my graduate research was in estimating subsurface density
+variations from observation of disturbances in the Earth's gravity field (e.g.,
+Uieda and Barbosa, 2012, 2017).
+Recently, I have been investigating the application of machine learning and
+data science techniques to geophysical datasets,
+in particular to long-term GPS measurements
+(Uieda and Wessel, 2018;
+\href{https://github.com/leouieda/aogs2018-gps}{github.com/leouieda/aogs2018-gps}).
+I intend to continue my research program in the intersection of geophysics and
+data science and would welcome collaborations with the Data Science Lab.
+I would also use this opportunity to establish a relationship the members of
+the Department of Earth, Ocean and Atmospheric Sciences and the
+UBC Geophysical Inversion Facility.
+
+% Software
+To support my research and teaching efforts, I have created the open-source
+Python library \textit{Fatiando a Terra}
+(\href{http://www.fatiando.org/}{www.fatiando.org}).
+The project uses software development best practices, such as version control
+and the Github pull request workflow,
+automated tests and continuous integration,
+and packaging and distribution through the Python Package Index and
+conda-forge.
+My current work at the University of Hawai'i is to develop a Python wrapper
+library for the \textit{Generic Mapping Tools}
+(GMT; \href{http://gmt.soest.hawaii.edu/}{gmt.soest.hawaii.edu}),
+an open-source software packaged widely used across the Earth, Atmospheric, and
+Ocean Sciences to process and visualize geospatial data.
+I have also contributed to other open-source projects, all of which can be
+accessed through my Github profile
+(\href{https://github.com/leouieda/}{github.com/leouieda}).
+
+% Open science
+As a proponent of open and reproducible science, I publish all of the
+source-code and data for my first author publications through my research
+group's Github page
+(\href{https://github.com/pinga-lab}{github.com/ pinga-lab}).
+To promote reproducible research best practices within the group,
+I maintain a template
+(\href{https://github.com/pinga-lab/paper-template}{github.com/pinga-lab/paper-template})
+which is used for creating new research projects.
+I am interested in exchanging information and learning from the experiences of
+the Data Science Workflows course of the MDS program.
+
+% Teaching
+
+I have three years of teaching experience from my work as Assistant Professor
+at the State University of Rio de Janeiro (UERJ), Brazil.
+I had the opportunity to design two geophysics courses for the Geology
+program
+(\href{http://www.leouieda.com/teaching/geofisica1.html}{leouieda.com/teaching/geofisica1.html}
+and
+\href{http://www.leouieda.com/teaching/geofisica2.html}{leouieda.com/teaching/geofisica2.html})
+and a programming and numerical methods course for the Oceanography
+program
+(\href{http://www.leouieda.com/teaching/matematica-especial.html}{leouieda.com/teaching/matematica-especial.html}).
+All three are based on active learning principals and rely heavily on hands-on
+exercises using Jupyter notebooks, numerical simulations, and real world
+datasets.
+Each module of the geophysics courses includes a Jupyter notebook with
+interactive simulations or real datasets to guide the students through a
+series of formative and summative assessments
+(e.g.,
+\href{http://nbviewer.jupyter.org/github/leouieda/geofisica2/blob/master/notebooks/1-ondas-sismicas.ipynb}{nbviewer.jupyter.org/github/leouieda/geofisica2/blob/master/notebooks/ 1-ondas-sismicas.ipynb}).
+The programming course was entirely implemented using Github repositories and
+Github Classroom (\href{https://classroom.github.com/}{classroom.github.com}).
+Each module has a repository with a group project containing instructions, a
+Jupyter notebook, and data
+(\href{https://github.com/mat-esp}{github.com/ mat-esp}).
+The students submit their work as repositories in a separate Github
+organization
+(e.g., \href{https://github.com/mat-esp-2016}{github.com/mat-esp-2016}).
+Grading and feedback are provided through Github issues (e.g.,
+\href{https://github.com/mat-esp/about/issues/259}{github.com/mat-esp/about/issues/259}).
+This workflow allowed me to manage a project-based class with over 70 students
+as the sole instructor.
+I have also taught short workshops on Python programming and inverse problems
+in geophysics.
+All of my teaching material is available on Github and on my personal website
+(\href{http://www.leouieda.com/teaching/}{leouieda.com/teaching}).
+Evidence of my public speaking skills is also publicly available through my
+talks at the Scipy Conference, which have been recorded and uploaded to YouTube
+(see \href{http://www.leouieda.com/talks/}{leouieda.com/talks}).
+
+% Conclusion
+I look forward to the opportunity to learn from the experience of the MDS
+faculty and to use my geoscience expertise to expand and enrich the program.
+I am particularly interested in the Capstone projects, for which I see great
+potential for collaboration with the mining and oil and gas industries.
+
+\closing{Thank you for your consideration,}
+
+\ps
+\vspace{1cm}
+P.S. Please find attached the contact information for three references.
+\newpage
+{\fontsize{16pt}{0}\selectfont References for Leonardo Uieda}
+\\[1cm]
+Dr. Valéria C. F. Barbosa
+\\
+Full Researcher, Departamento de Geofísica, Observatório Nacional
+\\
+Rua Geneneral José Cristino, 77
+\\
+Rio de Janeiro, RJ, Brazil, 20921-400
+\\
+phone: +55~21~35049235
+\\
+email: \href{mailto:valcris@on.br}{valcris@on.br}
+\\[0.5cm]
+Dr. Paul Wessel
+\\
+Department of Geology and Geophysics, SOEST, University of Hawai'i at M\={a}noa
+\\
+1680 East-West Rd., POST 806
+\\
+Honolulu, HI, USA, 96822
+\\
+phone: +1~808~956~4778
+\\
+email: \href{mailto:pwessel@hawaii.edu}{pwessel@hawaii.edu}
+\\[0.5cm]
+Dr. Matt Hall
+\\
+Founder, Agile Scientific
+(\href{https://agilescientific.com}{www.agilescientific.com})
+\\
+PO Box 336
+\\
+Mahone Bay, NS, Canada, B0J 2E0
+\\
+phone: +1~902~980~0130
+\\
+email: \href{mailto:matt@agilescientific.com}{matt@agilescientific.com}
+
+\end{letter}
+
+\end{document}
