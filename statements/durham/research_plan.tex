@@ -1,5 +1,5 @@
 \documentclass[12pt,notitlepage]{article}
-\usepackage[left=1.5in,right=1.5in,top=1in,bottom=1in]{geometry}
+\usepackage[left=1.5in,right=1.5in,top=1.5in,bottom=1.5in]{geometry}
 
 \usepackage{graphicx}
 \usepackage{url}
@@ -25,14 +25,41 @@ My focus is on tackling the theoretical and computational challenges that arise 
 these inverse problems.
 The main questions that drive my research efforts are:
 
-\begin{itemize}
-    \item How can we better constrain gravity and magnetic inversions using other data
-        sources?
-    \item How can we make inversion algorithms more efficient to deal with increasing
-        data volumes?
-\end{itemize}
+\begin{enumerate}
+    \item How can we better constrain gravity and magnetic inverse problems?
+    \item How can we make more efficient algorithms to deal with increasing data volumes?
+    \item What steps need to be taken to make computational geoscience more reproducible
+        and accessible?
+    \item Which techniques from different fields (e.g., statistics, machine learning)
+        can be applied to solve problems in geoscience?
+    \item How can multiple types satellite observations be used to constrain the
+        movement of masses?
+\end{enumerate}
+
+As attempts to address questions 1 and 2, I have developed new gravity inversion methods
+(Uieda and Barbosa, 2012 and 2017) and collaborated on the development of others
+(Oliveira Jr et al., 2015; Zhao et al., unpublished).
+To enable modeling on global and continental scales, I improved upon existing forward
+modeling methods using spherical elements (Uieda et al., 2016).
+
+% Inversion
+My first attempt to tackle questions 1 and 2 resulted in Uieda and Barbosa (2012), in
+which we developed an efficient 3D inversion method for gravity gradient data.
+At the time, new instrumentation spurred the interest in gravity gradiometry and
+research groups struggled to develop inversion methods for this new type of data.
+In Uieda and Barbosa (2017), we developed another method to estimate the depth of the
+crust-mantle interface from gravity data using seismological results as constraints.
+In order to apply this method to large areas, we used spherical elements (tesseroids)
+and the forward modeling developed in Uieda et al. (2016).
+Currently, the work on forward modeling with tesseroids is being carried out by
+Santiago Soler, a PhD student whom I am co-advising.
+He developed a formulation for modeling tesseroids with depth-variable density, which
+is currently undergoing peer-review.
+
+% Processing and machine learning
 
 
+% Software and reproducibility
 
 Modeling across geophysics
 
