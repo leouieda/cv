@@ -40,164 +40,66 @@ As attempts to address questions 1 and 2, I have developed new gravity inversion
 (Uieda and Barbosa, 2012 and 2017) and collaborated on the development of others
 (Oliveira Jr et al., 2015; Zhao et al., unpublished).
 To enable modeling on global and continental scales, I improved upon existing forward
-modeling methods using spherical elements (Uieda et al., 2016).
+modeling methods using spherical elements, or tesseroids (Uieda et al., 2016).
+However, all of these new methodologies would not be immediately useful to other
+researchers without a software implementation.
+Throughout my career, I have developed and maintained open-source software that
+implements the methodologies that I create and any supporting tools required for my
+research.
+Making these projects open-source and freely available to others allows me to share all
+facets of my work: the manuscript explaining the method, the source code that implements
+it, and the data analysis pipeline used to generate published results.
+This freedom is essential to achieve reproducibility (or at least replicability) in
+science.
 
-% Inversion
-My first attempt to tackle questions 1 and 2 resulted in Uieda and Barbosa (2012), in
-which we developed an efficient 3D inversion method for gravity gradient data.
-At the time, new instrumentation spurred the interest in gravity gradiometry and
-research groups struggled to develop inversion methods for this new type of data.
-In Uieda and Barbosa (2017), we developed another method to estimate the depth of the
-crust-mantle interface from gravity data using seismological results as constraints.
-In order to apply this method to large areas, we used spherical elements (tesseroids)
-and the forward modeling developed in Uieda et al. (2016).
-Currently, the work on forward modeling with tesseroids is being carried out by
-Santiago Soler, a PhD student whom I am co-advising.
-He developed a formulation for modeling tesseroids with depth-variable density, which
-is currently undergoing peer-review.
+In the future, I plan to expand the development of my open-source projects by attracting
+and training new contributors.
+The impact of these software tools is wide and enables synergistic interactions with
+other researchers through the sharing of a common digital infrastructure.
+I will also continue my collaborations with researchers at the University of Hawai'i
+and my involvement in the Generic Mapping Tools (GMT) project.
+I am currently developing an interface between GMT and the popular Python language,
+for which there is a lack of feature rich mapping tools.
+Building communities around open-source projects requires the creation of a pool of
+researchers trained in software development best practices.
+As part of my teaching efforts, I will investigate funding sources for running workshops
+on software development and basic computational literacy for scientists.
+A possible funding source is the EPSRC, which has funded this type of activity in the
+past.
+I envision collaborations with Mathias and others from the department in these
+activities, which would certainly benefit the entire program.
+These skills are in high demand in both academia and industry, which makes them
+invaluable to graduate students and early career scientists.
 
-% Processing and machine learning
+For my research on inverse problems, I am investigating the use of gravity data from the
+GRACE satellite in conjunction with tesseroids to better estimate mass loss from the
+melting glaciers in Antarctica and the Arctic.
+I plan to investigate the use of space geodetic data, namely InSAR, to help constrain
+the gravity inversion.
+Collaborations with others at the Department of Earth Sciences (e.g., Walters) and the
+Institute of Hazard, Risk and Resilience would be highly valued given the complexity of
+the issue.
+Furthermore, I will continue my work on large scale gravity inversion with a focus on
+integrating isostatic, heat flow, and seismological data into the solution.
+Gravity data can cover large areas at a small cost but require other data sources to
+constrain the depth dimension.
+A common choice is to integrate seismological data into the inversion, for which I would
+welcome collaborations with Hobbs, Peirce, and others.
 
+I will also continue my collaborations with researchers at the Scripps Institution of
+Oceanography on interpolation methods for GNSS and InSAR data. The results obtained
+through this research can be expanded for processing airborne and satellite gravity and
+magnetic data, which is one the areas of expertise of my collaborators from Brazil.
+I am particularly interested in applying techniques from the field of machine learning
+to these problems.
 
-% Software and reproducibility
-
-Modeling across geophysics
-
-Global to local scale gravity
-
-Time-lapse for mass balance.
-
-Started working on antartica GRACE with Santiago
-
-Processing GPS and InSAR with Dave (prof here)
-
-Joint inversion of time lapse gravity and insar
-
-Joint inversion of gravity and seismic (prof here)
-
-Joint inverison of gravity, seismic, topography for Moho
-
-Implications of Moho depth and Curie surface for geothermal
-
-Software to support openness
-
-Collaborations with outside people. Bo and Guangdong. Santiago. Carla.
-
-Continue with GMT dev.
-
-GMT has huge impact.
-
-Modernizing and bringing to Python.
-
-Expand seed to magnetic with pinga
-
-Reproducibility: try new things, keep recording things on git, open software is required
-
-Impact of software is wide. Tesseroids key to some GOCE products. Working on using for
-GRACE.
-
-Openness is at the core.
-
-Communication through web technologies. Websites and interactive computation to promote
-awareness. Collaborate with prof on hazards communitation.
-
-Grants. Which ones would I try? NERC for GRACE inversions antartic and arctic.
-
-NERC for environment (GRACE stuff)
-
-EPSRC for software (maybe training in software design and best practices for scientists)
+Finally, openness is at the core of my approach to teaching and research.
+I will continue to leverage open web technologies and interactive computational tools to
+promote the public understanding of science and programming.
+I advocate for open-access publishing and hope to collaborate with Wadsworth to bring
+the model implemented in the Volcanica journal to my own field of geophysics.
 
 
 
-
-
-
-
-\textbf{Software}:
-Methodological development requires
-much prototyping and iteration.
-%
-Thus,
-a researcher needs
-a flexible environment
-and a large collection of tools
-for experimentation.
-%
-The approach I have taken is
-to develop an open-source library
-called Fatiando a Terra\footnote{\url{http://www.fatiando.org}}
-that collects the basic tools
-required for building an inversion method.
-%
-The library is implemented in Python,
-a dynamically typed interpreted language
-known for its simplicity
-and large ecosystem of scientific libraries.
-%
-Fatiando is developed in the
-open\footnote{\url{https://github.com/fatiando/fatiando}}
-with the help of a growing, though yet small,
-developer community.
-%
-I use it as the basis for
-all of my research projects
-as well as for teaching geophysics.
-%
-My first open-source project
-was \textit{Tesseroids}\footnote{\url{http://tesseroids.leouieda.com/}},
-a collection of command-line programs
-for forward modeling gravitational fields
-using spherical prisms.
-%
-It is written entirely in C
-and is my most widely used software project to date.
-
-
-\textbf{Inverse problems}:
-During my graduate studies,
-I have developed two novel inversion methods
-for gravity data.
-%
-The first is a 3D gravity gradient inversion
-using a heuristic algorithm
-that grows the solution from starting ``seeds''.
-%
-The method is computationally efficient
-and can handle problems with millions of unknowns
-on a mid-range laptop computer.
-%
-The second method inverts gravity data
-to estimate the relief
-of the crust-mantle boundary
-using a spherical approximation for the Earth.
-%
-A common theme of my research has been
-to use, adapt, and improve upon
-highly efficient algorithms
-to solve the problems of geophysical inversion.
-
-
-\textbf{Reproducibility}:
-Computational experiments
-are difficult, if not impossible, to reproduce
-without access to the code used to generate them.
-%
-I attempt to tackle
-some of these issues
-on my own research
-by making all source-code and data
-(as much as legally possible)
-from my own publications
-available in public repositories\footnote{For example \url{https://github.com/pinga-lab/paper-moho-inversion-tesseroids}}.
-%
-I hope to train my students
-in these practices from the start
-and provide guidance for others to do the same.
-%
-Though I cannot claim
-to generate fully reproducible results,
-I have been refining this process over time
-and hope that my efforts will contribute
-to advance the reproducibility of our science.
 
 \end{document}
