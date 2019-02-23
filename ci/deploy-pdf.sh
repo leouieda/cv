@@ -7,7 +7,7 @@ set -e
 
 REPO=cv
 USER=leouieda
-BRANCH=pdf
+BRANCH=gh-pages
 CLONE_ARGS="--quiet --branch=$BRANCH --single-branch"
 REPO_URL=https://${GH_TOKEN}@github.com/${USER}/${REPO}.git
 CLONE_DIR=deploy
@@ -43,6 +43,7 @@ git checkout --orphan ${BRANCH}
 echo -e "Remove old files from previous builds"
 git rm -rf .
 cp -Rf $HOME/keep/. $HOME/$CLONE_DIR
+touch $HOME/$CLONE_DIR/.nojekyll
 
 # add, commit, and push files
 echo -e "Add and commit changes"

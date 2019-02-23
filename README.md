@@ -3,7 +3,7 @@
 These are the Latex sources for my academic CV.
 
 **Download** the latest compiled PDF:
-[leonardo_uieda_cv.pdf](https://github.com/leouieda/cv/raw/pdf/leonardo_uieda_cv.pdf)
+[leonardo_uieda_cv.pdf](https://www.leouieda.com/cv/leonardo_uieda_cv.pdf)
 
 ## Template
 
@@ -16,7 +16,7 @@ You're free to reuse and modify this template under the terms of the BSD
 3-clause License (see `LICENSE.txt`).
 
 A PDF is compiled automatically by TravisCI with every commit to the *master* branch
-and uploaded to the *pdf* branch.
+and uploaded to the *gh-pages* branch.
 
 [![Travis CI build status](http://img.shields.io/travis/leouieda/cv/master.svg?style=flat-square&label=build)](https://travis-ci.org/leouieda/cv)
 
