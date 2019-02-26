@@ -66,6 +66,9 @@
 % Template configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Disable hyphenation
+\usepackage[none]{hyphenat}
+
 % Control the font size
 \usepackage{anyfontsize}
 
@@ -73,7 +76,7 @@
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
-\newcommand{\Invited}{[\textbf{Invited}] -- }
+\newcommand{\Invited}{\textbf{[Invited]}}
 
 % For fancy and multipage tables
 \usepackage{tabularx}
@@ -83,18 +86,24 @@
 % Left column are the dates, right column the entries.
 \usepackage{environ}
 \NewEnviron{EntriesTable}{
-    \TablePad
-    \begin{tabularx}{\textwidth}{@{}p{0.10\textwidth} p{0.9\textwidth}@{}}
-        \BODY
-    \end{tabularx}
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.1\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+    \BODY
+\end{tabularx}
 }
 
 % Macros to add links
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\Youtube}[1]{[recording: \href{https://youtu.be/#1}{youtu.be/#1}]}
+
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
+\newcommand{\Ongoing}{}
+%\newcommand{\Ongoing}{$\ast$}
+\newcommand{\Future}{future}
+\newcommand{\Review}{in review}
+\newcommand{\Accepted}{accepted}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
@@ -108,6 +117,7 @@
 
 % Increase the line spacing
 \renewcommand{\baselinestretch}{1.1}
+% and the spacing between rows in tables
 \renewcommand{\arraystretch}{1.5}
 
 % Remove space between items in itemize and enumerate
@@ -124,6 +134,11 @@
 \usepackage{sectsty}
 \sectionfont{\vspace{0.5cm}\bfseries\fontsize{12pt}{0}\selectfont\uppercase}
 \subsectionfont{\vspace{0.2cm}\mdseries\fontsize{12pt}{0}\selectfont\uppercase}
+
+% Set the spacing for sections
+%\usepackage{titlesec}
+%\titlespacing{\section}{0pt}{0cm}{0.3cm}
+%\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
 
 % Set fancy headers
 \usepackage{fancyhdr}
@@ -154,7 +169,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 \begin{document}
 
 % No header for the first page
@@ -162,32 +176,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
-\begin{center}
-    {\fontsize{26pt}{0}\selectfont\MyName}
-\end{center}
-\vspace{0.5cm}
-\begin{minipage}[t]{0.5\textwidth}
-\begin{flushleft}
+%\begin{center}
+    %{\fontsize{24pt}{0}\selectfont\MyName}
+%\end{center}
+%\vspace{-0.6cm}
+{\fontsize{24pt}{0}\selectfont\MyName}\\[-0.1cm]
+\rule{\textwidth}{0.2pt}
+\begin{minipage}[t]{0.595\textwidth}
     \Affiliation
     \\
     \Address
-\end{flushleft}
 \end{minipage}
-\begin{minipage}[t]{0.5\textwidth}
-\begin{flushright}
-    ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
-    \\
-    email: \href{mailto:\Email}{\Email}
-    \\
-    website: \href{https://\Website}{\Website}
-\end{flushright}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushright}
+        ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+        \\
+        email: \href{mailto:\Email}{\Email}
+        \\
+        website: \href{https://\Website}{\Website}
+    \end{flushright}
 \end{minipage}
+%\vspace{0.2cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Professional Appointments}
 
 \begin{EntriesTable}
-    \Duration{2017}{}  &
+    \Duration{2017}{\Ongoing}  &
     \textbf{Visiting Research Scholar}
     \newline
     Department of Earth Sciences,
@@ -283,22 +298,22 @@ at \href{https://www.leouieda.com/papers}{leouieda.com/papers}
 \subsection*{Peer-Reviewed}
 
 \begin{EntriesTable}
-\Year{in review}  &
+\Year{\Review}  &
     \Santiago, \Agustina, \Gimenez, \Me.
     Gravitational field calculation in spherical coordinates using variable densities in
     depth.
-    In review at \emph{Geophysical Journal International}.
+    \emph{Geophysical Journal International}.
     \\
     ~ &
     \Guangdong, \Bo, \Me, \JLiu, \LChen, \RGuo.
     Efficient 3D large-scale forward-modeling and inversion of gravitational fields in
     spherical coordinates with application to lunar mascons.
-    In review at \emph{JGR Solid Earth}.
+    \emph{JGR Solid Earth}.
     \\
     ~ &
     \Bi, \Me, \Kristoffer, \Val.
     Should geophysicists use the gravity disturbance or the anomaly?
-    In review at \emph{Geophysics}.
+    \emph{Geophysics}.
     \\
 \Year{2018}  &
     \Me. Verde: Processing and gridding spatial data using Green's functions.
@@ -449,14 +464,14 @@ my Github profile
 \\
 
 \begin{EntriesTable}
-    \Duration{2017}{} &
+    \Duration{2017}{\Ongoing} &
     \textbf{PyGMT}
     --
     \href{https://www.pygmt.org}{www.pygmt.org}
     \newline
     A Python interface for the Generic Mapping Tools.
     \\
-    \Duration{2010}{} &
+    \Duration{2010}{\Ongoing} &
     \textbf{Fatiando a Terra}
     --
     \href{https://www.fatiando.org}{www.fatiando.org}
@@ -478,78 +493,78 @@ my Github profile
 All educational material developed for these courses is available at
 \href{https://www.leouieda.com/teaching}{leouieda.com/teaching}
 
-\subsection*{Undergraduate -- instructor}
+\subsection*{Undergraduate}
 
 \begin{EntriesTable}
     \Duration{2014}{2016}  &
     Special Mathematics I: Introduction to Programming and Numerical Analysis
     \newline
-    BSc in Oceanography --
-    Universidade do Estado do Rio de Janeiro
+    BSc in Oceanography,
+    \textit{Universidade do Estado do Rio de Janeiro}
     \\
     \Duration{2014}{2016}  &
     Geophysics I: Gravity and magnetic methods
     \newline
-    BSc in Geology --
-    Universidade do Estado do Rio de Janeiro
+    BSc in Geology,
+    \textit{Universidade do Estado do Rio de Janeiro}
     \\
     \Duration{2014}{2016}  &
     Geophysics II: Exploration Seismology
     \newline
-    BSc in Geology --
-    Universidade do Estado do Rio de Janeiro
+    BSc in Geology,
+    \textit{Universidade do Estado do Rio de Janeiro}
     \\
     \Year{2015}  &
     Introduction to Geology
     \newline
-    BSc in Oceanography --
-    Universidade do Estado do Rio de Janeiro
+    BSc in Oceanography,
+    \textit{Universidade do Estado do Rio de Janeiro}
 \end{EntriesTable}
 
 
-\subsection*{Workshops and Short Courses}
+\subsection*{Workshops \& Short Courses}
 
 \begin{EntriesTable}
-%\Year{future}  &
+%\Year{\Future}  &
 \Year{2018}  &
     Best Practices for Modern Open-Source Research Codes
     \newline
-    AGU Fall Meeting 2018
+    \textit{AGU Fall Meeting 2018}
     \\
     ~  &
     InSAR Processing and Theory with GMTSAR
     \newline
-    Scripps Institution of Oceanography
+    \textit{Scripps Institution of Oceanography}
     \\
     ~  &
     Git and Github: What are their uses? Are they worth the effort? Let's find out!
     \newline
-    ASPRS UHM Student Chapter -- University of Hawai'i at M\={a}noa
+    \textit{ASPRS UHM Student Chapter, University of Hawai'i at M\={a}noa}
     \\
 \Year{2017}  &
     Introduction to Python
     \newline
-    Department of Geology and Geophysics -- University of Hawai'i at M\={a}noa
+    \textit{Department of Geology and Geophysics, University of Hawai'i at M\={a}noa}
     \\
 \Year{2016}  &
     Python for Geologists
     \newline
-    Faculdade de Geologia -- Universidade do Estado do Rio de Janeiro
+    \textit{Faculdade de Geologia, Universidade do Estado do Rio de Janeiro}
     \\
     ~  &
     Python for Earth Scientists
     \newline
-    Departamento de Geofísica -- Universidade de São Paulo
+    \textit{Departamento de Geofísica, Universidade de São Paulo}
     \\
 \Year{2014}  &
     Introduction to Geophysical Inversion
     \newline
-    Instituto de Geociências -- Universidade de Brasília
+    \textit{Instituto de Geociências, Universidade de Brasília}
     \\
 \Year{2011}  &
     Introduction to Geophysical Inversion
     \newline
-    Departamento de Geofísica -- Universidade de São Paulo
+    \textit{Departamento de Geofísica, Universidade de São Paulo}
 \end{EntriesTable}
 
 
@@ -557,17 +572,17 @@ All educational material developed for these courses is available at
 \section*{Student supervision}
 
 \begin{EntriesTable}
-\Duration{2017}{}  &
+\Duration{2017}{\Ongoing}  &
     Santiago R. Soler (PhD student -- co-Advisor)
     \newline
-    Instituto Geofı́sico Sismológico Volponi, Universidad Nacional de San Juan, Argentina.
+    \textit{Instituto Geofı́sico Sismológico Volponi, Universidad Nacional de San Juan}, Argentina.
     \newline
     Advisor: Mario E. Gimenez
     \\
 \Duration{2015}{2017}  &
     Vinicius V. Riguete (Undergraduate research -- Advisor)
     \newline
-    Faculdade de Geologia, Universidade do Estado do Rio de Janeiro, Brazil.
+    \textit{Faculdade de Geologia, Universidade do Estado do Rio de Janeiro}, Brazil.
     \\
 \end{EntriesTable}
 
@@ -623,7 +638,7 @@ and
 \href{https://www.leouieda.com/posters/}{leouieda.com/posters}
 \\
 \begin{EntriesTable}
-%\Year{Future}  &
+%\Year{\Future}  &
 \Year{2018}  &
     \Me, \Eric, \Paul, \David.
     Coupled Interpolation of Three-component GPS Velocities,
@@ -822,7 +837,7 @@ and
 \subsection*{Editor}
 
 \begin{EntriesTable}
-    \Duration{2019} & Topic editor for the \textit{Journal of Open Source Software}
+    \Duration{2019}{\Ongoing} & Topic editor for the \textit{Journal of Open Source Software}
 \end{EntriesTable}
 
 \subsection*{Reviewer}
@@ -869,11 +884,11 @@ Journal of Open Source Software
 \subsection*{Affiliations}
 
 \begin{EntriesTable}
-    \Duration{2010}{} & American Geophysical Union
+    \Duration{2010}{\Ongoing} & American Geophysical Union
     \\
-    \Duration{2011}{} & Society of Exploration Geophysicists
+    \Duration{2011}{\Ongoing} & Society of Exploration Geophysicists
     \\
-    \Duration{2014}{} & European Geosciences Union
+    \Duration{2014}{\Ongoing} & European Geosciences Union
 \end{EntriesTable}
 
 
@@ -884,7 +899,7 @@ Journal of Open Source Software
 \begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}@{}}
     Portuguese & Native
     \\
-    English & Fluent (TOEFL iBT score 115/120)
+    English & Fluent (TOEFL iBT score 115/120 obtained in 2007)
 \end{tabularx}
 
 \end{document}
