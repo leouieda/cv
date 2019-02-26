@@ -19,12 +19,14 @@
 \newcommand{\Website}{www.leouieda.com}
 \newcommand{\ORCID}{0000-0001-6123-9515}
 \newcommand{\Affiliation}{
-    Department of Earth Sciences
-    -- SOEST --
+    Department of Earth Sciences, SOEST
+    \\
     University of Hawai'i at M\={a}noa
 }
 \newcommand{\Address}{
-    POST Building Suite 821, 1680 East-West Rd, Honolulu, HI, USA, 96822
+    1680 East-West Road, POST 821
+    \\
+    Honolulu, HI 96822, USA
 }
 
 % Names for citing coauthors
@@ -128,7 +130,6 @@
 \pagestyle{fancy}
 \fancyhf{}
 \chead{
-    \itshape
     \fontsize{10pt}{12pt}\selectfont
     \MyName
     \hspace{0.2cm} -- \hspace{0.2cm}
@@ -162,23 +163,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
 \begin{center}
-    {\fontsize{24pt}{0}\selectfont \MyName}
-    \\[0.5cm]
-    {\fontsize{10pt}{0}\selectfont \Title \, | \, \monthyear\today}
-    \\[0.5cm]
-    {\fontsize{10pt}{0}\selectfont
-        \Affiliation
-        \\[0.2cm]
-        \Address
-        \\[0.08cm]
-        email: \href{mailto:\Email}{\Email}
-        \, | \,
-        ORCID: \href{http://orcid.org/\ORCID}{\ORCID}
-        \, | \,
-        website: \href{http://\Website}{\Website}
-    }
+    {\fontsize{26pt}{0}\selectfont\MyName}
 \end{center}
-
+\vspace{0.5cm}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{flushleft}
+    \Affiliation
+    \\
+    \Address
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{flushright}
+    ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+    \\
+    email: \href{mailto:\Email}{\Email}
+    \\
+    website: \href{https://\Website}{\Website}
+\end{flushright}
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Professional Appointments}
@@ -227,8 +230,7 @@
     NSF-EAR: ``The EarthScope/GMT Analysis and Visualization Toolbox''.
     PI: \Paul, \textbf{co-PI}: \Me, co-PI: \Bridget.
     University of Hawai'i at M\={a}noa.
-    Amount: \$174,975.
-    Award ID: 1829371.
+    Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829371}{1829371}.
 \end{EntriesTable}
 
 
@@ -276,7 +278,7 @@
 \section*{Publications}
 
 Source code, data, and PDFs for most articles are available
-at \href{http://www.leouieda.com/papers}{leouieda.com/papers}
+at \href{https://www.leouieda.com/papers}{leouieda.com/papers}
 
 \subsection*{Peer-Reviewed}
 
@@ -438,7 +440,8 @@ at \href{http://www.leouieda.com/papers}{leouieda.com/papers}
 \end{EntriesTable}
 
 
-\subsection*{Open-source Software}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Open-source Software}
 
 I work on several open-source projects, all of which are available through
 my Github profile
@@ -449,25 +452,23 @@ my Github profile
     \Duration{2017}{} &
     \textbf{PyGMT}
     --
-    \href{http://www.pygmt.org}{www.pygmt.org}
-    --
+    \href{https://www.pygmt.org}{www.pygmt.org}
+    \newline
     A Python interface for the Generic Mapping Tools.
     \\
     \Duration{2010}{} &
     \textbf{Fatiando a Terra}
     --
-    \href{http://www.fatiando.org}{www.fatiando.org}
-    --
-    Toolkit for geophysical data analysis, forward modeling, and inversion.
-    Language: Python.
+    \href{https://www.fatiando.org}{www.fatiando.org}
+    \newline
+    Toolkit for geophysical data processing, forward modeling, and inversion.
     \\
-    \Duration{2009}{} &
+    \Duration{2009}{2016} &
     \textbf{Tesseroids}
     --
     \href{http://www.tesseroids.org}{www.tesseroids.org}
-    --
+    \newline
     Forward modeling of gravitational fields in spherical coordinates.
-    Language: C.
 \end{EntriesTable}
 
 
@@ -475,7 +476,7 @@ my Github profile
 \section*{Teaching}
 
 All educational material developed for these courses is available at
-\href{http://www.leouieda.com/teaching}{leouieda.com/teaching}
+\href{https://www.leouieda.com/teaching}{leouieda.com/teaching}
 
 \subsection*{Undergraduate -- instructor}
 
@@ -575,7 +576,7 @@ All educational material developed for these courses is available at
 \section*{Outreach}
 
 I maintain a blog about my research, geoscience, and programming at
-\href{http://www.leouieda.com/blog}{leouieda.com/blog}
+\href{https://www.leouieda.com/blog}{leouieda.com/blog}
 \\
 
 \begin{EntriesTable}
@@ -616,10 +617,10 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 \section*{Presentations}
 
 Slides, posters, and abstracts for all presentations are available at
-\href{http://www.leouieda.com/talks/}{leouieda.com/talks}
+\href{https://www.leouieda.com/talks/}{leouieda.com/talks}
 and
 \\
-\href{http://www.leouieda.com/posters/}{leouieda.com/posters}
+\href{https://www.leouieda.com/posters/}{leouieda.com/posters}
 \\
 \begin{EntriesTable}
 %\Year{Future}  &
@@ -818,24 +819,10 @@ and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Academic Service \& Affiliations}
 
-\subsection*{Committees}
+\subsection*{Editor}
 
 \begin{EntriesTable}
-\Year{2015} &
-    Chairman of the Election Committee for the deans of the University and the School of
-    Geology, Universidade do Estado do Rio de Janeiro
-    \\
-\Duration{2015}{2017} &
-    Faculty Advisor for the Student Chapter of the Socienty of Exploration Geophysicists
-    (SEG) at the Universidade do Estado do Rio de Janeiro.
-\end{EntriesTable}
-
-\subsection*{Convener}
-
-\begin{EntriesTable}
-\Year{2018} &
-    \Lindsey, \Lion, \Me. Townhall: The role of an open-source software initiative
-    within the AGU, \emph{AGU 2018}, Washington DC, USA.
+    \Duration{2019} & Topic editor for the \textit{Journal of Open Source Software}
 \end{EntriesTable}
 
 \subsection*{Reviewer}
@@ -858,14 +845,36 @@ Computers \& Geosciences
 --
 Journal of Open Source Software
 
+\subsection*{Committees}
+
+\begin{EntriesTable}
+\Year{2015} &
+    Chairman of the Election Committee for the deans of the University and the School of
+    Geology, Universidade do Estado do Rio de Janeiro
+    \\
+\Duration{2015}{2017} &
+    Faculty Advisor for the Student Chapter of the Socienty of Exploration Geophysicists
+    (SEG) at the Universidade do Estado do Rio de Janeiro.
+\end{EntriesTable}
+
+\subsection*{Convener}
+
+\begin{EntriesTable}
+\Year{2018} &
+    \Lindsey, \Lion, \Me. Townhall: The role of an open-source software initiative
+    within the AGU, \emph{AGU 2018}, Washington DC, USA.
+\end{EntriesTable}
+
 
 \subsection*{Affiliations}
 
-American Geophysical Union
---
-Society of Exploration Geophysicists
---
-Geological Society of America
+\begin{EntriesTable}
+    \Duration{2010}{} & American Geophysical Union
+    \\
+    \Duration{2011}{} & Society of Exploration Geophysicists
+    \\
+    \Duration{2014}{} & European Geosciences Union
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
