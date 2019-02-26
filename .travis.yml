@@ -1,6 +1,4 @@
-sudo: require
-
-language: bash
+language: generic
 
 branches:
     only:
@@ -9,14 +7,16 @@ branches:
 notifications:
     email: false
 
+dist: xenial
+
+addons:
+    apt:
+        packages:
+            - texlive-full
+
 env:
     global:
-        # Github Token for pushing the built docs (GH_TOKEN)
         - secure: "N0Rt5VNq5rX2uwlltUws0Sj03elzpIeYP4hYQkimmBfUnU5Cjw1seWEXYFZghvr4YZhoTYrmDv1DZsity3go7UCFy5/ZLkYl418ev7sOdQT2yA1hjAoNgFyRyXoJZLmUVaEDUYv/QQUBnMtE44F58SdGBPKbkY/epU7AvmvUgSw="
-
-before_install:
-    - sudo apt-get -q update
-    - sudo apt-get install -y texlive-full
 
 script:
     - make
