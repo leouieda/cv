@@ -1,30 +1,44 @@
-language: generic
-
-branches:
-    only:
-        - master
-
-notifications:
-    email: false
-
+# Configuration file for TravisCI
+os: linux
 dist: xenial
+language: python
+python: "3.6"
 
+# Only build pushes to the master branch
+branches:
+  only:
+    - master
+
+# Install Tex on the OS
 addons:
-    apt:
-        packages:
-            - texlive-full
+  apt:
+    packages:
+      - texlive-full
 
 env:
-    global:
-        - secure: "N0Rt5VNq5rX2uwlltUws0Sj03elzpIeYP4hYQkimmBfUnU5Cjw1seWEXYFZghvr4YZhoTYrmDv1DZsity3go7UCFy5/ZLkYl418ev7sOdQT2yA1hjAoNgFyRyXoJZLmUVaEDUYv/QQUBnMtE44F58SdGBPKbkY/epU7AvmvUgSw="
+  global:
+    # Doctr deploy key for leouieda/cv
+    - secure: "mlr5CPIF8Pfleulxnz422NKMzyE2KTg6X45Y/p7ROxFg3f7Aj8OGbz6dTZRGxw9C+PDVM7fPgNEmgbcZav1Ji4/AeiSJoJ0zVXigs/ACcHxOqVwKuigw9DR0HPr7ujFsSCrBi8w2pqJgZa+VzA5TTdvD0B2Vlpe/j6JQiePgV0k="
 
+# Setup the build environment
+install:
+  # Install the requirements
+  - pip install -r requirements.txt
+
+# Build the PDF from the LaTeX file
 script:
-    - make
+  - make
+  - cd output
+  - rm -f *.aux *.log *.bbl *.blg *.out *.toc
+  - cd ..
 
 deploy:
-    # Push the PDF to a branch
-    - provider: script
-      script: ci/deploy-pdf.sh
-      skip_cleanup: true
-      on:
-          branch: master
+  # Push the PDF to the gh-pages branch so that it's served
+  - provider: script
+    script: doctr deploy . --built-docs output --key-path .github_deploy_key.enc
+    skip_cleanup: true
+    on:
+      branch: master
+
+notifications:
+  email: false
