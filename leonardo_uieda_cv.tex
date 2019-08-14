@@ -9,7 +9,13 @@
 \documentclass[11pt, a4paper]{article}
 
 % Useful aliases
+\newcommand{\UERJ}{Universidade do Estado do Rio de Janeiro}
 \newcommand{\UHM}{University of Hawai`i at M\={a}noa}
+\newcommand{\SOEST}{School of Ocean and Earth Science and Technology}
+\newcommand{\UHEARTH}{Department of Earth Sciences}
+\newcommand{\LIVEARTH}{Department of Earth, Ocean and Ecological Sciences}
+\newcommand{\LIVENV}{School of Environmental Sciences}
+\newcommand{\LIV}{University of Liverpool}
 
 % Identifying information
 \newcommand{\Title}{Curriculum Vit\ae}
@@ -21,15 +27,9 @@
 \newcommand{\Email}{leouieda@gmail.com}
 \newcommand{\Website}{www.leouieda.com}
 \newcommand{\ORCID}{0000-0001-6123-9515}
-\newcommand{\Affiliation}{
-    Department of Earth Sciences, SOEST
-    \\
-    \UHM
-}
+\newcommand{\Affiliation}{\LIVEARTH \\ \LIV}
 \newcommand{\Address}{
-    1680 East-West Road, POST 821
-    \\
-    Honolulu, HI 96822, USA
+    Jane Herdman Building, 4 Brownlow Street \\ Liverpool, L69 3GP, United Kingdom
 }
 
 % Names for citing coauthors
@@ -138,6 +138,7 @@
 \newcommand{\Future}{future}
 \newcommand{\Review}{in review}
 \newcommand{\Accepted}{accepted}
+\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
@@ -210,10 +211,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
-%\begin{center}
-    %{\fontsize{24pt}{0}\selectfont\MyName}
-%\end{center}
-%\vspace{-0.6cm}
 {\fontsize{24pt}{0}\selectfont\MyName}\\[-0.1cm]
 \rule{\textwidth}{0.2pt}
 \begin{minipage}[t]{0.595\textwidth}
@@ -232,38 +229,22 @@
         website: \href{https://\Website}{\Website}
     \end{flushright}
 \end{minipage}
-%\vspace{0.2cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Professional Appointments}
 
 \begin{EntriesTable}
     \Duration{2019}{}  &
-    \textbf{Lecturer}
-    \newline
-    Department of Earth, Ocean and Ecological Sciences
-    \newline
-    School of Environmental Sciences
-    \newline
-    University of Liverpool, UK
+    \Appointment{Lecturer}{\LIVEARTH}{\LIVENV}{\LIV, UK}
     \\
-    \Duration{2017}{2019}  &
-    \textbf{Visiting Research Scholar}
-    \newline
-    Department of Earth Sciences
-    \newline
-    School of Ocean and Earth Science and Technology
-    \newline
-    \UHM, USA
+    \Duration{2018}{}  &
+    \Appointment{Affiliate Researcher}{\UHEARTH}{\SOEST}{\UHM, USA}
+    \\
+    \Duration{2017}{2018}  &
+    \Appointment{Visiting Research Scholar}{\UHEARTH}{\SOEST}{\UHM, USA}
     \\
     \Duration{2014}{2018}  &
-    \textbf{Assistant Professor}
-    \newline
-    Departamento de Geologia Aplicada
-    \newline
-    Faculdade de Geologia
-    \newline
-    Universidade do Estado do Rio de Janeiro, Brazil
+    \Appointment{Assistant Professor}{Departamento de Geologia Aplicada}{Faculdade de Geologia}{\UERJ, Brazil}
 \end{EntriesTable}
 
 
@@ -307,12 +288,12 @@
     of 2015 -- 2017
     \\
     \Year{2016}  &
-    Universidade do Estado do Rio de Janeiro, Brazil, School of Geology
+    \UERJ, Brazil, School of Geology
     \textbf{Teaching Award} given by the graduating class of 2016
     \\
     \Duration{2014}{2018}  &
     QUALITEC/UERJ Grant for training a technician for the Laboratory of
-    Exploration Geophysics - Universidade do Estado do Rio de Janeiro
+    Exploration Geophysics - \UERJ
     \\
     \Duration{2011}{2015}  &
     Brazilian Ministry of Education CAPES \textbf{PhD Research Scholarship}
@@ -538,13 +519,26 @@ my Github profile
     \href{https://www.pygmt.org}{www.pygmt.org}
     \newline
     A Python interface for the Generic Mapping Tools.
+    \newline
+    \textit{Creator and main developer}.
+    \\
+    \Duration{2017}{\Ongoing} &
+    \textbf{The Generic Mapping Tools (GMT)}
+    --
+    \href{https://www.generic-mapping-tools.org}{www.generic-mapping-tools.org}
+    \newline
+    A data processing and mapping toolbox for the Earth, Ocean, and Planetary Science.
+    \newline
+    \textit{Core development team}.
     \\
     \Duration{2010}{\Ongoing} &
     \textbf{Fatiando a Terra}
     --
     \href{https://www.fatiando.org}{www.fatiando.org}
     \newline
-    Toolkit for geophysical data processing, forward modeling, and inversion.
+    Python tools for geophysical data processing, forward modeling, and inversion.
+    \newline
+    \textit{Creator and main developer}.
     \\
     \Duration{2009}{2016} &
     \textbf{Tesseroids}
@@ -552,6 +546,8 @@ my Github profile
     \href{http://www.tesseroids.org}{www.tesseroids.org}
     \newline
     Forward modeling of gravitational fields in spherical coordinates.
+    \newline
+    \textit{Creator and sole developer}.
 \end{EntriesTable}
 
 
@@ -568,25 +564,25 @@ All educational material developed for these courses is available at
     Special Mathematics I: Introduction to Programming and Numerical Analysis
     \newline
     BSc in Oceanography,
-    \textit{Universidade do Estado do Rio de Janeiro}
+    \textit{\UERJ}
     \\
     \Duration{2014}{2016}  &
     Geophysics I: Gravity and magnetic methods
     \newline
     BSc in Geology,
-    \textit{Universidade do Estado do Rio de Janeiro}
+    \textit{\UERJ}
     \\
     \Duration{2014}{2016}  &
     Geophysics II: Exploration Seismology
     \newline
     BSc in Geology,
-    \textit{Universidade do Estado do Rio de Janeiro}
+    \textit{\UERJ}
     \\
     \Year{2015}  &
     Introduction to Geology
     \newline
     BSc in Oceanography,
-    \textit{Universidade do Estado do Rio de Janeiro}
+    \textit{\UERJ}
 \end{EntriesTable}
 
 
@@ -631,7 +627,7 @@ All educational material developed for these courses is available at
 \Year{2016}  &
     Python for Geologists
     \newline
-    \textit{Faculdade de Geologia, Universidade do Estado do Rio de Janeiro}
+    \textit{Faculdade de Geologia, \UERJ}
     \\
     ~  &
     Python for Earth Scientists
@@ -664,7 +660,7 @@ All educational material developed for these courses is available at
 \Duration{2015}{2017}  &
     Vinicius V. Riguete (Undergraduate research -- Advisor)
     \newline
-    \textit{Faculdade de Geologia, Universidade do Estado do Rio de Janeiro}, Brazil.
+    \textit{Faculdade de Geologia, \UERJ}, Brazil.
     \\
 \end{EntriesTable}
 
@@ -947,11 +943,11 @@ Journal of Open Source Software
 \begin{EntriesTable}
 \Year{2015} &
     Chairman of the Election Committee for the deans of the University and the School of
-    Geology, Universidade do Estado do Rio de Janeiro
+    Geology, \UERJ
     \\
 \Duration{2015}{2017} &
     Faculty Advisor for the Student Chapter of the Socienty of Exploration Geophysicists
-    (SEG) at the Universidade do Estado do Rio de Janeiro.
+    (SEG) at the \UERJ.
 \end{EntriesTable}
 
 \subsection*{Convener}
@@ -981,7 +977,7 @@ Journal of Open Source Software
 \begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}@{}}
     Portuguese & Native
     \\
-    English & Fluent (TOEFL iBT score 115/120 obtained in 2007)
+    English & IELTS: CEFR Level C2 (mastery or proficiency) obtained in 2019
 \end{tabularx}
 
 \end{document}
