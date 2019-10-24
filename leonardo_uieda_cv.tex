@@ -179,6 +179,13 @@
 %\titlespacing{\section}{0pt}{0cm}{0.3cm}
 %\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
 
+% Disable number of sections. Use this instead of "section*" so that the sections still
+% appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
+% manually.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
 % Set fancy headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -237,7 +244,7 @@
 \end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Professional Appointments}
+\section{Professional Appointments}
 
 \begin{EntriesTable}
     \Duration{2019}{}  &
@@ -255,7 +262,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Education}
+\section{Education}
 
 \begin{EntriesTable}
     \Year{2016}  &
@@ -273,7 +280,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Grants \& Fellowships}
+\section{Grants \& Fellowships}
 
 \begin{EntriesTable}
     \Duration{2018}{2020}  &
@@ -286,7 +293,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Awards \& Honors}
+\section{Awards \& Honors}
 
 \begin{EntriesTable}
     \Year{2017}  &
@@ -326,9 +333,9 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Publications}
+\section{Publications}
 
-\subsection*{Peer-Reviewed}
+\subsection{Peer-Reviewed}
 
 \begin{EntriesTable}
 %\Year{\Review}  &
@@ -418,7 +425,7 @@
 \end{EntriesTable}
 
 
-\subsection*{Peer-Reviewed Conference proceedings}
+\subsection{Peer-Reviewed Conference proceedings}
 
 \begin{EntriesTable}
 \Year{2014}  &
@@ -485,7 +492,7 @@
     \DOI{10.1190/sbgf2011-243}.
 \end{EntriesTable}
 
-\subsection*{Preprints}
+\subsection{Preprints}
 
 \begin{EntriesTable}
 \Year{2019}  &
@@ -497,7 +504,7 @@
     \DOI{10.31219/osf.io/f4vx6}
 \end{EntriesTable}
 
-\subsection*{Open Datasets}
+\subsection{Open Datasets}
 
 \begin{EntriesTable}
 \Year{2017}  &
@@ -510,7 +517,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Open-source Software}
+\section{Open-source Software}
 
 \begin{EntriesTable}
     \Duration{2017}{\Ongoing} &
@@ -552,9 +559,9 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Teaching}
+\section{Teaching}
 
-\subsection*{Undergraduate}
+\subsection{Undergraduate}
 
 \begin{EntriesTable}
     \Duration{2019}{}  &
@@ -588,7 +595,7 @@
 \end{EntriesTable}
 
 
-\subsection*{Workshops \& Short Courses}
+\subsection{Workshops \& Short Courses}
 
 \begin{EntriesTable}
 \Year{\Future}  &
@@ -649,7 +656,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Student supervision}
+\section{Student supervision}
 
 \begin{EntriesTable}
 \Duration{2017}{\Ongoing}  &
@@ -668,7 +675,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Outreach}
+\section{Outreach}
 
 I maintain a blog about my research, geoscience, and programming at
 \href{https://www.leouieda.com/blog}{leouieda.com/blog}
@@ -711,7 +718,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Presentations}
+\section{Presentations}
 
 \begin{EntriesTable}
 \Year{\Future}  &
@@ -911,15 +918,15 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Academic Service \& Affiliations}
+\section{Academic Service \& Affiliations}
 
-\subsection*{Editor}
+\subsection{Editor}
 
 \begin{EntriesTable}
     \Duration{2019}{\Ongoing} & Topic editor for the \textit{Journal of Open Source Software}
 \end{EntriesTable}
 
-\subsection*{Reviewer}
+\subsection{Reviewer}
 
 Geophysical Journal International
 --
@@ -939,7 +946,7 @@ Computers \& Geosciences
 --
 Journal of Open Source Software
 
-\subsection*{Committees}
+\subsection{Committees}
 
 \begin{EntriesTable}
 \Year{2015} &
@@ -951,7 +958,7 @@ Journal of Open Source Software
     (SEG) at the \UERJ.
 \end{EntriesTable}
 
-\subsection*{Convener}
+\subsection{Convener}
 
 \begin{EntriesTable}
 \Year{future} &
@@ -977,7 +984,7 @@ Journal of Open Source Software
 \end{EntriesTable}
 
 
-\subsection*{Affiliations}
+\subsection{Affiliations}
 
 \begin{EntriesTable}
     \Duration{2010}{\Ongoing} & American Geophysical Union
@@ -989,7 +996,7 @@ Journal of Open Source Software
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Languages}
+\section{Languages}
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}@{}}
