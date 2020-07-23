@@ -26,7 +26,7 @@ jobs:
           cd ..
 
       - name: Test
-        if: success() && $GITHUB_EVENT_NAME == 'push'
+        if: success() && github.event_name == 'push'
         run: echo "Meh"
 
       #- name: Push to gh-pages
