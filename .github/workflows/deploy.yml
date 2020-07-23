@@ -26,7 +26,7 @@ jobs:
           cd ..
 
       - name: Test
-        if: ${{ success() && (github.event_name == 'pull_request') }}
+        if: ${{ success() && (github.event_name == 'push') }}
         run: echo "Meh"
 
       #- name: Push to gh-pages
