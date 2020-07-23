@@ -1,4 +1,4 @@
-name: Compile CV
+name: compile-pdf
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
@@ -25,15 +25,11 @@ jobs:
           touch .nojekyll
           cd ..
 
-      - name: Test
+      - name: Push to gh-pages
         if: success() && github.event_name == 'push'
-        run: echo "Meh"
-
-      #- name: Push to gh-pages
-        #if: ${{ success() && (github.event_name == 'push') }}
-        #uses: peaceiris/actions-gh-pages@v3
-        #with:
-          #github_token: ${{ secrets.GITHUB_TOKEN }}
-          #publish_dir: ./output
-          #user_name: 'github-actions[bot]'
-          #user_email: 'github-actions[bot]@users.noreply.github.com'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

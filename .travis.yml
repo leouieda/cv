@@ -32,13 +32,13 @@ script:
   - rm -f *.aux *.log *.bbl *.blg *.out *.toc
   - cd ..
 
-deploy:
-  # Push the PDF to the gh-pages branch so that it's served
-  - provider: script
-    script: doctr deploy . --built-docs output --key-path .github_deploy_key.enc
-    skip_cleanup: true
-    on:
-      branch: master
+#deploy:
+  ## Push the PDF to the gh-pages branch so that it's served
+  #- provider: script
+    #script: doctr deploy . --built-docs output --key-path .github_deploy_key.enc
+    #skip_cleanup: true
+    #on:
+      #branch: master
 
 notifications:
   email: false
