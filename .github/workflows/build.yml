@@ -1,0 +1,35 @@
+name: compile-pdf
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install LaTeX
+        run: sudo apt-get install texlive texlive-xetex
+
+      - name: Compile PDF
+        run: |
+          make
+          cd output
+          rm -f *.aux *.log *.bbl *.blg *.out *.toc
+          touch .nojekyll
+          cd ..
+
+      - name: Push to gh-pages
+        if: success() && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
