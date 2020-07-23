@@ -1,13 +1,13 @@
-name: Build and deploy
+name:  CV
 
 on:
+  pull_request:
   push:
     branches:
       - master
-      - actions
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install LaTeX
-        run: sudo apt install texlive-full
+        run: sudo apt-get install texlive
 
       - name: Compile PDF CV
         run: |
@@ -24,6 +24,10 @@ jobs:
           rm -f *.aux *.log *.bbl *.blg *.out *.toc
           touch .nojekyll
           cd ..
+
+      - name: Test
+        if: ${{ success() && GITHUB_EVENT_NAME == 'pull_request' }}
+        run: echo "Meh"
 
       #- name: Push to gh-pages
         #uses: peaceiris/actions-gh-pages@v3
