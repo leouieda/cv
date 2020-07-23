@@ -1,4 +1,4 @@
-name:  CV
+name: Compile CV
 
 on:
   pull_request:
@@ -25,9 +25,9 @@ jobs:
           touch .nojekyll
           cd ..
 
-      - name: Test
-        if: ${{ success() && GITHUB_EVENT_NAME == 'pull_request' }}
-        run: echo "Meh"
+      #- name: Test
+        #if: ${{ success() && GITHUB_EVENT_NAME == 'pull_request' }}
+        #run: echo "Meh"
 
       #- name: Push to gh-pages
         #uses: peaceiris/actions-gh-pages@v3
