@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-![compile-pdf](https://github.com/leouieda/cv/workflows/compile-pdf/badge.svg?event=push)
+[![compile-pdf](https://github.com/leouieda/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/leouieda/cv/actions)
 
 These are the Latex sources for my academic CV.
 
