@@ -1,0 +1,34 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - master
+      - actions
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install LaTeX
+        run: sudo apt install texlive-full
+
+      - name: Compile PDF CV
+        run: |
+          make
+          cd output
+          rm -f *.aux *.log *.bbl *.blg *.out *.toc
+          touch .nojekyll
+          cd ..
+
+      #- name: Push to gh-pages
+        #uses: peaceiris/actions-gh-pages@v3
+        #with:
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          #publish_dir: ./output
+          #user_name: 'github-actions[bot]'
+          #user_email: 'github-actions[bot]@users.noreply.github.com'
