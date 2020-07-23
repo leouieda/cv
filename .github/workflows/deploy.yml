@@ -17,7 +17,7 @@ jobs:
       - name: Install LaTeX
         run: sudo apt-get install texlive texlive-xetex
 
-      - name: Compile PDF CV
+      - name: Compile PDF
         run: |
           make
           cd output
@@ -26,10 +26,11 @@ jobs:
           cd ..
 
       - name: Test
-        if: ${{ success() && (github.event_name == 'push') }}
+        if: success() && $GITHUB_EVENT_NAME == 'push'
         run: echo "Meh"
 
       #- name: Push to gh-pages
+        #if: ${{ success() && (github.event_name == 'push') }}
         #uses: peaceiris/actions-gh-pages@v3
         #with:
           #github_token: ${{ secrets.GITHUB_TOKEN }}
