@@ -1,5 +1,7 @@
 # Curriculum Vitae
 
+![compile-pdf](https://github.com/leouieda/cv/workflows/compile-pdf/badge.svg?event=push)
+
 These are the Latex sources for my academic CV.
 
 **Download** the latest compiled PDF:
@@ -28,9 +30,9 @@ commands in the `Makefile` to build the PDF manually.
 ## Deploying
 
 A PDF is compiled automatically by GitHub Actions with every commit to the
-*master* branch and uploaded to the *gh-pages* branch.
-
-![compile-pdf](https://github.com/leouieda/cv/workflows/compile-pdf/badge.svg?event=push)
+*master* branch and uploaded to the *gh-pages* branch. This way, the compiled
+PDF is updated and served at https://www.leouieda.com/cv/leonardo_uieda_cv.pdf
+automatically.
 
 ## License
 
