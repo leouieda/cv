@@ -27,7 +27,8 @@ jobs:
 
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
-        uses: peaceiris/actions-gh-pages@v3
+        # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
+        uses: peaceiris/actions-gh-pages@8a36f3edfc5d1cbae6b09e6f5a7d7b19e5b7a73b
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
