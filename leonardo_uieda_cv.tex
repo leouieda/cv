@@ -30,7 +30,7 @@
 \newcommand{\ORCID}{0000-0001-6123-9515}
 \newcommand{\Affiliation}{\LIVEARTH \\ \LIVENV \\ \LIV}
 \newcommand{\Address}{
-    Jane Herdman Building, 4 Brownlow Street \\ L69 3GP, Liverpool, United Kingdom
+  Jane Herdman Building, 4 Brownlow Street \\ L69 3GP, Liverpool, United Kingdom
 }
 
 % Names for citing coauthors
@@ -127,7 +127,7 @@
 \NewEnviron{EntriesTable}{
 \TablePad
 \begin{tabularx}{\textwidth}{@{}p{0.1\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
-    \BODY
+  \BODY
 \end{tabularx}
 }
 
@@ -197,12 +197,12 @@
 \pagestyle{fancy}
 \fancyhf{}
 \chead{
-    \fontsize{10pt}{12pt}\selectfont
-    \MyName
-    \hspace{0.2cm} -- \hspace{0.2cm}
-    \Title
-    \hspace{0.2cm} -- \hspace{0.2cm}
-    \monthyear\today
+  \fontsize{10pt}{12pt}\selectfont
+  \MyName
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \Title
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \monthyear\today
 }
 \rhead{}
 \cfoot{\fontsize{10pt}{0}\selectfont \thepage}
@@ -211,12 +211,12 @@
 % Metadata for the PDF output and control of hyperlinks
 \usepackage[colorlinks=true]{hyperref}
 \hypersetup{
-    pdftitle={\MyName\ - \Title},
-    pdfauthor={\MyName},
-    linkcolor=blue,
-    citecolor=blue,
-    filecolor=black,
-    urlcolor=MidnightBlue
+  pdftitle={\MyName\ - \Title},
+  pdfauthor={\MyName},
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=MidnightBlue
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -231,39 +231,39 @@
 {\fontsize{24pt}{0}\selectfont\MyName}\\[-0.1cm]
 \rule{\textwidth}{0.2pt}
 \begin{minipage}[t]{0.595\textwidth}
-    \Affiliation
-    \\
-    \Address
+  \Affiliation
+  \\
+  \Address
 \end{minipage}
 \begin{minipage}[t]{0.405\textwidth}
-    \begin{flushright}
-		Last updated: \monthyear\today
-		\\
-        ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
-        \\
-        email: \href{mailto:\Email}{\Email}
-        \\
-        Research group: \href{https://www.\Lab}{\Lab}
-        \\
-        Website: \href{https://www.\Website}{\Website}
-    \end{flushright}
+  \begin{flushright}
+  Last updated: \monthyear\today
+  \\
+    ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+    \\
+    email: \href{mailto:\Email}{\Email}
+    \\
+    Research group: \href{https://www.\Lab}{\Lab}
+    \\
+    Website: \href{https://www.\Website}{\Website}
+  \end{flushright}
 \end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Professional Appointments}
 
 \begin{EntriesTable}
-    \Duration{2019}{}  &
-    \Appointment{Lecturer}{\LIVEARTH}{\LIVENV}{\LIV, UK}
-    \\
-    \Duration{2018}{}  &
-    \Appointment{Affiliate Researcher}{\UHEARTH}{\SOEST}{\UHM, USA}
-    \\
-    \Duration{2017}{2018}  &
-    \Appointment{Visiting Research Scholar}{\UHEARTH}{\SOEST}{\UHM, USA}
-    \\
-    \Duration{2014}{2018}  &
-    \Appointment{Assistant Professor}{Departamento de Geologia Aplicada}{Faculdade de Geologia}{\UERJ, Brazil}
+  \Duration{2019}{}  &
+  \Appointment{Lecturer}{\LIVEARTH}{\LIVENV}{\LIV, UK}
+  \\
+  \Duration{2018}{}  &
+  \Appointment{Affiliate Researcher}{\UHEARTH}{\SOEST}{\UHM, USA}
+  \\
+  \Duration{2017}{2018}  &
+  \Appointment{Visiting Research Scholar}{\UHEARTH}{\SOEST}{\UHM, USA}
+  \\
+  \Duration{2014}{2018}  &
+  \Appointment{Assistant Professor}{Departamento de Geologia Aplicada}{Faculdade de Geologia}{\UERJ, Brazil}
 \end{EntriesTable}
 
 
@@ -271,17 +271,17 @@
 \section{Education}
 
 \begin{EntriesTable}
-    \Year{2016}  &
-    \textbf{PhD in Geophysics}, Observatório Nacional, Brazil
-    \\
-    \Year{2011}  &
-    \textbf{MSc in Geophysics}, Observatório Nacional, Brazil
-    \\
-    \Year{2009}  &
-    \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
-    \\
-    \Year{2008}  &
-    \textbf{International Exchange}, York University, Canada
+  \Year{2016}  &
+  \textbf{PhD in Geophysics}, Observatório Nacional, Brazil
+  \\
+  \Year{2011}  &
+  \textbf{MSc in Geophysics}, Observatório Nacional, Brazil
+  \\
+  \Year{2009}  &
+  \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
+  \\
+  \Year{2008}  &
+  \textbf{International Exchange}, York University, Canada
 \end{EntriesTable}
 
 
@@ -289,33 +289,33 @@
 \section{Grants \& Fellowships}
 
 \begin{EntriesTable}
-    \Duration{2020}{2023}  &
-    NSF-EAR: ``A Sustainable Plan for the Future of the Generic Mapping Tools''.
-    PI: \Paul, \textbf{co-PI}: \Me.
-    \textit{\UHM}.
-    Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1948602}{1948602}.
-    \\
-    \Year{2020}  &
-    Software Sustainability Institute Fellowship.
-    \textit{\LIV}.
-    Amount: £3000.
-    More information:
-    \href{https://www.leouieda.com/research/ssi2020.html}{leouieda.com/research/ssi2020.html}
-    \\
-    \Duration{2019}{2020}  &
-    ESRG Research Support:
-    ``Geophysical inversion of GRACE satellite time-lapse gravity''.
-    Internal fund to support the research visit of PhD student Santiago R.
-    Soler.
-    \textit{\LIV}.
-    Amount: £1000.
-    \\
-    \Duration{2018}{2020}  &
-    NSF-EAR: ``The EarthScope/GMT Analysis and Visualization Toolbox''.
-    PI: \Paul, \textbf{co-PI}: \Me, co-PI: \Bridget.
-    \textit{\UHM}.
-    Amount: \$174,975.
-    Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829371}{1829371}.
+  \Duration{2020}{2023}  &
+  NSF-EAR: ``A Sustainable Plan for the Future of the Generic Mapping Tools''.
+  PI: \Paul, \textbf{co-PI}: \Me.
+  \textit{\UHM}.
+  Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1948602}{1948602}.
+  \\
+  \Year{2020}  &
+  Software Sustainability Institute Fellowship.
+  \textit{\LIV}.
+  Amount: £3000.
+  More information:
+  \href{https://www.leouieda.com/research/ssi2020.html}{leouieda.com/research/ssi2020.html}
+  \\
+  \Duration{2019}{2020}  &
+  ESRG Research Support:
+  ``Geophysical inversion of GRACE satellite time-lapse gravity''.
+  Internal fund to support the research visit of PhD student Santiago R.
+  Soler.
+  \textit{\LIV}.
+  Amount: £1000.
+  \\
+  \Duration{2018}{2020}  &
+  NSF-EAR: ``The EarthScope/GMT Analysis and Visualization Toolbox''.
+  PI: \Paul, \textbf{co-PI}: \Me, co-PI: \Bridget.
+  \textit{\UHM}.
+  Amount: \$174,975.
+  Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829371}{1829371}.
 \end{EntriesTable}
 
 
@@ -323,39 +323,39 @@
 \section{Awards \& Honors}
 
 \begin{EntriesTable}
-    \Year{2017}  &
-    Brazilian Geophysical Society (SBGf) Award for \textbf{Best PhD Thesis}
-    of 2015 -- 2017
-    \\
-    \Year{2016}  &
-    \UERJ, Brazil, School of Geology
-    \textbf{Teaching Award} given by the graduating class of 2016
-    \\
-    \Duration{2014}{2018}  &
-    QUALITEC/UERJ Grant for training a technician for the Laboratory of
-    Exploration Geophysics - \UERJ
-    \\
-    \Duration{2011}{2015}  &
-    Brazilian Ministry of Education CAPES \textbf{PhD Research Scholarship}
-    \\
-    \Year{2011}  &
-    SEG Near Surface Geophysics Section \textbf{Student Travel Grant} to
-    present at the SEG Annual Meeting, San Antornio, TX, USA
-    \\
-    \Year{2011}  &
-    EAGE \textbf{PACE Student Travel Grant} to present at the 73rd EAGE
-    Conference \& Exhibition, Vienna, Austria
-    \\
-    \Duration{2010}{2011}  &
-    Brazilian Ministry of Education CAPES \textbf{Masters Research Scholarship}
-    \\
-    \Year{2008}  &
-    Brazilian Geophysical Society (SBGf) \textbf{Undergraduate Research
-    Scholarship}
-    \\
-    \Year{2005}  &
-    São Paulo Research Foundation (FAPESP) \textbf{Undergraduate Research
-    Scholarship}
+  \Year{2017}  &
+  Brazilian Geophysical Society (SBGf) Award for \textbf{Best PhD Thesis}
+  of 2015 -- 2017
+  \\
+  \Year{2016}  &
+  \UERJ, Brazil, School of Geology
+  \textbf{Teaching Award} given by the graduating class of 2016
+  \\
+  \Duration{2014}{2018}  &
+  QUALITEC/UERJ Grant for training a technician for the Laboratory of
+  Exploration Geophysics - \UERJ
+  \\
+  \Duration{2011}{2015}  &
+  Brazilian Ministry of Education CAPES \textbf{PhD Research Scholarship}
+  \\
+  \Year{2011}  &
+  SEG Near Surface Geophysics Section \textbf{Student Travel Grant} to
+  present at the SEG Annual Meeting, San Antornio, TX, USA
+  \\
+  \Year{2011}  &
+  EAGE \textbf{PACE Student Travel Grant} to present at the 73rd EAGE
+  Conference \& Exhibition, Vienna, Austria
+  \\
+  \Duration{2010}{2011}  &
+  Brazilian Ministry of Education CAPES \textbf{Masters Research Scholarship}
+  \\
+  \Year{2008}  &
+  Brazilian Geophysical Society (SBGf) \textbf{Undergraduate Research
+  Scholarship}
+  \\
+  \Year{2005}  &
+  São Paulo Research Foundation (FAPESP) \textbf{Undergraduate Research
+  Scholarship}
 \end{EntriesTable}
 
 
@@ -366,12 +366,12 @@
 
 \begin{EntriesTable}
 \Year{2019}  &
-    \LBarba, \JBazan, \JBrown, \RGuimera, \MGymrek, \AHanna, \Lindsey, \KHuff, \DKatz,
-    \CMadan, \KMoerman, \KNiemeyer, \JPoulson, \PPrins, \KRam, \ARokem, \Arfon,
-    \GThiruvathukal, \KThyng, \Me, \BWilson, \Yehudi.
-    Giving software its due through community-driven review and publication.
-    \emph{OSF Preprints}.
-    \DOI{10.31219/osf.io/f4vx6}
+  \LBarba, \JBazan, \JBrown, \RGuimera, \MGymrek, \AHanna, \Lindsey, \KHuff, \DKatz,
+  \CMadan, \KMoerman, \KNiemeyer, \JPoulson, \PPrins, \KRam, \ARokem, \Arfon,
+  \GThiruvathukal, \KThyng, \Me, \BWilson, \Yehudi.
+  Giving software its due through community-driven review and publication.
+  \emph{OSF Preprints}.
+  \DOI{10.31219/osf.io/f4vx6}
 \end{EntriesTable}
 
 \subsection{Peer-Reviewed}
@@ -379,95 +379,95 @@
 \begin{EntriesTable}
 %\Year{\Review}  &
 \Year{2020}  &
-    \Me, \Santiago, \Remi, \Hugo, \MattTurk, \Shapero, \Anderson, \Leeman.
-    Pooch: A friend to fetch your data files.
-    \emph{Journal of Open Source Software}.
-    \DOI{10.21105/joss.01943}.
-	\OA
-    \\
+  \Me, \Santiago, \Remi, \Hugo, \MattTurk, \Shapero, \Anderson, \Leeman.
+  Pooch: A friend to fetch your data files.
+  \emph{Journal of Open Source Software}.
+  \DOI{10.21105/joss.01943}.
+  \OA
+  \\
 \Year{2019}  &
-    \Paul, \Joaquim, \Me, \Remko, \Florian, \Walter, \Dongdong.
-    The Generic Mapping Tools, Version 6.
-    \emph{Geochemistry, Geophysics, Geosystems}.
-    \DOI{10.1029/2019GC008515}.
-    \\
-    ~ &
-    \Santiago, \Agustina, \Gimenez, \Me.
-    Gravitational field calculation in spherical coordinates using variable densities in
-    depth.
-    \emph{Geophysical Journal International}.
-    \DOI{10.1093/gji/ggz277}.
-    \Preprint{10.31223/osf.io/3548g}
-    \\
-    ~ &
-    \Guangdong, \Bo, \Me, \JLiu, \MKaban, \LChen, \RGuo.
-    Efficient 3D large-scale forward-modeling and inversion of gravitational fields in
-    spherical coordinates with application to lunar mascons.
-    \emph{Journal of Geophysical Research: Solid Earth}.
-    \DOI{10.1029/2019jb017691}.
-    \Preprint{10.31223/osf.io/dzf9j}
-    \\
+  \Paul, \Joaquim, \Me, \Remko, \Florian, \Walter, \Dongdong.
+  The Generic Mapping Tools, Version 6.
+  \emph{Geochemistry, Geophysics, Geosystems}.
+  \DOI{10.1029/2019GC008515}.
+  \\
+  ~ &
+  \Santiago, \Agustina, \Gimenez, \Me.
+  Gravitational field calculation in spherical coordinates using variable densities in
+  depth.
+  \emph{Geophysical Journal International}.
+  \DOI{10.1093/gji/ggz277}.
+  \Preprint{10.31223/osf.io/3548g}
+  \\
+  ~ &
+  \Guangdong, \Bo, \Me, \JLiu, \MKaban, \LChen, \RGuo.
+  Efficient 3D large-scale forward-modeling and inversion of gravitational fields in
+  spherical coordinates with application to lunar mascons.
+  \emph{Journal of Geophysical Research: Solid Earth}.
+  \DOI{10.1029/2019jb017691}.
+  \Preprint{10.31223/osf.io/dzf9j}
+  \\
 \Year{2018}  &
-    \Me. Verde: Processing and gridding spatial data using Green's functions.
-    \emph{Journal of Open Source Software}.
-    \DOI{10.21105/joss.00957}.
-	\OA
-    \\
+  \Me. Verde: Processing and gridding spatial data using Green's functions.
+  \emph{Journal of Open Source Software}.
+  \DOI{10.21105/joss.00957}.
+  \OA
+  \\
 \Year{2017}  &
-    \Me, \Val.
-    Fast non-linear gravity inversion in spherical coordinates with application
-    to the South American Moho,
-    \emph{Geophysical Journal International},
-    \DOI{10.1093/gji/ggw390}.
-    \Preprint{10.31223/osf.io/9ba4m}
-    \\
+  \Me, \Val.
+  Fast non-linear gravity inversion in spherical coordinates with application
+  to the South American Moho,
+  \emph{Geophysical Journal International},
+  \DOI{10.1093/gji/ggw390}.
+  \Preprint{10.31223/osf.io/9ba4m}
+  \\
 \Year{2016}  &
-    \Me, \Val, \Carla.
-    Tesseroids: forward modeling gravitational fields in spherical coordinates,
-    \emph{Geophysics},
-    \DOI{10.1190/geo2015-0204.1}.
-    \\
-    ~ &
-    \Dio, \Me, \Val.
-    How two gravity-gradient inversion methods can be used to reveal different
-    geologic features of ore deposit - A case study from the Quadrilátero
-    Ferrífero (Brazil),
-    \emph{Journal of Applied Geophysics},
-    \DOI{10.1016/j.jappgeo.2016.04.011}.
-    \\
+  \Me, \Val, \Carla.
+  Tesseroids: forward modeling gravitational fields in spherical coordinates,
+  \emph{Geophysics},
+  \DOI{10.1190/geo2015-0204.1}.
+  \\
+  ~ &
+  \Dio, \Me, \Val.
+  How two gravity-gradient inversion methods can be used to reveal different
+  geologic features of ore deposit - A case study from the Quadrilátero
+  Ferrífero (Brazil),
+  \emph{Journal of Applied Geophysics},
+  \DOI{10.1016/j.jappgeo.2016.04.011}.
+  \\
 \Year{2015}  &
-    \Bi, \Dai, \Val, \Me.
-    Estimation of the total magnetization direction of approximately spherical
-    bodies,
-    \emph{Nonlinear Processes in Geophysics},
-    \DOI{10.5194/npg-22-215-2015}.
-	\OA
-    \\
+  \Bi, \Dai, \Val, \Me.
+  Estimation of the total magnetization direction of approximately spherical
+  bodies,
+  \emph{Nonlinear Processes in Geophysics},
+  \DOI{10.5194/npg-22-215-2015}.
+  \OA
+  \\
 \Year{2014}  &
-    \Dio, \Me, \Val.
-    Imaging iron ore from the Quadrilátero Ferrífero (Brazil) using geophysical
-    inversion and drill hole data,
-    \emph{Ore Geology Reviews},
-    \DOI{10.1016/j.oregeorev.2014.02.011}.
-    \\
+  \Dio, \Me, \Val.
+  Imaging iron ore from the Quadrilátero Ferrífero (Brazil) using geophysical
+  inversion and drill hole data,
+  \emph{Ore Geology Reviews},
+  \DOI{10.1016/j.oregeorev.2014.02.011}.
+  \\
 \Year{2013}  &
-    \Figura, \Val, \Me, \Bi, \JB.
-    Estimating the nature and the horizontal and vertical positions of 3D
-    magnetic sources using Euler deconvolution,
-    \emph{Geophysics},
-    \DOI{10.1190/geo2012-0515.1}.
-    \\
-    ~ &
-    \Bi, \Val, \Me.
-    Polynomial equivalent layer,
-    \emph{Geophysics},
-    \DOI{10.1190/geo2012-0196.1}.
-    \\
+  \Figura, \Val, \Me, \Bi, \JB.
+  Estimating the nature and the horizontal and vertical positions of 3D
+  magnetic sources using Euler deconvolution,
+  \emph{Geophysics},
+  \DOI{10.1190/geo2012-0515.1}.
+  \\
+  ~ &
+  \Bi, \Val, \Me.
+  Polynomial equivalent layer,
+  \emph{Geophysics},
+  \DOI{10.1190/geo2012-0196.1}.
+  \\
 \Year{2012}  &
-    \Me, \Val.
-    Robust 3D gravity gradient inversion by planting anomalous densities,
-    \emph{Geophysics},
-    \DOI{10.1190/geo2011-0388.1}.
+  \Me, \Val.
+  Robust 3D gravity gradient inversion by planting anomalous densities,
+  \emph{Geophysics},
+  \DOI{10.1190/geo2011-0388.1}.
 \end{EntriesTable}
 
 
@@ -475,79 +475,79 @@
 
 \begin{EntriesTable}
 \Year{2014}  &
-    \Figura, \Val, \Me, \Bi, \JB.
-    A Single Euler Solution Per Anomaly,
-    \emph{76th EAGE Conference and Exhibition 2014},
-    \DOI{10.3997/2214-4609.20140891}.
-    \\
+  \Figura, \Val, \Me, \Bi, \JB.
+  A Single Euler Solution Per Anomaly,
+  \emph{76th EAGE Conference and Exhibition 2014},
+  \DOI{10.3997/2214-4609.20140891}.
+  \\
 \Year{2013}  &
-    \Me, \Bi, \Val.
-    Modeling the Earth with Fatiando a Terra,
-    \emph{Proceedings of the 12th Python in Science Conference}.
-    \DOI{10.25080/Majora-8b375195-010}.
-    \\
+  \Me, \Bi, \Val.
+  Modeling the Earth with Fatiando a Terra,
+  \emph{Proceedings of the 12th Python in Science Conference}.
+  \DOI{10.25080/Majora-8b375195-010}.
+  \\
 \Year{2012}  &
-    \Me, \Val.
-    Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
-    anomalous densities,
-    \emph{SEG Technical Program Expanded Abstracts},
-    \DOI{10.1190/segam2012-0383.1}.
-    \\
-    ~ &
-    \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
-    Iron ore interpretation using gravity-gradient inversions in the Carajás, Brazil.
-    \emph{SEG Technical Program Expanded Abstracts},
-    \DOI{10.1190/segam2012-0525.1}.
-    \\
+  \Me, \Val.
+  Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
+  anomalous densities,
+  \emph{SEG Technical Program Expanded Abstracts},
+  \DOI{10.1190/segam2012-0383.1}.
+  \\
+  ~ &
+  \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
+  Iron ore interpretation using gravity-gradient inversions in the Carajás, Brazil.
+  \emph{SEG Technical Program Expanded Abstracts},
+  \DOI{10.1190/segam2012-0525.1}.
+  \\
 \Year{2011}  &
-    \Me, \Everton, \Carla, \Eder.
-    Optimal forward calculation method of the Marussi tensor due to a geologic
-    structure at GOCE height,
-    \emph{Proceedings of the 4th International GOCE User Workshop}.
-    \DOI{10.6084/m9.figshare.92624}.
-    \\
-    ~ &
-    \Me, \Val.
-    Robust 3D gravity gradient inversion by planting anomalous densities,
-    \emph{SEG Technical Program Expanded Abstracts},
-    \DOI{10.1190/1.3628201}.
-    \\
-    ~ &
-    \Me, \Val.
-    3D gravity inversion by planting anomalous densities.
-    \emph{12th International Congress of the Brazilian Geophysical Society},
-    \DOI{10.1190/sbgf2011-179}.
-    \\
-    ~ &
-    \Me, \Val.
-    3D gravity gradient inversion by planting density anomalies.
-    \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
-    \DOI{10.3997/2214-4609.20149567}.
-    \\
-    ~ &
-    \Dio, \Me, \Val, \BragaVale, \Gomes.
-    In-depth imaging of an iron orebody from Quadrilatero Ferrifero using 3D
-    gravity gradient inversion,
-    \emph{SEG Technical Program Expanded Abstracts},
-    \DOI{10.1190/1.3628219}.
-    \\
-    ~ &
-    \Dio, \Val, \Me, \BragaVale.
-    Inversão de Dados de Aerogradiometria Gravimétrica 3D-FTG Aplicada a
-    Exploração Mineral na Região do Quadrilátero Ferrífero,
-    \emph{12th International Congress of the Brazilian Geophysical Society},
-    \DOI{10.1190/sbgf2011-243}.
+  \Me, \Everton, \Carla, \Eder.
+  Optimal forward calculation method of the Marussi tensor due to a geologic
+  structure at GOCE height,
+  \emph{Proceedings of the 4th International GOCE User Workshop}.
+  \DOI{10.6084/m9.figshare.92624}.
+  \\
+  ~ &
+  \Me, \Val.
+  Robust 3D gravity gradient inversion by planting anomalous densities,
+  \emph{SEG Technical Program Expanded Abstracts},
+  \DOI{10.1190/1.3628201}.
+  \\
+  ~ &
+  \Me, \Val.
+  3D gravity inversion by planting anomalous densities.
+  \emph{12th International Congress of the Brazilian Geophysical Society},
+  \DOI{10.1190/sbgf2011-179}.
+  \\
+  ~ &
+  \Me, \Val.
+  3D gravity gradient inversion by planting density anomalies.
+  \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
+  \DOI{10.3997/2214-4609.20149567}.
+  \\
+  ~ &
+  \Dio, \Me, \Val, \BragaVale, \Gomes.
+  In-depth imaging of an iron orebody from Quadrilatero Ferrifero using 3D
+  gravity gradient inversion,
+  \emph{SEG Technical Program Expanded Abstracts},
+  \DOI{10.1190/1.3628219}.
+  \\
+  ~ &
+  \Dio, \Val, \Me, \BragaVale.
+  Inversão de Dados de Aerogradiometria Gravimétrica 3D-FTG Aplicada a
+  Exploração Mineral na Região do Quadrilátero Ferrífero,
+  \emph{12th International Congress of the Brazilian Geophysical Society},
+  \DOI{10.1190/sbgf2011-243}.
 \end{EntriesTable}
 
 \subsection{Open Datasets}
 
 \begin{EntriesTable}
 \Year{2017}  &
-    \Me, \Val.
-    A gravity-derived Moho model for South America: source code, data, and
-    model results from ``Fast non-linear gravity inversion in spherical
-    coordinates with application to the South American Moho''.
-    \DOI{10.6084/m9.figshare.3987267}
+  \Me, \Val.
+  A gravity-derived Moho model for South America: source code, data, and
+  model results from ``Fast non-linear gravity inversion in spherical
+  coordinates with application to the South American Moho''.
+  \DOI{10.6084/m9.figshare.3987267}
 \end{EntriesTable}
 
 
@@ -555,41 +555,41 @@
 \section{Open-source Software}
 
 \begin{EntriesTable}
-    \Duration{2017}{\Ongoing} &
-    \textbf{PyGMT}
-    --
-    \href{https://www.pygmt.org}{www.pygmt.org}
-    \newline
-    A Python interface for the Generic Mapping Tools.
-    \newline
-    \textit{Creator and core developer}.
-    \\
-    \Duration{2017}{\Ongoing} &
-    \textbf{The Generic Mapping Tools (GMT)}
-    --
-    \href{https://www.generic-mapping-tools.org}{www.generic-mapping-tools.org}
-    \newline
-    A data processing and mapping toolbox for the Earth, Ocean, and Planetary Science.
-    \newline
-    \textit{Core development team}.
-    \\
-    \Duration{2010}{\Ongoing} &
-    \textbf{Fatiando a Terra}
-    --
-    \href{https://www.fatiando.org}{www.fatiando.org}
-    \newline
-    Python tools for geophysical data processing, forward modeling, and inversion.
-    \newline
-    \textit{Creator and main developer}.
-    \\
-    \Duration{2009}{2016} &
-    \textbf{Tesseroids}
-    --
-    \href{http://www.tesseroids.org}{www.tesseroids.org}
-    \newline
-    Forward modeling of gravitational fields in spherical coordinates.
-    \newline
-    \textit{Creator and sole developer}.
+  \Duration{2017}{\Ongoing} &
+  \textbf{PyGMT}
+  --
+  \href{https://www.pygmt.org}{www.pygmt.org}
+  \newline
+  A Python interface for the Generic Mapping Tools.
+  \newline
+  \textit{Creator and core developer}.
+  \\
+  \Duration{2017}{\Ongoing} &
+  \textbf{The Generic Mapping Tools (GMT)}
+  --
+  \href{https://www.generic-mapping-tools.org}{www.generic-mapping-tools.org}
+  \newline
+  A data processing and mapping toolbox for the Earth, Ocean, and Planetary Science.
+  \newline
+  \textit{Core development team}.
+  \\
+  \Duration{2010}{\Ongoing} &
+  \textbf{Fatiando a Terra}
+  --
+  \href{https://www.fatiando.org}{www.fatiando.org}
+  \newline
+  Python tools for geophysical data processing, forward modeling, and inversion.
+  \newline
+  \textit{Creator and main developer}.
+  \\
+  \Duration{2009}{2016} &
+  \textbf{Tesseroids}
+  --
+  \href{http://www.tesseroids.org}{www.tesseroids.org}
+  \newline
+  Forward modeling of gravitational fields in spherical coordinates.
+  \newline
+  \textit{Creator and sole developer}.
 \end{EntriesTable}
 
 
@@ -599,52 +599,52 @@
 \subsection{Undergraduate}
 
 \begin{EntriesTable}
-    \Duration{2020}{\Ongoing}  &
-    ENVS398: Advanced Geodynamics
-    \newline
-    Teaching the lithosphere dynamics part (50\%) |
-    Module coordinator from 2021
-    \newline
-    \textit{\LIV}
-    \\
-    \Duration{2020}{\Ongoing}  &
-    ENVS258: Environmental Geophysics
-    \newline
-    Teaching remote sensing, gravity surveying, and Python programming
-    ($\sim$50\%)
-    \newline
-    \textit{\LIV}
-    \\
-    \Duration{2019}{\Ongoing}  &
-    ENVS363: Geophysical Exploration Techniques
-    \newline
-    Part of the teaching team for geophysical field methods
-    \newline
-    \textit{\LIV}
-    \\
-    \Duration{2014}{2016}  &
-    Special Mathematics I: Introduction to Programming and Numerical Analysis
-    \newline
-    BSc in Oceanography,
-    \textit{\UERJ}
-    \\
-    \Duration{2014}{2016}  &
-    Geophysics I: Gravity and magnetic methods
-    \newline
-    BSc in Geology,
-    \textit{\UERJ}
-    \\
-    \Duration{2014}{2016}  &
-    Geophysics II: Exploration Seismology
-    \newline
-    BSc in Geology,
-    \textit{\UERJ}
-    \\
-    \Year{2015}  &
-    Introduction to Geology
-    \newline
-    BSc in Oceanography,
-    \textit{\UERJ}
+  \Duration{2020}{\Ongoing}  &
+  ENVS398: Advanced Geodynamics
+  \newline
+  Teaching the lithosphere dynamics part (50\%) |
+  Module coordinator from 2021
+  \newline
+  \textit{\LIV}
+  \\
+  \Duration{2020}{\Ongoing}  &
+  ENVS258: Environmental Geophysics
+  \newline
+  Teaching remote sensing, gravity surveying, and Python programming
+  ($\sim$50\%)
+  \newline
+  \textit{\LIV}
+  \\
+  \Duration{2019}{\Ongoing}  &
+  ENVS363: Geophysical Exploration Techniques
+  \newline
+  Part of the teaching team for geophysical field methods
+  \newline
+  \textit{\LIV}
+  \\
+  \Duration{2014}{2016}  &
+  Special Mathematics I: Introduction to Programming and Numerical Analysis
+  \newline
+  BSc in Oceanography,
+  \textit{\UERJ}
+  \\
+  \Duration{2014}{2016}  &
+  Geophysics I: Gravity and magnetic methods
+  \newline
+  BSc in Geology,
+  \textit{\UERJ}
+  \\
+  \Duration{2014}{2016}  &
+  Geophysics II: Exploration Seismology
+  \newline
+  BSc in Geology,
+  \textit{\UERJ}
+  \\
+  \Year{2015}  &
+  Introduction to Geology
+  \newline
+  BSc in Oceanography,
+  \textit{\UERJ}
 \end{EntriesTable}
 
 
@@ -652,67 +652,67 @@
 
 \begin{EntriesTable}
 \Year{2020}  &
-    The Generic Mapping Tools for Geodesy
-    \newline
-    \textit{UNAVCO} (online)
-    \\
-    ~  &
-    From scattered data to gridded products using Verde
-    \newline
-    \textit{Transform 2020} (online)
-    \newline
-    \Youtube{-xZdNdvzm3E}
-    \\
+  The Generic Mapping Tools for Geodesy
+  \newline
+  \textit{UNAVCO} (online)
+  \\
+  ~  &
+  From scattered data to gridded products using Verde
+  \newline
+  \textit{Transform 2020} (online)
+  \newline
+  \Youtube{-xZdNdvzm3E}
+  \\
 \Year{2019}  &
-    Best Practices for Developing and Sustaining Your Open-Source Research
-    Software
-    \newline
-    \textit{AGU Fall Meeting 2019}
-    \\
-    ~  &
-    Become a Generic Mapping Tools Contributor Even If You Can't Code
-    \newline
-    \textit{AGU Fall Meeting 2019}
-    \\
-    ~  &
-    The Generic Mapping Tools for Geodesy
-    \newline
-    \textit{Scripps Institution of Oceanography}
-    \\
+  Best Practices for Developing and Sustaining Your Open-Source Research
+  Software
+  \newline
+  \textit{AGU Fall Meeting 2019}
+  \\
+  ~  &
+  Become a Generic Mapping Tools Contributor Even If You Can't Code
+  \newline
+  \textit{AGU Fall Meeting 2019}
+  \\
+  ~  &
+  The Generic Mapping Tools for Geodesy
+  \newline
+  \textit{Scripps Institution of Oceanography}
+  \\
 \Year{2018}  &
-    Best Practices for Modern Open-Source Research Codes
-    \newline
-    \textit{AGU Fall Meeting 2018}
-    \\
-    ~  &
-    Git and Github: What are their uses? Are they worth the effort? Let's find out!
-    \newline
-    \textit{ASPRS UHM Student Chapter, \UHM}
-    \\
+  Best Practices for Modern Open-Source Research Codes
+  \newline
+  \textit{AGU Fall Meeting 2018}
+  \\
+  ~  &
+  Git and Github: What are their uses? Are they worth the effort? Let's find out!
+  \newline
+  \textit{ASPRS UHM Student Chapter, \UHM}
+  \\
 \Year{2017}  &
-    Introduction to Python
-    \newline
-    \textit{Department of Geology and Geophysics, \UHM}
-    \\
+  Introduction to Python
+  \newline
+  \textit{Department of Geology and Geophysics, \UHM}
+  \\
 \Year{2016}  &
-    Python for Geologists
-    \newline
-    \textit{Faculdade de Geologia, \UERJ}
-    \\
-    ~  &
-    Python for Earth Scientists
-    \newline
-    \textit{Departamento de Geofísica, Universidade de São Paulo}
-    \\
+  Python for Geologists
+  \newline
+  \textit{Faculdade de Geologia, \UERJ}
+  \\
+  ~  &
+  Python for Earth Scientists
+  \newline
+  \textit{Departamento de Geofísica, Universidade de São Paulo}
+  \\
 \Year{2014}  &
-    Introduction to Geophysical Inversion
-    \newline
-    \textit{Instituto de Geociências, Universidade de Brasília}
-    \\
+  Introduction to Geophysical Inversion
+  \newline
+  \textit{Instituto de Geociências, Universidade de Brasília}
+  \\
 \Year{2011}  &
-    Introduction to Geophysical Inversion
-    \newline
-    \textit{Departamento de Geofísica, Universidade de São Paulo}
+  Introduction to Geophysical Inversion
+  \newline
+  \textit{Departamento de Geofísica, Universidade de São Paulo}
 \end{EntriesTable}
 
 
@@ -723,26 +723,26 @@
 
 \begin{EntriesTable}
 \Duration{2017}{\Ongoing}  &
-    Santiago R. Soler (co-Advising)
-    \newline
-    Universidad Nacional de San Juan, Argentina.
-    \newline
-    Advisor: Mario E. Gimenez
+  Santiago R. Soler (co-Advising)
+  \newline
+  Universidad Nacional de San Juan, Argentina.
+  \newline
+  Advisor: Mario E. Gimenez
 \end{EntriesTable}
 
 \subsection{Undergraduate}
 
 \begin{EntriesTable}
 \Duration{2019}{2020}  &
-    Final year project cohort:
-    Lottie Cooper, Steven Heer, Charles Thomson, and Alexander Borges.
-    \LIV, UK.
-    \\
+  Final year project cohort:
+  Lottie Cooper, Steven Heer, Charles Thomson, and Alexander Borges.
+  \LIV, UK.
+  \\
 \Duration{2015}{2017}  &
-    Vinicius V. Riguete
-    \newline
-    \UERJ, Brazil.
-    \\
+  Vinicius V. Riguete
+  \newline
+  \UERJ, Brazil.
+  \\
 \end{EntriesTable}
 
 
@@ -755,18 +755,18 @@ I maintain a blog about my research, geoscience, and programming at
 
 \begin{EntriesTable}
 \Year{2018}  &
-    Interviewed by the geoscience podcast \textit{Don't Panic Geocast}, episode 166
-    \textit{``You are headed to a warm and sunny place''}:
-    \href{http://www.dontpanicgeocast.com/?p=638}{dontpanicgeocast.com/?p=638}
-    \\
+  Interviewed by the geoscience podcast \textit{Don't Panic Geocast}, episode 166
+  \textit{``You are headed to a warm and sunny place''}:
+  \href{http://www.dontpanicgeocast.com/?p=638}{dontpanicgeocast.com/?p=638}
+  \\
 \Year{2017}  &
-    Volunteer for the \textit{Hour of Code} at Salt Lake Elementary School, Honolulu,
-    USA.
-    \\
+  Volunteer for the \textit{Hour of Code} at Salt Lake Elementary School, Honolulu,
+  USA.
+  \\
 \Year{2016}  &
-    Interviewed by the geoscience podcast \textit{Undersampled Radio}, episode
-    \textit{``Open Sourcery''}:
-    \href{https://undersampledrad.io/home/2016/7/open-sourcery}{undersampledrad.io/home/2016/7/open-sourcery}
+  Interviewed by the geoscience podcast \textit{Undersampled Radio}, episode
+  \textit{``Open Sourcery''}:
+  \href{https://undersampledrad.io/home/2016/7/open-sourcery}{undersampledrad.io/home/2016/7/open-sourcery}
 \end{EntriesTable}
 
 Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
@@ -774,18 +774,18 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 
 \begin{EntriesTable}
 \Year{2017}  &
-    \Me.
-    Step-by-step NMO correction,
-    \emph{The Leading Edge},
-    \DOI{10.1190/tle36020179.1}.
-	\OA
-    \\
+  \Me.
+  Step-by-step NMO correction,
+  \emph{The Leading Edge},
+  \DOI{10.1190/tle36020179.1}.
+  \OA
+  \\
 \Year{2014}  &
-    \Me, \Bi, \Val.
-    Geophysical tutorial: Euler deconvolution of potential-field data,
-    \emph{The Leading Edge},
-    \DOI{10.1190/tle33040448.1}.
-	\OA
+  \Me, \Bi, \Val.
+  Geophysical tutorial: Euler deconvolution of potential-field data,
+  \emph{The Leading Edge},
+  \DOI{10.1190/tle33040448.1}.
+  \OA
 \end{EntriesTable}
 
 
@@ -794,255 +794,255 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 
 \begin{EntriesTable}
 %\Year{\Future}  &
-    %\Invited{}
-    %\Me.
-    %Geophysical research powered by open-source,
-    %\emph{Christian-Albrechts-Universität zu Kiel},
-    %Kiel, Germany.
-    %\\
+  %\Invited{}
+  %\Me.
+  %Geophysical research powered by open-source,
+  %\emph{Christian-Albrechts-Universität zu Kiel},
+  %Kiel, Germany.
+  %\\
 \Year{2020}  &
-    \Invited{}
-    \Me.
-    Geophysical research powered by open-source,
-    \emph{Christian-Albrechts-Universität zu Kiel},
-    Kiel, Germany.
-    \\
-    ~ &
-    \Invited{}
-    \Me.
-    Geophysical research powered by open-source,
-    \emph{Departamento de Geofísica, IAG, Universidade de São Paulo},
-    São Paulo, Brazil.
-    \href{https://www.leouieda.com/2020-06-18-usp}{leouieda.com/2020-06-18-usp}.
-    \Youtube{VqI8BX1Yg54}.
-    \\
-    ~ &
-    \Invited{}
-    \Me.
-    Geophysical research powered by open-source,
-    \emph{Technische Universität Bergakademie Freiberg},
-    Freiberg, Germany.
-    \href{https://www.leouieda.com/2020-06-04-freiberg}{leouieda.com/2020-06-04-freiberg}.
-    \\
-    ~ &
-    \Me, \Santiago.
-    Evaluating the accuracy of equivalent-source predictions using
-    cross-validation,
-    \emph{EGU 2020},
-    Vienna, Austria.
-    \DOI{10.5194/egusphere-egu2020-15729}.
-    \DOI{10.6084/m9.figshare.12245372}.
-    \\
-    ~ &
-    \Invited{}
-    \Me.
-    Geophysical research powered by open-source,
-    \emph{Geographic Data Science Lab, University of Liverpool},
-    Liverpool, UK.
-    \href{https://www.leouieda.com/liverpool-gdsl-2020}{leouieda.com/liverpool-gdsl-2020}.
-    \\
+  \Invited{}
+  \Me.
+  Geophysical research powered by open-source,
+  \emph{Christian-Albrechts-Universität zu Kiel},
+  Kiel, Germany.
+  \\
+  ~ &
+  \Invited{}
+  \Me.
+  Geophysical research powered by open-source,
+  \emph{Departamento de Geofísica, IAG, Universidade de São Paulo},
+  São Paulo, Brazil.
+  \href{https://www.leouieda.com/2020-06-18-usp}{leouieda.com/2020-06-18-usp}.
+  \Youtube{VqI8BX1Yg54}.
+  \\
+  ~ &
+  \Invited{}
+  \Me.
+  Geophysical research powered by open-source,
+  \emph{Technische Universität Bergakademie Freiberg},
+  Freiberg, Germany.
+  \href{https://www.leouieda.com/2020-06-04-freiberg}{leouieda.com/2020-06-04-freiberg}.
+  \\
+  ~ &
+  \Me, \Santiago.
+  Evaluating the accuracy of equivalent-source predictions using
+  cross-validation,
+  \emph{EGU 2020},
+  Vienna, Austria.
+  \DOI{10.5194/egusphere-egu2020-15729}.
+  \DOI{10.6084/m9.figshare.12245372}.
+  \\
+  ~ &
+  \Invited{}
+  \Me.
+  Geophysical research powered by open-source,
+  \emph{Geographic Data Science Lab, University of Liverpool},
+  Liverpool, UK.
+  \href{https://www.leouieda.com/liverpool-gdsl-2020}{leouieda.com/liverpool-gdsl-2020}.
+  \\
 \Year{2019}  &
-    \Me, \Paul.
-    PyGMT: Accessing the Generic Mapping Tools from Python,
-    \emph{AGU 2019},
-    San Francisco, USA.
-    \DOI{10.6084/m9.figshare.11320280}.
-    \\
-    ~ &
-    \Me.
-    Building the foundations for open-source geophysics,
-    \emph{\LIVEARTH, \LIV},
-    UK.
-    \DOI{10.6084/m9.figshare.10255832}.
-    \\
+  \Me, \Paul.
+  PyGMT: Accessing the Generic Mapping Tools from Python,
+  \emph{AGU 2019},
+  San Francisco, USA.
+  \DOI{10.6084/m9.figshare.11320280}.
+  \\
+  ~ &
+  \Me.
+  Building the foundations for open-source geophysics,
+  \emph{\LIVEARTH, \LIV},
+  UK.
+  \DOI{10.6084/m9.figshare.10255832}.
+  \\
 \Year{2018}  &
-    \Me, \Eric, \Paul, \David.
-    Coupled Interpolation of Three-component GPS Velocities,
-    \emph{AGU 2018},
-    Washington DC, USA.
-    \DOI{10.6084/m9.figshare.7440683}.
-    \\
-    ~ &
-    \Me.
-    Machine Learning Lessons for Geophysics,
-    \emph{Department of Earth Sciences, \UHM},
-    Honolulu, USA.
-    \DOI{10.6084/m9.figshare.7203344}.
-    \\
-    ~ &
-    \Me, \Paul.
-    Building an object-oriented Python interface for the Generic Mapping Tools,
-    \emph{Scipy 2018},
-    Austin, USA.
-    \DOI{10.6084/m9.figshare.6814052}.
-    \Youtube{6wMtfZXfTRM}
-    \\
-    ~ &
-    \Me, \David, \Paul.
-    Joint Interpolation of 3-component GPS Velocities Constrained by
-    Elasticity,
-    \emph{AOGS $15^{th}$ Annual Meeting},
-    Honolulu, USA.
-    \DOI{10.6084/m9.figshare.6387467}.
-    \\
-    ~ &
-    \Me, \Paul.
-    Integrating the Generic Mapping Tools with the Scientific Python Ecosystem,
-    \emph{AOGS $15^{th}$ Annual Meeting},
-    Honolulu, USA.
-    \DOI{10.6084/m9.figshare.6399944}.
-    \\
+  \Me, \Eric, \Paul, \David.
+  Coupled Interpolation of Three-component GPS Velocities,
+  \emph{AGU 2018},
+  Washington DC, USA.
+  \DOI{10.6084/m9.figshare.7440683}.
+  \\
+  ~ &
+  \Me.
+  Machine Learning Lessons for Geophysics,
+  \emph{Department of Earth Sciences, \UHM},
+  Honolulu, USA.
+  \DOI{10.6084/m9.figshare.7203344}.
+  \\
+  ~ &
+  \Me, \Paul.
+  Building an object-oriented Python interface for the Generic Mapping Tools,
+  \emph{Scipy 2018},
+  Austin, USA.
+  \DOI{10.6084/m9.figshare.6814052}.
+  \Youtube{6wMtfZXfTRM}
+  \\
+  ~ &
+  \Me, \David, \Paul.
+  Joint Interpolation of 3-component GPS Velocities Constrained by
+  Elasticity,
+  \emph{AOGS $15^{th}$ Annual Meeting},
+  Honolulu, USA.
+  \DOI{10.6084/m9.figshare.6387467}.
+  \\
+  ~ &
+  \Me, \Paul.
+  Integrating the Generic Mapping Tools with the Scientific Python Ecosystem,
+  \emph{AOGS $15^{th}$ Annual Meeting},
+  Honolulu, USA.
+  \DOI{10.6084/m9.figshare.6399944}.
+  \\
 \Year{2017}  &
-    \Invited{}
-    \Me, \Paul.
-    Nurturing reliable and robust open-source scientific software,
-    \emph{AGU Fall Meeting 2017},
-    New Orleans, USA.
-    \Youtube{0GO4ZZ5Ry6M}
-    \\
-    ~  &
-    \Me, \Paul.
-    A modern Python interface for the Generic Mapping Tools,
-    \emph{AGU Fall Meeting 2017},
-    New Orleans, USA.
-    \DOI{10.6084/m9.figshare.5662411}.
-    \\
-    ~  &
-    \Me, \Paul.
-    Bringing the Generic Mapping Tools to Python,
-    \emph{Scipy 2017},
-    Austin, USA.
-    \DOI{10.6084/m9.figshare.7635833}.
-    \Youtube{93M4How7R24}
-    \\
-    ~ &
-    \Me.
-    Inverting gravity to map the Moho: A new method and the open source
-    software that made it possible,
-    \emph{Department of Geology and Geophysics, \UHM},
-    Honolulu, USA.
-    \DOI{10.6084/m9.figshare.4779766}.
-    \\
+  \Invited{}
+  \Me, \Paul.
+  Nurturing reliable and robust open-source scientific software,
+  \emph{AGU Fall Meeting 2017},
+  New Orleans, USA.
+  \Youtube{0GO4ZZ5Ry6M}
+  \\
+  ~  &
+  \Me, \Paul.
+  A modern Python interface for the Generic Mapping Tools,
+  \emph{AGU Fall Meeting 2017},
+  New Orleans, USA.
+  \DOI{10.6084/m9.figshare.5662411}.
+  \\
+  ~  &
+  \Me, \Paul.
+  Bringing the Generic Mapping Tools to Python,
+  \emph{Scipy 2017},
+  Austin, USA.
+  \DOI{10.6084/m9.figshare.7635833}.
+  \Youtube{93M4How7R24}
+  \\
+  ~ &
+  \Me.
+  Inverting gravity to map the Moho: A new method and the open source
+  software that made it possible,
+  \emph{Department of Geology and Geophysics, \UHM},
+  Honolulu, USA.
+  \DOI{10.6084/m9.figshare.4779766}.
+  \\
 \Year{2016}  &
-    \Invited{}
-    \Me.
-    Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
-    \emph{Observatório Nacional},
-    Rio de Janeiro, Brazil.
-    \\
+  \Invited{}
+  \Me.
+  Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
+  \emph{Observatório Nacional},
+  Rio de Janeiro, Brazil.
+  \\
 \Year{2015}  &
-    \Invited{}
-    \Me.
-    Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
-    \emph{Universidade de São Paulo},
-    São Paulo, Brazil.
-    \DOI{10.6084/m9.figshare.1381870}.
-    \\
+  \Invited{}
+  \Me.
+  Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
+  \emph{Universidade de São Paulo},
+  São Paulo, Brazil.
+  \DOI{10.6084/m9.figshare.1381870}.
+  \\
 \Year{2014}  &
-    \Me, \Bi, \Val.
-    Using Fatiando a Terra to solve inverse problems in geophysics,
-    \emph{Scipy 2014},
-    Austin, USA.
-    \DOI{10.6084/m9.figshare.1089987}.
-    \\
-    ~ &
-    \Me, \Val.
-    Gravity inversion in spherical coordinates using tesseroids,
-    \emph{EGU General Assembly 2014},
-    Vienna, Austria.
-    \DOI{10.6084/m9.figshare.1155457}.
-    \\
+  \Me, \Bi, \Val.
+  Using Fatiando a Terra to solve inverse problems in geophysics,
+  \emph{Scipy 2014},
+  Austin, USA.
+  \DOI{10.6084/m9.figshare.1089987}.
+  \\
+  ~ &
+  \Me, \Val.
+  Gravity inversion in spherical coordinates using tesseroids,
+  \emph{EGU General Assembly 2014},
+  Vienna, Austria.
+  \DOI{10.6084/m9.figshare.1155457}.
+  \\
 \Year{2013}  &
-    \Me, \Bi, \Val.
-    Modeling the Earth with Fatiando a Terra,
-    \emph{Scipy 2013},
-    Austin, USA.
-    \DOI{10.25080/Majora-8b375195-010}.
-    \Youtube{Ec38h1oB8cc}
-    \\
-    ~ &
-    \Me, \Val.
-    3D magnetic inversion by planting anomalous densities,
-    \emph{AGU Meeting of the Americas},
-    Cancun, Mexico.
-    \DOI{10.6084/m9.figshare.703651}.
-    \\
+  \Me, \Bi, \Val.
+  Modeling the Earth with Fatiando a Terra,
+  \emph{Scipy 2013},
+  Austin, USA.
+  \DOI{10.25080/Majora-8b375195-010}.
+  \Youtube{Ec38h1oB8cc}
+  \\
+  ~ &
+  \Me, \Val.
+  3D magnetic inversion by planting anomalous densities,
+  \emph{AGU Meeting of the Americas},
+  Cancun, Mexico.
+  \DOI{10.6084/m9.figshare.703651}.
+  \\
 \Year{2012}  &
-    \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
-    Iron ore interpretation using gravity-gradient inversions in the Carajás,
-    Brazil,
-    \emph{SEG Annual Meeting 2012},
-    Las Vegas, USA.
-    \DOI{10.6084/m9.figshare.156865}.
-    \\
-    ~ &
-    \Me, \Val.
-    Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
-    anomalous densities,
-    \emph{SEG Annual Meeting 2012},
-    Las Vegas, USA.
-    \DOI{10.6084/m9.figshare.156864}.
-    \\
-    ~ &
-    \Me, \Val.
-    Rapid 3D inversion of gravity and gravity gradient data to test geologic
-    hypotheses,
-    \emph{International Symposium on Gravity, Geoid and Height Systems},
-    Venice, Italy.
-    \DOI{10.6084/m9.figshare.156859}.
-    \\
+  \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
+  Iron ore interpretation using gravity-gradient inversions in the Carajás,
+  Brazil,
+  \emph{SEG Annual Meeting 2012},
+  Las Vegas, USA.
+  \DOI{10.6084/m9.figshare.156865}.
+  \\
+  ~ &
+  \Me, \Val.
+  Use of the ``shape-of-anomaly'' data misfit in 3D inversion by planting
+  anomalous densities,
+  \emph{SEG Annual Meeting 2012},
+  Las Vegas, USA.
+  \DOI{10.6084/m9.figshare.156864}.
+  \\
+  ~ &
+  \Me, \Val.
+  Rapid 3D inversion of gravity and gravity gradient data to test geologic
+  hypotheses,
+  \emph{International Symposium on Gravity, Geoid and Height Systems},
+  Venice, Italy.
+  \DOI{10.6084/m9.figshare.156859}.
+  \\
 \Year{2011}  &
-    \Me, \Val.
-    Robust 3D gravity gradient inversion by planting anomalous densities,
-    \emph{SEG Annual Meeting 2011},
-    San Antonio, USA.
-    \DOI{10.6084/m9.figshare.156863}.
-    \\
-    ~ &
-    \Me, \Val.
-    3D gravity inversion by planting anomalous densities,
-    \emph{Internation Congress of the Brazilian Geophysical Society},
-    Rio de Janeiro, Brazil.
-    \DOI{10.6084/m9.figshare.156861}.
-    \\
-    ~ &
-    \Me, \Everton, \Carla, \Eder.
-    Optimal forward calculation method of the Marussi tensor due to a geologic
-    structure at GOCE height,
-    \emph{4th International GOCE User Workshop},
-    Munich, Germany.
-    \DOI{10.6084/m9.figshare.92624}.
-    \\
-    ~ &
-    \Me, \Val.
-    3D gravity gradient inversion by planting density anomalies,
-    \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
-    Vienna, Austria.
-    \DOI{10.6084/m9.figshare.91511}.
-    \\
+  \Me, \Val.
+  Robust 3D gravity gradient inversion by planting anomalous densities,
+  \emph{SEG Annual Meeting 2011},
+  San Antonio, USA.
+  \DOI{10.6084/m9.figshare.156863}.
+  \\
+  ~ &
+  \Me, \Val.
+  3D gravity inversion by planting anomalous densities,
+  \emph{Internation Congress of the Brazilian Geophysical Society},
+  Rio de Janeiro, Brazil.
+  \DOI{10.6084/m9.figshare.156861}.
+  \\
+  ~ &
+  \Me, \Everton, \Carla, \Eder.
+  Optimal forward calculation method of the Marussi tensor due to a geologic
+  structure at GOCE height,
+  \emph{4th International GOCE User Workshop},
+  Munich, Germany.
+  \DOI{10.6084/m9.figshare.92624}.
+  \\
+  ~ &
+  \Me, \Val.
+  3D gravity gradient inversion by planting density anomalies,
+  \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
+  Vienna, Austria.
+  \DOI{10.6084/m9.figshare.91511}.
+  \\
 \Year{2010}  &
-    \Me, \Naomi, \Carla.
-    Computation of the gravity gradient tensor due to topographic masses using
-    tesseroids,
-    \emph{AGU Meeting of the Americas},
-    Foz do Iguaçu, Brazil.
-    \DOI{10.6084/m9.figshare.156858}.
-    \\
+  \Me, \Naomi, \Carla.
+  Computation of the gravity gradient tensor due to topographic masses using
+  tesseroids,
+  \emph{AGU Meeting of the Americas},
+  Foz do Iguaçu, Brazil.
+  \DOI{10.6084/m9.figshare.156858}.
+  \\
 \Year{2008}  &
-    \Me, \Naomi.
-    Utilização de tesseróides na modelagem de dados de gradiometria
-    gravimétrica,
-    \emph{XIII Simpósio de Iniciação Científica do IAG-USP},
-    São Paulo, Brazil.
-    \DOI{10.6084/m9.figshare.4779760}.
-    \\
+  \Me, \Naomi.
+  Utilização de tesseróides na modelagem de dados de gradiometria
+  gravimétrica,
+  \emph{XIII Simpósio de Iniciação Científica do IAG-USP},
+  São Paulo, Brazil.
+  \DOI{10.6084/m9.figshare.4779760}.
+  \\
 \Year{2006}  &
-    \Me, \Manoel.
-    Paleomagnetismo e mineralogia magnética dos diques cambrianos de Maravilhas
-    e Prata (PB),
-    \emph{XI Simpósio de Iniciação Científica do IAG/USP},
-    São Paulo, Brazil.
-    \DOI{10.6084/m9.figshare.4779769}.
+  \Me, \Manoel.
+  Paleomagnetismo e mineralogia magnética dos diques cambrianos de Maravilhas
+  e Prata (PB),
+  \emph{XI Simpósio de Iniciação Científica do IAG/USP},
+  São Paulo, Brazil.
+  \DOI{10.6084/m9.figshare.4779769}.
 \end{EntriesTable}
 
 
@@ -1052,7 +1052,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 \subsection{Editor}
 
 \begin{EntriesTable}
-    \Duration{2019}{\Ongoing} & Topic editor for the \textit{Journal of Open Source Software}
+  \Duration{2019}{\Ongoing} & Topic editor for the \textit{Journal of Open Source Software}
 \end{EntriesTable}
 
 \subsection{Reviewer}
@@ -1079,16 +1079,16 @@ Journal of Open Source Software
 
 \begin{EntriesTable}
 \Duration{2020}{\Ongoing} &
-    Earth Sciences representative at the Early Career Academic (ECA) forum,
-    \LIV.
-    \\
+  Earth Sciences representative at the Early Career Academic (ECA) forum,
+  \LIV.
+  \\
 \Year{2015} &
-    Chairman of the Election Committee for the deans of the University and the School of
-    Geology, \UERJ.
-    \\
+  Chairman of the Election Committee for the deans of the University and the School of
+  Geology, \UERJ.
+  \\
 \Duration{2015}{2017} &
-    Faculty Advisor for the Student Chapter of the Socienty of Exploration Geophysicists
-    (SEG) at the \UERJ.
+  Faculty Advisor for the Student Chapter of the Socienty of Exploration Geophysicists
+  (SEG) at the \UERJ.
 \end{EntriesTable}
 
 \subsection{Convener}
@@ -1096,45 +1096,45 @@ Journal of Open Source Software
 \begin{EntriesTable}
 %\Year{future} &
 \Year{2019} &
-    Townhall: Update and Future Directions of the Open-Source Software Initiative.
-    \newline
-    \Me, \Lindsey, \Lion, \Rene, \Bane.
-    \newline
-    \emph{AGU 2019}, San Francisco, USA.
-    \\
-    ~ &
-    Session: NS21A - A Tour of Open-Source Software Packages for the Geosciences.
-    \newline
-    \Lindsey, \Rene, \Me, \Jens.
-    \newline
-    \emph{AGU 2019}, San Francisco, USA.
-    \\
+  Townhall: Update and Future Directions of the Open-Source Software Initiative.
+  \newline
+  \Me, \Lindsey, \Lion, \Rene, \Bane.
+  \newline
+  \emph{AGU 2019}, San Francisco, USA.
+  \\
+  ~ &
+  Session: NS21A - A Tour of Open-Source Software Packages for the Geosciences.
+  \newline
+  \Lindsey, \Rene, \Me, \Jens.
+  \newline
+  \emph{AGU 2019}, San Francisco, USA.
+  \\
 \Year{2018} &
-    Townhall: The role of an open-source software initiative within the AGU.
-    \newline
-    \Lindsey, \Lion, \Me.
-    \newline
-    \emph{AGU 2018}, Washington DC, USA.
+  Townhall: The role of an open-source software initiative within the AGU.
+  \newline
+  \Lindsey, \Lion, \Me.
+  \newline
+  \emph{AGU 2018}, Washington DC, USA.
 \end{EntriesTable}
 
 \subsection{Affiliations}
 
 \begin{EntriesTable}
-    \Duration{2020}{\Ongoing} & Royal Astronomical Society
-    \\
-    \Duration{2014}{\Ongoing} & \href{https://softwareunderground.org}{Software Underground}
-    \\
-    \Duration{2014}{\Ongoing} & European Geosciences Union
-    \\
-    \Duration{2010}{\Ongoing} & American Geophysical Union
-    \\
-    \Duration{2011}{2019} & Society of Exploration Geophysicists
+  \Duration{2020}{\Ongoing} & Royal Astronomical Society
+  \\
+  \Duration{2014}{\Ongoing} & \href{https://softwareunderground.org}{Software Underground}
+  \\
+  \Duration{2014}{\Ongoing} & European Geosciences Union
+  \\
+  \Duration{2010}{\Ongoing} & American Geophysical Union
+  \\
+  \Duration{2011}{2019} & Society of Exploration Geophysicists
 \end{EntriesTable}
 
 \subsection{Other}
 
 \begin{EntriesTable}
-    \Duration{2019}{\Ongoing} & Member of the EarthArXiv Advisory Council
+  \Duration{2019}{2020} & Member of the EarthArXiv Advisory Council (2 year tenure)
 \end{EntriesTable}
 
 
@@ -1143,9 +1143,9 @@ Journal of Open Source Software
 
 \TablePad
 \begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}@{}}
-    Portuguese & Native
-    \\
-    English & IELTS: CEFR Level C2 (mastery or proficiency) obtained in 2019
+  Portuguese & Native
+  \\
+  English & IELTS: CEFR Level C2 (mastery or proficiency) obtained in 2019
 \end{tabularx}
 
 \end{document}
