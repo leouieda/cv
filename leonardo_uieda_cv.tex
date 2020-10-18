@@ -115,7 +115,6 @@
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
-\newcommand{\Invited}{\textbf{[Invited]}}
 
 % For fancy and multipage tables
 \usepackage{tabularx}
@@ -133,18 +132,24 @@
 
 % Macros to add links
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-\newcommand{\Preprint}[1]{preprint: \href{https://doi.org/#1}{doi.org/#1}}
-\newcommand{\Youtube}[1]{recording: \href{https://youtu.be/#1}{youtu.be/#1}}
+\newcommand{\Preprint}[2]{\href{#1}{pdf}}
+\newcommand{\PreprintDOI}[1]{\href{https://doi.org/#1}{pdf}}
+\newcommand{\Slides}[2]{\href{#1}{slides}}
+\newcommand{\SlidesDOI}[1]{\href{https://doi.org/#1}{slides}}
+\newcommand{\Repo}[1]{\href{https://github.com/#1}{code}}
+\newcommand{\Youtube}[1]{\href{https://youtu.be/#1}{video}}
 
 % Tags to mark publications
-%\newcommand{\OA}{{\bfseries [open access]}}
-\newcommand{\OA}{}
+%\newcommand{\ExtraInfo}[1]{\{ \ignorespaces#1\unskip\ \}}
+\newcommand{\ExtraInfo}[1]{\{\ignorespaces#1\unskip\}}
+\newcommand{\OA}{{\bfseries open-access}}
+\newcommand{\Invited}{{\bfseries invited~talk}}
+\newcommand{\Sep}{|}
 
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
 \newcommand{\Ongoing}{}
-%\newcommand{\Ongoing}{$\ast$}
 \newcommand{\Future}{future}
 \newcommand{\Review}{in review}
 \newcommand{\Accepted}{accepted}
@@ -383,13 +388,14 @@
   Pooch: A friend to fetch your data files.
   \emph{Journal of Open Source Software}.
   \DOI{10.21105/joss.01943}.
-  \OA
+  \ExtraInfo{\OA{} \Sep{} \Repo{fatiando/pooch}}
   \\
 \Year{2019}  &
   \Paul, \Joaquim, \Me, \Remko, \Florian, \Walter, \Dongdong.
   The Generic Mapping Tools, Version 6.
   \emph{Geochemistry, Geophysics, Geosystems}.
   \DOI{10.1029/2019GC008515}.
+  \ExtraInfo{\OA{} \Sep{} \Repo{GenericMappingTools/gmt}}
   \\
   ~ &
   \Santiago, \Agustina, \Gimenez, \Me.
@@ -397,7 +403,10 @@
   depth.
   \emph{Geophysical Journal International}.
   \DOI{10.1093/gji/ggz277}.
-  \Preprint{10.31223/osf.io/3548g}
+  \ExtraInfo{
+    \PreprintDOI{10.31223/osf.io/3548g} \Sep{}
+    \Repo{pinga-lab/tesseroid-variable-density}
+  }
   \\
   ~ &
   \Guangdong, \Bo, \Me, \JLiu, \MKaban, \LChen, \RGuo.
@@ -405,7 +414,7 @@
   spherical coordinates with application to lunar mascons.
   \emph{Journal of Geophysical Research: Solid Earth}.
   \DOI{10.1029/2019jb017691}.
-  \Preprint{10.31223/osf.io/dzf9j}
+  \ExtraInfo{\PreprintDOI{10.31223/osf.io/dzf9j}}
   \\
 \Year{2018}  &
   \Me. Verde: Processing and gridding spatial data using Green's functions.
@@ -419,7 +428,7 @@
   to the South American Moho,
   \emph{Geophysical Journal International},
   \DOI{10.1093/gji/ggw390}.
-  \Preprint{10.31223/osf.io/9ba4m}
+  \PreprintDOI{10.31223/osf.io/9ba4m}
   \\
 \Year{2016}  &
   \Me, \Val, \Carla.
@@ -794,18 +803,14 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 
 \begin{EntriesTable}
 %\Year{\Future}  &
-  %\Invited{}
-  %\Me.
-  %Geophysical research powered by open-source,
-  %\emph{Christian-Albrechts-Universität zu Kiel},
-  %Kiel, Germany.
   %\\
 \Year{2020}  &
-  \Invited{}
   \Me.
   Geophysical research powered by open-source,
   \emph{Christian-Albrechts-Universität zu Kiel},
   Kiel, Germany.
+  \newline
+  \Invited{}
   \\
   ~ &
   \Invited{}
@@ -813,6 +818,8 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   Geophysical research powered by open-source,
   \emph{Departamento de Geofísica, IAG, Universidade de São Paulo},
   São Paulo, Brazil.
+  \newline
+  \Invited{}
   \href{https://www.leouieda.com/2020-06-18-usp}{leouieda.com/2020-06-18-usp}.
   \Youtube{VqI8BX1Yg54}.
   \\
@@ -822,6 +829,8 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   Geophysical research powered by open-source,
   \emph{Technische Universität Bergakademie Freiberg},
   Freiberg, Germany.
+  \newline
+  \Invited{}
   \href{https://www.leouieda.com/2020-06-04-freiberg}{leouieda.com/2020-06-04-freiberg}.
   \\
   ~ &
@@ -831,7 +840,8 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   \emph{EGU 2020},
   Vienna, Austria.
   \DOI{10.5194/egusphere-egu2020-15729}.
-  \DOI{10.6084/m9.figshare.12245372}.
+  \newline
+  \SlidesDOI{10.6084/m9.figshare.12245372}.
   \\
   ~ &
   \Invited{}
