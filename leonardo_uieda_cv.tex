@@ -120,7 +120,6 @@
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
 \newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
-\newcommand{\Invited}{\textbf{[Invited]}}
 
 % For fancy and multipage tables
 \usepackage{tabularx}
@@ -143,10 +142,12 @@
 \newcommand{\GitHub}[1]{\newline • GitHub: \href{https://github.com/#1}{#1}}
 \newcommand{\Slides}[1]{\newline • Slides: \href{https://#1}{#1}}
 \newcommand{\SlidesDOI}[1]{\newline • Slides: \DOI{#1}}
+\newcommand{\PosterDOI}[1]{\newline • Poster: \DOI{#1}}
 
 % Tags to mark publications
 \newcommand{\OA}{\newline • Open-access}
 %\newcommand{\OA}{}
+\newcommand{\Invited}{\newline • \textbf{Invited talk}}
 
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
@@ -521,7 +522,6 @@
   Optimal forward calculation method of the Marussi tensor due to a geologic
   structure at GOCE height,
   \emph{Proceedings of the 4th International GOCE User Workshop}.
-  \DOI{10.6084/m9.figshare.92624}.
   \\
   ~ &
   \Me, \Val.
@@ -860,6 +860,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   \emph{The Leading Edge},
   \DOI{10.1190/tle36020179.1}.
   \OA
+  \GitHub{pinga-lab/nmo-tutorial}
   \\
 \Year{2014}  &
   \Me, \Bi, \Val.
@@ -867,6 +868,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   \emph{The Leading Edge},
   \DOI{10.1190/tle33040448.1}.
   \OA
+  \GitHub{pinga-lab/paper-tle-euler-tutorial}
 \end{EntriesTable}
 
 
@@ -882,28 +884,37 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   %Kiel, Germany.
   %\\
 \Year{2020}  &
-  \Invited{}
   \Me.
   Geophysical research powered by open-source,
-  \emph{Christian-Albrechts-Universität zu Kiel},
+  \emph{Christian Albrechts Universität zu Kiel},
   Kiel, Germany.
+  \Invited
+  \Slides{www.leouieda.com/2020-07-01-kiel}
   \\
   ~ &
-  \Invited{}
   \Me.
   Geophysical research powered by open-source,
   \emph{Departamento de Geofísica, IAG, Universidade de São Paulo},
   São Paulo, Brazil.
-  \href{https://www.leouieda.com/2020-06-18-usp}{leouieda.com/2020-06-18-usp}.
-  \Youtube{VqI8BX1Yg54}.
+  \Invited
+  \Youtube{VqI8BX1Yg54}
+  \Slides{www.leouieda.com/2020-06-18-usp}
   \\
   ~ &
-  \Invited{}
   \Me.
   Geophysical research powered by open-source,
   \emph{Technische Universität Bergakademie Freiberg},
   Freiberg, Germany.
-  \href{https://www.leouieda.com/2020-06-04-freiberg}{leouieda.com/2020-06-04-freiberg}.
+  \Invited
+  \Slides{www.leouieda.com/2020-06-04-freiberg}
+  \\
+  ~ &
+  \Me.
+  Geophysical research powered by open-source,
+  \emph{Geographic Data Science Lab, University of Liverpool},
+  Liverpool, UK.
+  \Invited
+  \Slides{www.leouieda.com/liverpool-gdsl-2020}
   \\
   ~ &
   \Me, \Santiago.
@@ -912,51 +923,43 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   \emph{EGU 2020},
   Vienna, Austria.
   \DOI{10.5194/egusphere-egu2020-15729}.
-  \DOI{10.6084/m9.figshare.12245372}.
-  \\
-  ~ &
-  \Invited{}
-  \Me.
-  Geophysical research powered by open-source,
-  \emph{Geographic Data Science Lab, University of Liverpool},
-  Liverpool, UK.
-  \href{https://www.leouieda.com/liverpool-gdsl-2020}{leouieda.com/liverpool-gdsl-2020}.
+  \SlidesDOI{10.6084/m9.figshare.12245372}
   \\
 \Year{2019}  &
   \Me, \Paul.
   PyGMT: Accessing the Generic Mapping Tools from Python,
   \emph{AGU 2019},
   San Francisco, USA.
-  \DOI{10.6084/m9.figshare.11320280}.
+  \PosterDOI{10.6084/m9.figshare.11320280}
   \\
   ~ &
   \Me.
   Building the foundations for open-source geophysics,
   \emph{\LIVEARTH, \LIV},
   UK.
-  \DOI{10.6084/m9.figshare.10255832}.
+  \SlidesDOI{10.6084/m9.figshare.10255832}
   \\
 \Year{2018}  &
   \Me, \Eric, \Paul, \David.
   Coupled Interpolation of Three-component GPS Velocities,
   \emph{AGU 2018},
   Washington DC, USA.
-  \DOI{10.6084/m9.figshare.7440683}.
+  \PosterDOI{10.6084/m9.figshare.7440683}
   \\
   ~ &
   \Me.
   Machine Learning Lessons for Geophysics,
   \emph{Department of Earth Sciences, \UHM},
   Honolulu, USA.
-  \DOI{10.6084/m9.figshare.7203344}.
+  \SlidesDOI{10.6084/m9.figshare.7203344}
   \\
   ~ &
   \Me, \Paul.
   Building an object-oriented Python interface for the Generic Mapping Tools,
   \emph{Scipy 2018},
   Austin, USA.
-  \DOI{10.6084/m9.figshare.6814052}.
   \Youtube{6wMtfZXfTRM}
+  \SlidesDOI{10.6084/m9.figshare.6814052}
   \\
   ~ &
   \Me, \David, \Paul.
@@ -964,21 +967,21 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   Elasticity,
   \emph{AOGS $15^{th}$ Annual Meeting},
   Honolulu, USA.
-  \DOI{10.6084/m9.figshare.6387467}.
+  \SlidesDOI{10.6084/m9.figshare.6387467}
   \\
   ~ &
   \Me, \Paul.
   Integrating the Generic Mapping Tools with the Scientific Python Ecosystem,
   \emph{AOGS $15^{th}$ Annual Meeting},
   Honolulu, USA.
-  \DOI{10.6084/m9.figshare.6399944}.
+  \PosterDOI{10.6084/m9.figshare.6399944}
   \\
 \Year{2017}  &
-  \Invited{}
   \Me, \Paul.
   Nurturing reliable and robust open-source scientific software,
   \emph{AGU Fall Meeting 2017},
   New Orleans, USA.
+  \Invited
   \Youtube{0GO4ZZ5Ry6M}
   \\
   ~  &
@@ -986,15 +989,15 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   A modern Python interface for the Generic Mapping Tools,
   \emph{AGU Fall Meeting 2017},
   New Orleans, USA.
-  \DOI{10.6084/m9.figshare.5662411}.
+  \PosterDOI{10.6084/m9.figshare.5662411}
   \\
   ~  &
   \Me, \Paul.
   Bringing the Generic Mapping Tools to Python,
   \emph{Scipy 2017},
   Austin, USA.
-  \DOI{10.6084/m9.figshare.7635833}.
   \Youtube{93M4How7R24}
+  \SlidesDOI{10.6084/m9.figshare.7635833}
   \\
   ~ &
   \Me.
@@ -1002,36 +1005,37 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   software that made it possible,
   \emph{Department of Geology and Geophysics, \UHM},
   Honolulu, USA.
-  \DOI{10.6084/m9.figshare.4779766}.
+  \SlidesDOI{10.6084/m9.figshare.4779766}
   \\
 \Year{2016}  &
-  \Invited{}
   \Me.
   Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
   \emph{Observatório Nacional},
   Rio de Janeiro, Brazil.
+  \Invited
+  \SlidesDOI{10.6084/m9.figshare.1381870}
   \\
 \Year{2015}  &
-  \Invited{}
   \Me.
   Fatiando a Terra: construindo uma base para ensino e pesquisa de geofísica,
   \emph{Universidade de São Paulo},
   São Paulo, Brazil.
-  \DOI{10.6084/m9.figshare.1381870}.
+  \Invited
+  \SlidesDOI{10.6084/m9.figshare.1381870}
   \\
 \Year{2014}  &
   \Me, \Bi, \Val.
   Using Fatiando a Terra to solve inverse problems in geophysics,
   \emph{Scipy 2014},
   Austin, USA.
-  \DOI{10.6084/m9.figshare.1089987}.
+  \PosterDOI{10.6084/m9.figshare.1089987}
   \\
   ~ &
   \Me, \Val.
   Gravity inversion in spherical coordinates using tesseroids,
   \emph{EGU General Assembly 2014},
   Vienna, Austria.
-  \DOI{10.6084/m9.figshare.1155457}.
+  \SlidesDOI{10.6084/m9.figshare.1155457}
   \\
 \Year{2013}  &
   \Me, \Bi, \Val.
@@ -1040,13 +1044,14 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   Austin, USA.
   \DOI{10.25080/Majora-8b375195-010}.
   \Youtube{Ec38h1oB8cc}
+  \Slides{www.leouieda.com/scipy2013/?theme=night}
   \\
   ~ &
   \Me, \Val.
   3D magnetic inversion by planting anomalous densities,
   \emph{AGU Meeting of the Americas},
   Cancun, Mexico.
-  \DOI{10.6084/m9.figshare.703651}.
+  \SlidesDOI{10.6084/m9.figshare.703651}
   \\
 \Year{2012}  &
   \Dio, \Me, \YLi, \Val, \BragaVale, \Angeli, \Peres.
@@ -1054,7 +1059,8 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   Brazil,
   \emph{SEG Annual Meeting 2012},
   Las Vegas, USA.
-  \DOI{10.6084/m9.figshare.156865}.
+  \DOI{10.1190/segam2012-0525.1}.
+  \SlidesDOI{10.6084/m9.figshare.156865}
   \\
   ~ &
   \Me, \Val.
@@ -1062,7 +1068,8 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   anomalous densities,
   \emph{SEG Annual Meeting 2012},
   Las Vegas, USA.
-  \DOI{10.6084/m9.figshare.156864}.
+  \DOI{10.1190/segam2012-0383.1}.
+  \SlidesDOI{10.6084/m9.figshare.156864}
   \\
   ~ &
   \Me, \Val.
@@ -1070,21 +1077,23 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   hypotheses,
   \emph{International Symposium on Gravity, Geoid and Height Systems},
   Venice, Italy.
-  \DOI{10.6084/m9.figshare.156859}.
+  \SlidesDOI{10.6084/m9.figshare.156859}
   \\
 \Year{2011}  &
   \Me, \Val.
   Robust 3D gravity gradient inversion by planting anomalous densities,
   \emph{SEG Annual Meeting 2011},
   San Antonio, USA.
-  \DOI{10.6084/m9.figshare.156863}.
+  \DOI{10.1190/1.3628201}.
+  \SlidesDOI{10.6084/m9.figshare.156863}
   \\
   ~ &
   \Me, \Val.
   3D gravity inversion by planting anomalous densities,
   \emph{Internation Congress of the Brazilian Geophysical Society},
   Rio de Janeiro, Brazil.
-  \DOI{10.6084/m9.figshare.156861}.
+  \DOI{10.1190/sbgf2011-179}.
+  \SlidesDOI{10.6084/m9.figshare.156861}
   \\
   ~ &
   \Me, \Everton, \Carla, \Eder.
@@ -1092,14 +1101,15 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   structure at GOCE height,
   \emph{4th International GOCE User Workshop},
   Munich, Germany.
-  \DOI{10.6084/m9.figshare.92624}.
+  \PosterDOI{10.6084/m9.figshare.92624}
   \\
   ~ &
   \Me, \Val.
   3D gravity gradient inversion by planting density anomalies,
   \emph{73th EAGE Conference and Exhibition incorporating SPE EUROPEC},
   Vienna, Austria.
-  \DOI{10.6084/m9.figshare.91511}.
+  \DOI{10.3997/2214-4609.20149567}.
+  \PosterDOI{10.6084/m9.figshare.91511}
   \\
 \Year{2010}  &
   \Me, \Naomi, \Carla.
@@ -1107,7 +1117,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   tesseroids,
   \emph{AGU Meeting of the Americas},
   Foz do Iguaçu, Brazil.
-  \DOI{10.6084/m9.figshare.156858}.
+  \SlidesDOI{10.6084/m9.figshare.156858}
   \\
 \Year{2008}  &
   \Me, \Naomi.
@@ -1115,7 +1125,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   gravimétrica,
   \emph{XIII Simpósio de Iniciação Científica do IAG-USP},
   São Paulo, Brazil.
-  \DOI{10.6084/m9.figshare.4779760}.
+  \PosterDOI{10.6084/m9.figshare.4779760}
   \\
 \Year{2006}  &
   \Me, \Manoel.
@@ -1123,7 +1133,7 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   e Prata (PB),
   \emph{XI Simpósio de Iniciação Científica do IAG/USP},
   São Paulo, Brazil.
-  \DOI{10.6084/m9.figshare.4779769}.
+  \PosterDOI{10.6084/m9.figshare.4779769}
 \end{EntriesTable}
 
 
