@@ -138,13 +138,15 @@
 
 % Macros to add links
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-\newcommand{\Preprint}[1]{Preprint: \href{https://doi.org/#1}{doi.org/#1}}
-\newcommand{\Youtube}[1]{Recording: \href{https://youtu.be/#1}{youtu.be/#1}}
-\newcommand{\GitHub}[1]{GitHub: \href{https://github.com/#1}{#1}}
+\newcommand{\Preprint}[1]{\newline • Preprint: \DOI{#1}}
+\newcommand{\Youtube}[1]{\newline • Recording: \href{https://youtu.be/#1}{youtu.be/#1}}
+\newcommand{\GitHub}[1]{\newline • GitHub: \href{https://github.com/#1}{#1}}
+\newcommand{\Slides}[1]{\newline • Slides: \href{https://#1}{#1}}
+\newcommand{\SlidesDOI}[1]{\newline • Slides: \DOI{#1}}
 
 % Tags to mark publications
-%\newcommand{\OA}{{\bfseries [open access]}}
-\newcommand{\OA}{}
+\newcommand{\OA}{\newline • Open-access}
+%\newcommand{\OA}{}
 
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
@@ -390,7 +392,6 @@
   \emph{Journal of Open Source Software}.
   \DOI{10.21105/joss.01943}.
   \OA
-  \newline
   \GitHub{fatiando/pooch}
   \\
 \Year{2019}  &
@@ -398,6 +399,7 @@
   The Generic Mapping Tools, Version 6.
   \emph{Geochemistry, Geophysics, Geosystems}.
   \DOI{10.1029/2019GC008515}.
+  \OA
   \\
   ~ &
   \Santiago, \Agustina, \Gimenez, \Me.
@@ -407,7 +409,6 @@
   \DOI{10.1093/gji/ggz277}.
   %\newline
   \Preprint{10.31223/osf.io/3548g}
-  \newline
   \GitHub{pinga-lab/tesseroid-variable-density}
   \\
   ~ &
@@ -423,7 +424,6 @@
   \emph{Journal of Open Source Software}.
   \DOI{10.21105/joss.00957}.
   \OA
-  \newline
   \GitHub{fatiando/verde}
   \\
 \Year{2017}  &
@@ -433,7 +433,6 @@
   \emph{Geophysical Journal International},
   \DOI{10.1093/gji/ggw390}.
   \Preprint{10.31223/osf.io/9ba4m}
-  \newline
   \GitHub{pinga-lab/paper-moho-inversion-tesseroids}
   \\
 \Year{2016}  &
@@ -441,7 +440,6 @@
   Tesseroids: forward modeling gravitational fields in spherical coordinates,
   \emph{Geophysics},
   \DOI{10.1190/geo2015-0204.1}.
-  \newline
   \GitHub{pinga-lab/paper-tesseroids}
   \\
   ~ &
@@ -459,7 +457,6 @@
   \emph{Nonlinear Processes in Geophysics},
   \DOI{10.5194/npg-22-215-2015}.
   \OA
-  \newline
   \GitHub{pinga-lab/Total-magnetization-of-spherical-bodies}
   \\
 \Year{2014}  &
@@ -487,7 +484,6 @@
   Robust 3D gravity gradient inversion by planting anomalous densities,
   \emph{Geophysics},
   \DOI{10.1190/geo2011-0388.1}.
-  \newline
   \GitHub{pinga-lab/paper-planting-densities}
 \end{EntriesTable}
 
@@ -568,7 +564,6 @@
   Gravity ground survey data compilation for Australia derived from the
   open-access Geoscience Australia archive by
   \href{https://doi.org/10.26186/5c1987fa17078}{Wynne (2018)}.
-  \newline
   \GitHub{compgeolab/australia-gravity-data}
   \\
 \Year{2017}  &
@@ -577,6 +572,7 @@
   model results from ``Fast non-linear gravity inversion in spherical
   coordinates with application to the South American Moho''.
   \DOI{10.6084/m9.figshare.3987267}
+  \GitHub{pinga-lab/paper-moho-inversion-tesseroids}
 \end{EntriesTable}
 
 
@@ -589,44 +585,40 @@
   \newline
   A Python interface for the Generic Mapping Tools
   \newline
-  Role: \textit{Creator and core developer}
-  \newline
+  • Role: \textit{Creator and core developer}
   \GitHub{GenericMappingTools/pygmt}
   \newline
-  Website: \href{https://www.pygmt.org}{www.pygmt.org}
+  • Website: \href{https://www.pygmt.org}{www.pygmt.org}
   \\
   \Duration{2017}{\Ongoing} &
   \textbf{The Generic Mapping Tools (GMT)}
   \newline
   A data processing and mapping toolbox for the Earth, Ocean, and Planetary Science
   \newline
-  Role: \textit{Core team and community management}
-  \newline
+  • Role: \textit{Core team and community management}
   \GitHub{GenericMappingTools/gmt}
   \newline
-  Website: \href{https://www.generic-mapping-tools.org}{www.generic-mapping-tools.org}
+  • Website: \href{https://www.generic-mapping-tools.org}{www.generic-mapping-tools.org}
   \\
   \Duration{2010}{\Ongoing} &
   \textbf{Fatiando a Terra}
   \newline
   Python tools for geophysical data processing, forward modeling, and inversion
   \newline
-  Role: \textit{Creator, main developer, project leadership}
-  \newline
+  • Role: \textit{Creator, main developer, project leadership}
   \GitHub{fatiando}
   \newline
-  Website: \href{https://www.fatiando.org}{www.fatiando.org}
+  • Website: \href{https://www.fatiando.org}{www.fatiando.org}
   \\
   \Duration{2009}{2016} &
   \textbf{Tesseroids}
   \newline
   Forward modeling of gravitational fields in spherical coordinates
   \newline
-  Role: \textit{Creator and sole developer}
-  \newline
+  • Role: \textit{Creator and sole developer}
   \GitHub{leouieda/tesseroids}
   \newline
-  Website: \href{http://www.tesseroids.org}{www.tesseroids.org}
+  • Website: \href{http://www.tesseroids.org}{www.tesseroids.org}
 \end{EntriesTable}
 
 
@@ -678,21 +670,18 @@
   Special Mathematics I: Introduction to Programming and Numerical Analysis
   \newline
   \textit{\UERJ}
-  \newline
   \GitHub{mat-esp/about}
   \\
   \Duration{2014}{2016}  &
   Geophysics I: Gravity and magnetic methods
   \newline
   \textit{\UERJ}
-  \newline
   \GitHub{leouieda/geofisica1}
   \\
   \Duration{2014}{2016}  &
   Geophysics II: Exploration Seismology
   \newline
   \textit{\UERJ}
-  \newline
   \GitHub{leouieda/geofisica2}
   \\
   \Year{2015}  &
@@ -712,30 +701,25 @@
   \textit{IRTG-2379 Graduate School: Modern Inverse Problems}
   \newline
   \textit{RWTH Aachen University} (online)
-  \newline
   \GitHub{compgeolab/2020-aachen-inverse-problems}
   \\
   ~ &
   The Generic Mapping Tools for Geodesy
   \newline
   \textit{UNAVCO} (online)
-  \newline
   \GitHub{GenericMappingTools/2020-unavco-course}
   \\
   ~  &
   From scattered data to gridded products using Verde
   \newline
   \textit{Transform 2020} (online)
-  \newline
   \Youtube{-xZdNdvzm3E}
-  \newline
   \GitHub{fatiando/transform2020}
   \\
 \Year{2019}  &
   Best Practices for Developing and Sustaining Your Open-Source Research Software
   \newline
   \textit{AGU Fall Meeting 2019}
-  \newline
   \GitHub{agu-ossi/2019-agu-oss}
   \\
   ~  &
@@ -747,21 +731,18 @@
   The Generic Mapping Tools for Geodesy
   \newline
   \textit{Scripps Institution of Oceanography} and \textit{UNAVCO}
-  \newline
   \GitHub{GenericMappingTools/2019-unavco-course}
   \\
   ~  &
   Introduction to Python Workshop (Earth Sciences REU program)
   \newline
   \textit{Department of Geology and Geophysics, \UHM}
-  \newline
   \GitHub{leouieda/2019-06-reu-python}
   \\
 \Year{2018}  &
   Best Practices for Modern Open-Source Research Codes
   \newline
   \textit{AGU Fall Meeting 2018}
-  \newline
   \GitHub{agu-ossi/2018-agu-oss}
   \\
   ~  &
@@ -773,35 +754,30 @@
   Introduction to Python
   \newline
   \textit{Department of Geology and Geophysics, \UHM}
-  \newline
   \GitHub{leouieda/python-hawaii-2017}
   \\
 \Year{2016}  &
   Python for Geologists (SAGEO)
   \newline
   \textit{Faculdade de Geologia, \UERJ}
-  \newline
   \GitHub{leouieda/python-geologia-2016}
   \\
   ~  &
   Python for Earth Scientists (IAG Summer School)
   \newline
   \textit{Departamento de Geofísica, Universidade de São Paulo}
-  \newline
   \GitHub{leouieda/verao2016}
   \\
 \Year{2014}  &
   Introduction to Geophysical Inversion
   \newline
   \textit{Instituto de Geociências, Universidade de Brasília}
-  \newline
   \GitHub{pinga-lab/inversao-unb-2014}
   \\
 \Year{2011}  &
   Introduction to Geophysical Inversion (IAG Summer School)
   \newline
   \textit{Departamento de Geofísica, Universidade de São Paulo}
-  \newline
   \GitHub{pinga-lab/inversao-iag-2012}
 \end{EntriesTable}
 
