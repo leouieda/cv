@@ -116,6 +116,10 @@
 % Control the font size
 \usepackage{anyfontsize}
 
+% Icon fonts (requires using xelatex or luatex)
+\usepackage[fixed]{fontawesome5}
+\usepackage{academicons}
+
 % Template variables for styling
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
@@ -135,20 +139,17 @@
 \end{tabularx}
 }
 
-% Macros to add links
+% Macros to add links and mark publications
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\Preprint}[1]{\newline • Preprint: \DOI{#1}}
-\newcommand{\Youtube}[1]{\newline • Recording: \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
-\newcommand{\GitHub}[1]{\newline • GitHub: \href{https://github.com/#1}{#1}}
+\newcommand{\Youtube}[1]{\newline • Recording: \faYoutube\, \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
+\newcommand{\GitHub}[1]{\newline • Code: \faGithub\ \href{https://github.com/#1}{#1}}
 \newcommand{\Role}[1]{\newline • Role: #1}
 \newcommand{\Website}[1]{\newline • Website: \href{https://#1}{#1}}
 \newcommand{\Slides}[1]{\newline • Slides: \href{https://#1}{#1}}
 \newcommand{\SlidesDOI}[1]{\newline • Slides: \DOI{#1}}
 \newcommand{\PosterDOI}[1]{\newline • Poster: \DOI{#1}}
-
-% Tags to mark publications
-\newcommand{\OA}{\newline • Open-access}
-%\newcommand{\OA}{}
+\newcommand{\OA}{\aiOpenAccess\enspace}
 \newcommand{\Invited}{\newline • \textbf{Invited talk}}
 
 % Macros to set the year and duration on the left column
@@ -397,19 +398,19 @@
 \begin{EntriesTable}
 %\Year{\Review}  &
 \Year{2020}  &
+  \OA
   \Me, \Santiago, \Remi, \Hugo, \MattTurk, \Shapero, \Anderson, \Leeman.
   Pooch: A friend to fetch your data files.
   \emph{Journal of Open Source Software}.
   \DOI{10.21105/joss.01943}.
-  \OA
   \GitHub{fatiando/pooch}
   \\
 \Year{2019}  &
+  \OA
   \Paul, \Joaquim, \Me, \Remko, \Florian, \Walter, \Dongdong.
   The Generic Mapping Tools, Version 6.
   \emph{Geochemistry, Geophysics, Geosystems}.
   \DOI{10.1029/2019GC008515}.
-  \OA
   \\
   ~ &
   \Santiago, \Agustina, \Gimenez, \Me.
@@ -430,10 +431,10 @@
   \Preprint{10.31223/osf.io/dzf9j}
   \\
 \Year{2018}  &
+  \OA
   \Me. Verde: Processing and gridding spatial data using Green's functions.
   \emph{Journal of Open Source Software}.
   \DOI{10.21105/joss.00957}.
-  \OA
   \GitHub{fatiando/verde}
   \\
 \Year{2017}  &
@@ -461,12 +462,12 @@
   \DOI{10.1016/j.jappgeo.2016.04.011}.
   \\
 \Year{2015}  &
+  \OA
   \Bi, \Dai, \Val, \Me.
   Estimation of the total magnetization direction of approximately spherical
   bodies,
   \emph{Nonlinear Processes in Geophysics},
   \DOI{10.5194/npg-22-215-2015}.
-  \OA
   \GitHub{pinga-lab/Total-magnetization-of-spherical-bodies}
   \\
 \Year{2014}  &
@@ -859,19 +860,19 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
 
 \begin{EntriesTable}
 \Year{2017}  &
+  \OA
   \Me.
   Step-by-step NMO correction,
   \emph{The Leading Edge},
   \DOI{10.1190/tle36020179.1}.
-  \OA
   \GitHub{pinga-lab/nmo-tutorial}
   \\
 \Year{2014}  &
+  \OA
   \Me, \Bi, \Val.
   Geophysical tutorial: Euler deconvolution of potential-field data,
   \emph{The Leading Edge},
   \DOI{10.1190/tle33040448.1}.
-  \OA
   \GitHub{pinga-lab/paper-tle-euler-tutorial}
 \end{EntriesTable}
 
