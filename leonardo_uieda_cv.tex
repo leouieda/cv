@@ -141,14 +141,15 @@
 
 % Macros to add links and mark publications
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-\newcommand{\Preprint}[1]{\newline • Preprint: \DOI{#1}}
+\newcommand{\DOILink}[1]{\href{https://doi.org/#1}{doi.org/#1}}
+\newcommand{\Preprint}[1]{\newline • Preprint: \faFilePdf\ \DOILink{#1}}
 \newcommand{\Youtube}[1]{\newline • Recording: \faYoutube\, \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
 \newcommand{\GitHub}[1]{\newline • Code: \faGithub\ \href{https://github.com/#1}{#1}}
 \newcommand{\Role}[1]{\newline • Role: #1}
 \newcommand{\Website}[1]{\newline • Website: \href{https://#1}{#1}}
-\newcommand{\Slides}[1]{\newline • Slides: \href{https://#1}{#1}}
-\newcommand{\SlidesDOI}[1]{\newline • Slides: \DOI{#1}}
-\newcommand{\PosterDOI}[1]{\newline • Poster: \DOI{#1}}
+\newcommand{\Slides}[1]{\newline • Slides: \faTv\ \href{https://#1}{#1}}
+\newcommand{\SlidesDOI}[1]{\newline • Slides: \faTv\ \DOILink{#1}}
+\newcommand{\PosterDOI}[1]{\newline • Poster: \faImage\ \DOILink{#1}}
 \newcommand{\OA}{\aiOpenAccess\enspace}
 \newcommand{\Invited}{\newline • \textbf{Invited talk}}
 
@@ -378,6 +379,7 @@
 
 \begin{EntriesTable}
 \Year{2021}  &
+  \OA
   \Santiago, \Me.
   Gradient-boosted equivalent sources.
   \emph{EarthArXiv}.
@@ -385,6 +387,7 @@
   \GitHub{compgeolab/eql-gradient-boosted}
   \\
 \Year{2019}  &
+  \OA
   \LBarba, \JBazan, \JBrown, \RGuimera, \MGymrek, \AHanna, \Lindsey, \KHuff, \DKatz,
   \CMadan, \KMoerman, \KNiemeyer, \JPoulson, \PPrins, \KRam, \ARokem, \Arfon,
   \GThiruvathukal, \KThyng, \Me, \BWilson, \Yehudi.
