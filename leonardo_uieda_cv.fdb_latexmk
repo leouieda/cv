@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1616494053 "output/leonardo_uieda_cv.xdv" "output/leonardo_uieda_cv.pdf" "output/leonardo_uieda_cv" 1616494053
-  "output/leonardo_uieda_cv.xdv" 1616494053 271104 7a541f6a0498feedfd9dc2c334818409 "xelatex"
+["xdvipdfmx"] 1616494860 "output/leonardo_uieda_cv.xdv" "output/leonardo_uieda_cv.pdf" "output/leonardo_uieda_cv" 1616494860
+  "output/leonardo_uieda_cv.xdv" 1616494860 273172 998df419e50bc39cdd3da7d8a946b745 "xelatex"
   (generated)
   "output/leonardo_uieda_cv.pdf"
-["xelatex"] 1616494051 "leonardo_uieda_cv.tex" "output/leonardo_uieda_cv.xdv" "leonardo_uieda_cv" 1616494053
+["xelatex"] 1616494858 "leonardo_uieda_cv.tex" "output/leonardo_uieda_cv.xdv" "leonardo_uieda_cv" 1616494860
   "/etc/texmf/web2c/texmf.cnf" 1615778477 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -95,17 +95,17 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1417732693 4962 9c1069474ff71dbc47d5006555e352d3 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1616494043 3335529 efb9d6c7fed692e17022454ce07e5b02 ""
-  "leonardo_uieda_cv.tex" 1616493912 36424 65d70686edbdf38f879d14172218c624 ""
-  "output//leonardo_uieda_cv.aux" 1616494053 5623 e4edbad805a16c5e3ce1465970ae9a15 "xelatex"
-  "output//leonardo_uieda_cv.out" 1616494053 1636 d234722db7a50a2a8fea7a000a5a4011 "xelatex"
-  "output/leonardo_uieda_cv.aux" 1616494053 5623 e4edbad805a16c5e3ce1465970ae9a15 "xelatex"
-  "output/leonardo_uieda_cv.out" 1616494053 1636 d234722db7a50a2a8fea7a000a5a4011 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1616494833 3335529 03b88c669db5736212ee676a564fadbd ""
+  "leonardo_uieda_cv.tex" 1616494699 36548 b76082126b4d46535ca8b676b30ab6df ""
+  "output//leonardo_uieda_cv.aux" 1616494860 5623 e4edbad805a16c5e3ce1465970ae9a15 "xelatex"
+  "output//leonardo_uieda_cv.out" 1616494860 1636 d234722db7a50a2a8fea7a000a5a4011 "xelatex"
+  "output/leonardo_uieda_cv.aux" 1616494860 5623 e4edbad805a16c5e3ce1465970ae9a15 "xelatex"
+  "output/leonardo_uieda_cv.out" 1616494860 1636 d234722db7a50a2a8fea7a000a5a4011 ""
   (generated)
-  "output//leonardo_uieda_cv.log"
-  "output//leonardo_uieda_cv.aux"
-  "output/leonardo_uieda_cv.aux"
-  "output/leonardo_uieda_cv.log"
   "output/leonardo_uieda_cv.xdv"
-  "output//leonardo_uieda_cv.out"
+  "output//leonardo_uieda_cv.aux"
+  "output/leonardo_uieda_cv.log"
+  "output//leonardo_uieda_cv.log"
   "output//leonardo_uieda_cv.xdv"
+  "output/leonardo_uieda_cv.aux"
+  "output//leonardo_uieda_cv.out"
