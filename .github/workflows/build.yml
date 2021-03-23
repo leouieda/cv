@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install LaTeX
-        run: sudo apt-get install texlive texlive-xetex texlive-fonts-extra
+        run: sudo apt-get install texlive texlive-xetex texlive-fonts-extra latexmk
 
       - name: Compile PDF
         run: |
