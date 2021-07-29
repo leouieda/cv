@@ -14,23 +14,29 @@ I wanted a cleaner look and something that is more unique (as much as an academi
 CV can be).
 It was also a chance for me to learn some Latex templating (and procrastihack a
 little).
+
 You're free to reuse and modify this template under the terms of the BSD
 3-clause License (see `LICENSE.txt`).
 
 ## Building
 
-I highly recommend using the `Makefile` to build the PDF by running:
+I use [Tectonic](https://tectonic-typesetting.github.io) to build the PDF from
+the sources.
+It's very convenient, can be installed from
+[conda-forge](https://github.com/conda-forge/tectonic-feedstock),
+and is faster than using a normal LaTeX compiler.
+There are many ways to install it (see their website for instructions).
 
-    make
+I highly recommend using the `Makefile`:
 
-Use `make clean` to remove all generated files and `make show` to open the PDF
-in a default viewer (only for Linux). You could also copy and paste the
-commands in the `Makefile` to build the PDF manually.
+* `make`: builds the PDF
+* `make show`: opens the PDF on the default viewer
+* `make clean`: removes the built PDF and any other generated files
 
 ## Deploying
 
 A PDF is compiled automatically by GitHub Actions with every commit to the
-*master* branch and uploaded to the *gh-pages* branch. This way, the compiled
+*main* branch and uploaded to the *gh-pages* branch. This way, the compiled
 PDF is updated and served at https://www.leouieda.com/cv/leonardo_uieda_cv.pdf
 automatically.
 
