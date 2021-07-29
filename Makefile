@@ -1,19 +1,26 @@
 # Rules for compiling and showing the PDF from the LaTeX sources
 
-
 # Input files
 TEX = $(wildcard *.tex)
 # Output files
 PDF = $(patsubst %.tex,%.pdf,$(TEX))
 
+# Set commands for opening the generated PDF
+UNAME := $(shell uname)
+ifeq ($(UNAME), Linux)
+PDFVIEWER = xdg-open
+endif
+ifeq ($(UNAME), Darwin)
+PDFVIEWER = open
+endif
 
 # Generate all PDFs
 all: $(PDF)
 
 # Open the PDFs in the specified viewer program
-show: all
+show: $(PDF)
 	@ # Redirect stdout and stderr to /dev/null for silent execution
-	@ (${PDFVIEWER} $(PDF) > /dev/null 2>&1 & )
+	@ (${PDFVIEWER} $< > /dev/null 2>&1 & )
 
 # Generate a PDF from a Tex file
 %.pdf: %.tex
