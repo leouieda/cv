@@ -8,6 +8,9 @@
 
 \documentclass[11pt, a4paper]{article}
 
+% Full Unicode support for non-ASCII characters
+\usepackage[utf8]{inputenc}
+
 % Useful aliases
 \newcommand{\UERJ}{Universidade do Estado do Rio de Janeiro}
 \newcommand{\UHM}{University of Hawai`i at M\={a}noa}
@@ -136,7 +139,7 @@
 \usepackage{environ}
 \NewEnviron{EntriesTable}{
 \TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.1\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+\begin{tabularx}{\textwidth}{@{}p{0.12\textwidth}@{\hspace{0.02\textwidth}}p{0.86\textwidth}@{}}
   \BODY
 \end{tabularx}
 }
@@ -156,9 +159,9 @@
 \newcommand{\Invited}{\newline • \textbf{Invited talk}}
 
 % Macros to set the year and duration on the left column
-\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1 -- #2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
-\newcommand{\Ongoing}{}
+\newcommand{\Ongoing}{present}
 %\newcommand{\Ongoing}{$\ast$}
 \newcommand{\Future}{future}
 \newcommand{\Review}{in review}
@@ -170,7 +173,10 @@
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 
 % Set the page margins
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[a4paper,margin=1.5cm,includehead,headsep=5mm]{geometry}
+
+% To get the total page numbers (\pageref{LastPage})
+\usepackage{lastpage}
 
 % No indentation
 \setlength\parindent{0cm}
@@ -219,8 +225,7 @@
   \hspace{0.2cm} -- \hspace{0.2cm}
   \monthyear\today
 }
-\rhead{}
-\cfoot{\fontsize{10pt}{0}\selectfont \thepage}
+\rhead{\fontsize{10pt}{0}\selectfont \thepage/\pageref*{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 
 % Metadata for the PDF output and control of hyperlinks
@@ -243,7 +248,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
-{\fontsize{24pt}{0}\selectfont\MyName}\\[-0.1cm]
+{\fontsize{22pt}{0}\selectfont\MyName}\\[-0.1cm]
 \rule{\textwidth}{0.2pt}
 \begin{minipage}[t]{0.595\textwidth}
   \Affiliation
@@ -268,10 +273,10 @@
 \section{Professional Appointments}
 
 \begin{EntriesTable}
-  \Duration{2019}{}  &
+  \Duration{2019}{\Ongoing}  &
   \Appointment{Lecturer}{\LIVEARTH}{\LIVENV}{\LIV, UK}
   \\
-  \Duration{2018}{}  &
+  \Duration{2018}{\Ongoing}  &
   \Appointment{Affiliate Researcher}{\UHEARTH}{\SOEST}{\UHM, USA}
   \\
   \Duration{2017}{2018}  &
@@ -313,7 +318,6 @@
   \Year{2020}  &
   Software Sustainability Institute Fellowship.
   \textit{\LIV}.
-  Amount: £3000.
   More information:
   \href{https://www.leouieda.com/research/ssi2020.html}{leouieda.com/research/ssi2020.html}
   \\
@@ -323,13 +327,11 @@
   Internal fund to support the research visit of PhD student Santiago R.
   Soler.
   \textit{\LIV}.
-  Amount: £1000.
   \\
   \Duration{2018}{2020}  &
   NSF-EAR: ``The EarthScope/GMT Analysis and Visualization Toolbox''.
   PI: \Paul, \textbf{co-PI}: \Me, co-PI: \Bridget.
   \textit{\UHM}.
-  Amount: \$174,975.
   Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829371}{1829371}.
   \\
   \Duration{2014}{2018}  &
@@ -398,7 +400,7 @@
   \DOI{10.31219/osf.io/f4vx6}
 \end{EntriesTable}
 
-\subsection{Peer-Reviewed}
+\subsection{Papers}
 
 \begin{EntriesTable}
 %\Year{\Review}  &
@@ -504,7 +506,7 @@
 \end{EntriesTable}
 
 
-\subsection{Peer-Reviewed Conference proceedings}
+\subsection{Conference proceedings (peer-reviewed)}
 
 \begin{EntriesTable}
 \Year{2014}  &
@@ -592,8 +594,7 @@
 \end{EntriesTable}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Open-source Software}
+\subsection{Open-source Software}
 
 \begin{EntriesTable}
   \Duration{2017}{\Ongoing} &
@@ -1196,26 +1197,6 @@ Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
   \Duration{2019}{\Ongoing} & EarthArXiv Advisory Council
 \end{EntriesTable}
 
-\subsection{Reviewer}
-
-Geophysical Journal International
---
-Journal of Geodesy
---
-Pure and Applied Geophysics
---
-Journal of Applied Geophysics
---
-Geophysical Prospecting
---
-Geophysics
---
-Central European Journal of Geosciences
---
-Computers \& Geosciences
---
-Journal of Open Source Software
-
 \subsection{Committees}
 
 \begin{EntriesTable}
@@ -1285,6 +1266,20 @@ Journal of Open Source Software
   \emph{AGU 2018}, Washington DC, USA.
 \end{EntriesTable}
 
+\subsection{Reviewer}
+
+\begin{itemize}
+  \item Geophysical Journal International
+  \item Journal of Geodesy
+  \item Pure and Applied Geophysics
+  \item Journal of Applied Geophysics
+  \item Geophysical Prospecting
+  \item Geophysics
+  \item Central European Journal of Geosciences
+  \item Computers \& Geosciences
+  \item Journal of Open Source Software
+\end{itemize}
+
 \subsection{Affiliations}
 
 \begin{EntriesTable}
@@ -1299,8 +1294,6 @@ Journal of Open Source Software
   \Duration{2011}{2019} & Society of Exploration Geophysicists
 \end{EntriesTable}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Languages}
 
 \TablePad
