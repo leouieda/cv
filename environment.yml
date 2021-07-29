@@ -1,0 +1,5 @@
+name: cv
+channels:
+  - conda-forge
+dependencies:
+  - tectonic==0.7.1
