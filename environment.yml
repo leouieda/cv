@@ -2,4 +2,4 @@ name: cv
 channels:
   - conda-forge
 dependencies:
-  - tectonic==0.7.1
+  - tectonic==0.8.0
