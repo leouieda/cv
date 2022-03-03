@@ -139,7 +139,7 @@
 \usepackage{environ}
 \NewEnviron{EntriesTable}{
 \TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.12\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+\begin{tabularx}{\textwidth}{@{}p{0.12\textwidth}@{\hspace{0.02\textwidth}}p{0.86\textwidth}@{}}
   \BODY
 \end{tabularx}
 }
@@ -189,9 +189,17 @@
 % Use custom colors
 \usepackage[usenames,dvipsnames]{xcolor}
 
-% Set fonts. Requires compilation with xelatex
-\usepackage{fontspec}  % required to make older xelatex compile with UTF8
-\setmainfont{Noto Serif}
+% Set fonts (requires compilation with xelatex)
+\usepackage{fontspec}
+\setmainfont[%
+  Path = fonts/notoserif/,
+  UprightFont = NotoSerif-Regular,
+  BoldFont = NotoSerif-Bold,
+  ItalicFont = NotoSerif-Italic,
+  Extension = .ttf
+]{NotoSerif}
+
+
 
 % Set the spacing for sections
 \usepackage{titlesec}
