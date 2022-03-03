@@ -1,7 +1,7 @@
 # Rules for compiling the PDF from the LaTeX sources and displaying the output
 
 # The main source file
-TEX = cv.tex
+TEX = $(wildcard *.tex)
 # The PDF file
 PDF = $(patsubst %.tex,%.pdf,$(TEX))
 

@@ -5,7 +5,7 @@
 These are the Latex sources for my academic CV.
 
 **Download** the latest compiled PDF:
-[cv.pdf](https://www.leouieda.com/cv/cv.pdf)
+[leonardo_uieda_cv.pdf](https://www.leouieda.com/cv/leonardo_uieda_cv.pdf)
 
 ## Template
 
@@ -18,10 +18,11 @@ To use it:
   button to grab a copy of the repository.
 * Install Tectonic, either from their website or using the conda
   `environment.yml` file provided in the repository.
-* Fill out the variables and fields in `cv.tex`.
+* Rename `leonardo_uieda_cv.tex`.
+* Fill out the variables and fields in the `.tex` file.
 * Compile the PDF to check the results with `make show`.
 * Push your changes and GitHub Actions should do it's magic and serve the PDF
-  at `https://YOURUSERNAME.github.io/cv/cv.pdf`.
+  at `https://YOURUSERNAME.github.io/cv/YOURNAME_cv.pdf`.
 
 ### About
 
@@ -50,8 +51,7 @@ I highly recommend using the `Makefile`:
 
 A PDF is compiled automatically by GitHub Actions with every commit to the
 `main` branch and uploaded to the `gh-pages` branch.
-This way, the compiled PDF is updated and served at
-https://www.leouieda.com/cv/cv.pdf automatically.
+This way, the compiled PDF is updated and served automatically.
 
 ## License
 
