@@ -11,8 +11,5 @@ all: $(PDF)
 %.pdf: %.tex
 	tectonic -X compile $<
 
-show: $(PDF)
-	python -c "import webbrowser; webbrowser.open('$<')" &
-
 clean:
 	rm -f $(PDF)

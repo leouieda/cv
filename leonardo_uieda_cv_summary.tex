@@ -1,0 +1,512 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A clean template for an academic CV. This is a short summary version.
+%
+% Uses tabularx to create two column entries (date and job/edu/citation).
+% Defines commands to make adding entries simpler.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt, a4paper]{article}
+
+% Full Unicode support for non-ASCII characters
+\usepackage[utf8]{inputenc}
+
+% Useful aliases
+\newcommand{\UERJ}{UERJ}
+\newcommand{\UHM}{University of Hawai`i at M\={a}noa}
+\newcommand{\SOEST}{School of Ocean and Earth Science and Technology}
+\newcommand{\UHEARTH}{Department of Earth Sciences}
+\newcommand{\LIVEARTH}{Department of Earth, Ocean and Ecological Sciences}
+\newcommand{\LIVENV}{School of Environmental Sciences}
+\newcommand{\LIV}{University of Liverpool}
+
+% Identifying information
+\newcommand{\Title}{Curriculum Vit\ae\ Summary}
+\newcommand{\FirstName}{Leonardo}
+\newcommand{\LastName}{Uieda}
+\newcommand{\Initials}{L}
+\newcommand{\MyName}{Dr. \FirstName\ \LastName}
+\newcommand{\Me}{\textbf{\LastName, \Initials}}  % For citations
+\newcommand{\Email}{Leonardo.Uieda@liverpool.ac.uk}
+\newcommand{\PersonalWebsite}{www.leouieda.com}
+\newcommand{\LabWebsite}{www.compgeolab.org}
+\newcommand{\ORCID}{0000-0001-6123-9515}
+\newcommand{\Address}{
+  Jane Herdman Building, 4 Brownlow Street, Liverpool, L69 3GP, United Kingdom
+}
+
+% Names for citing coauthors
+\newcommand{\Val}{Barbosa, VCF}
+\newcommand{\Bi}{Oliveira Jr, VC}
+\newcommand{\Paul}{Wessel, P}
+\newcommand{\Joaquim}{Luis, J}
+\newcommand{\Remko}{Scharroo, R}
+\newcommand{\Florian}{Wobbe, F}
+\newcommand{\Walter}{Smith, WHF}
+\newcommand{\Dongdong}{Tian, D}
+\newcommand{\Bridget}{Smith-Konter, B}
+\newcommand{\Eric}{Xu, X}
+\newcommand{\David}{Sandwell, DT}
+\newcommand{\Carla}{Braitenberg, C}
+\newcommand{\Naomi}{Ussami, N}
+\newcommand{\Manoel}{D'Agrella-Filho, MS}
+\newcommand{\JB}{Silva, JBC}
+\newcommand{\Dai}{Sales, DP}
+\newcommand{\Figura}{Melo, FF}
+\newcommand{\Dio}{Carlos, DU}
+\newcommand{\BragaVale}{Braga, MA}
+\newcommand{\YLi}{Li, Y}
+\newcommand{\Angeli}{Angeli, G}
+\newcommand{\Peres}{Peres, G}
+\newcommand{\Everton}{Bomfim, EP}
+\newcommand{\Eder}{Molina, E}
+\newcommand{\Gomes}{Gomes, AAS}
+\newcommand{\Santiago}{Soler, SR}
+\newcommand{\Agustina}{Pesce, A}
+\newcommand{\Gimenez}{Gimenez, ME}
+\newcommand{\Kristoffer}{Hallam, KAT}
+\newcommand{\Guangdong}{Zhao, G}
+\newcommand{\Bo}{Chen, B}
+\newcommand{\JLiu}{Liu, J}
+\newcommand{\LChen}{Chen, L}
+\newcommand{\RGuo}{Guo, R}
+\newcommand{\MKaban}{Kaban, MK}
+\newcommand{\Lindsey}{Heagy, LJ}
+\newcommand{\Lion}{Krischer, L}
+\newcommand{\Rene}{Gassmoeller, R}
+\newcommand{\Bane}{Sullivan, CB}
+\newcommand{\Jens}{Klump, JF}
+\newcommand{\LBarba}{Barba, LA}
+\newcommand{\JBazan}{Bazan, J}
+\newcommand{\JBrown}{Brown, J}
+\newcommand{\RGuimera}{Guimera, RV}
+\newcommand{\MGymrek}{Gymrek, M}
+\newcommand{\AHanna}{Alex Hanna}
+\newcommand{\KHuff}{Huff, KD}
+\newcommand{\DKatz}{Katz, DS}
+\newcommand{\CMadan}{Madan, CR}
+\newcommand{\KMoerman}{Moerman, KM}
+\newcommand{\KNiemeyer}{Niemeyer, KE}
+\newcommand{\JPoulson}{Poulson, JL}
+\newcommand{\PPrins}{Prins, P}
+\newcommand{\KRam}{Ram, K}
+\newcommand{\ARokem}{Rokem, A}
+\newcommand{\Arfon}{Smith, AM}
+\newcommand{\GThiruvathukal}{Thiruvathukal, GK}
+\newcommand{\KThyng}{Thyng, KM}
+\newcommand{\BWilson}{Wilson, BE}
+\newcommand{\Yehudi}{Yehudi, Y}
+\newcommand{\Remi}{Rampin, R}
+\newcommand{\Hugo}{van Kemenade, H}
+\newcommand{\MattTurk}{Turk, M}
+\newcommand{\Shapero}{Shapero, D}
+\newcommand{\Anderson}{Banihirwe, A}
+\newcommand{\Leeman}{Leeman, J}
+\newcommand{\JEbbing}{Ebbing, J}
+\newcommand{\AGuy}{Guy, A}
+\newcommand{\JFarquharson}{Farquharson, J}
+\newcommand{\AKushnir}{Kushnir, A}
+\newcommand{\FWadsworth}{Wadsworth, F}
+\newcommand{\LPerozzi}{Perozzi, L}
+\newcommand{\MWieczorek}{Wieczorek, MA}
+\newcommand{\LLi}{Li, L}
+
+
+% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Disable hyphenation
+\usepackage[none]{hyphenat}
+
+% Control the font size
+\usepackage{anyfontsize}
+
+% Icon fonts (requires using xelatex or luatex)
+\usepackage[fixed]{fontawesome5}
+\usepackage{academicons}
+
+% Template variables for styling
+\newcommand{\TablePad}{\vspace{-0.4cm}}
+\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
+
+% For fancy and multipage tables
+\usepackage{tabularx}
+\usepackage{ltablex}
+
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\usepackage{environ}
+\NewEnviron{EntriesTable}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+  \BODY
+\end{tabularx}
+}
+
+% Macros to add links and mark publications
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+\newcommand{\DOILink}[1]{\href{https://doi.org/#1}{doi.org/#1}}
+\newcommand{\Website}[1]{\href{https://#1}{#1}}
+\newcommand{\Preprint}[1]{\newline Preprint: \faFilePdf\ \DOILink{#1}}
+\newcommand{\Youtube}[1]{\newline Recording: \faYoutube\, \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
+\newcommand{\GitHub}[1]{\faGithub\ \href{https://github.com/#1}{github.com/#1}}
+\newcommand{\Role}[1]{\newline Role: \faUsers\ #1}
+\newcommand{\Slides}[1]{\newline Slides: \faTv\ \href{https://#1}{#1}}
+\newcommand{\SlidesDOI}[1]{\newline Slides: \faTv\ \DOILink{#1}}
+\newcommand{\PosterDOI}[1]{\newline Poster: \faImage\ \DOILink{#1}}
+\newcommand{\OA}{\aiOpenAccess}
+
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{9pt}{0}\selectfont #1 -- #2}
+\newcommand{\Year}[1]{\fontsize{9pt}{0}\selectfont #1}
+\newcommand{\Ongoing}{on}
+\newcommand{\Future}{future}
+\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
+
+% Define command to insert month name and year as date
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+
+% Set the page margins
+\usepackage[a4paper,margin=1.5cm,includehead,headsep=5mm]{geometry}
+
+% To get the total page numbers (\pageref{LastPage})
+\usepackage{lastpage}
+
+% No indentation
+\setlength\parindent{0cm}
+
+% Increase the line spacing
+\renewcommand{\baselinestretch}{1.2}
+% and the spacing between rows in tables
+\renewcommand{\arraystretch}{1.2}
+
+% Remove space between items in itemize and enumerate
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Use custom colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Set fonts (requires compilation with xelatex)
+\usepackage{fontspec}
+\setmainfont[%
+  Path = fonts/notoserif/,
+  UprightFont = NotoSerif-Regular,
+  BoldFont = NotoSerif-Bold,
+  ItalicFont = NotoSerif-Italic,
+  Extension = .ttf
+]{NotoSerif}
+
+% Set the spacing for sections
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\mdseries} % format
+  {} % label
+  {0pt} % separation (left separation for hang)
+  {} % text before title
+  [\titlerule] % text after title
+\titleformat{\subsection}
+  {\normalfont\mdseries} % format
+  {} % label
+  {0pt} % separation (left separation for hang)
+  {} % text before title
+
+% Disable number of sections. Use this instead of "section*" so that the sections still
+% appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
+% manually.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Set fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\fontsize{9pt}{10pt}\selectfont
+  \monthyear\today
+}
+\chead{
+  \fontsize{9pt}{10pt}\selectfont
+  \MyName
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \Title
+}
+\rhead{\fontsize{9pt}{10pt}\selectfont \thepage{} of \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Metadata for the PDF output and control of hyperlinks
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+  pdftitle={\MyName\ - \Title},
+  pdfauthor={\MyName},
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=MidnightBlue
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% No header for the first page
+\thispagestyle{empty}
+
+% Remove extra header space
+\vspace*{-2.75\baselineskip}
+
+\begin{minipage}[t]{0.7\textwidth}
+  {\fontsize{16pt}{0}\selectfont\MyName}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+  \begin{flushright}
+    Last updated: \monthyear\today
+  \end{flushright}
+\end{minipage}
+\\[-0.1cm]
+\rule{\textwidth}{1pt}
+\vspace{-0.75cm}
+\begin{center}
+  Email: \href{mailto:\Email}{\Email} |
+  ORCID: \href{https://orcid.org/\ORCID}{\ORCID} |
+  Website: \Website{\PersonalWebsite}
+  \\
+  \Address
+\end{center}
+\vspace{-0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Appointments}
+
+\begin{EntriesTable}
+  \Duration{2019}{\Ongoing}  &
+  \textbf{Lecturer}, \LIVEARTH, \LIV, UK
+  \\
+  \Duration{2018}{\Ongoing}  &
+  \textbf{Affiliate Researcher}, \UHEARTH, \UHM, USA
+  \\
+  \Duration{2014}{2018}  &
+  \textbf{Assistant Professor}, Departamento de Geologia Aplicada, \UERJ, Brazil
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{EntriesTable}
+  \Duration{2011}{2016}  &
+  \textbf{PhD in Geophysics}, Observatório Nacional, Brazil
+  \\
+  \Duration{2010}{2011}  &
+  \textbf{MSc in Geophysics}, Observatório Nacional, Brazil
+  \\
+  \Duration{2004}{2009}  &
+  \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Grants \& Fellowships}
+
+\begin{EntriesTable}
+  \Duration{2020}{2023}  &
+  NSF-EAR: ``A Sustainable Plan for the Future of the Generic Mapping Tools''.
+  PI: \Paul, \textbf{co-PI}: \Me.
+  \textit{\UHM}.
+  Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1948602}{1948602}.
+  \\
+  \Year{2020}  &
+  Software Sustainability Institute Fellowship.
+  \textit{\LIV}.
+  More information:
+  \href{https://www.software.ac.uk/about/fellows/leonardo-uieda}{software.ac.uk/about/fellows/leonardo-uieda}
+  \\
+  \Duration{2018}{2020}  &
+  NSF-EAR: ``The EarthScope/GMT Analysis and Visualization Toolbox''.
+  PI: \Paul, \textbf{co-PI}: \Me, co-PI: \Bridget.
+  \textit{\UHM}.
+  Award ID: \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829371}{1829371}.
+\end{EntriesTable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Open Science}
+
+\begin{EntriesTable}
+  \Duration{2010}{\Ongoing} &
+  \textbf{Fatiando a Terra} | \Website{www.fatiando.org}
+  \newline
+  Python tools for geophysical data processing, forward modeling, and inversion
+  \\
+  \Duration{2017}{\Ongoing} &
+  \textbf{PyGMT} | \Website{www.pygmt.org}
+  \newline
+  A Python interface for the Generic Mapping Tools
+  \\
+  \Duration{2017}{\Ongoing} &
+  \textbf{The Generic Mapping Tools (GMT)} | \Website{www.generic-mapping-tools.org}
+  \newline
+  A data processing and mapping toolbox for the Earth, Ocean, and Planetary Science
+  \\
+  \Duration{2009}{2016} &
+  \textbf{Tesseroids} | \Website{tesseroids.leouieda.com}
+  \newline
+  Forward modeling of gravitational fields in spherical coordinates
+\end{EntriesTable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Academic Service}
+
+\begin{EntriesTable}
+  \Duration{2019}{\Ongoing} & Topic editor, \textit{Journal of Open Source Software}
+  \\
+  \Duration{2021}{\Ongoing} & Code of Conduct Working Group, \textit{Software Underground}
+  \\
+  \Duration{2019}{\Ongoing} & Advisory Council, \textit{EarthArXiv}
+\end{EntriesTable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Current Teaching}
+
+\begin{EntriesTable}
+  \Duration{2020}{\Ongoing}  &
+  ENVS398: Global Geophysics and Geodynamics,
+  \textit{\LIV}
+  \\
+  \Duration{2020}{\Ongoing}  &
+  ENVS258: Environmental Geophysics,
+  \textit{\LIV}
+  \\
+  \Duration{2020}{\Ongoing}  &
+  ENVS386: Geophysical Data Modelling,
+  \textit{\LIV}
+  \\
+  \Duration{2020}{\Ongoing}  &
+  ENVS101/106: Study Skills and GIS (tutorial),
+  \textit{\LIV}
+  \\
+  \Duration{2019}{\Ongoing}  &
+  ENVS363: Geophysical Exploration Techniques (field),
+  \textit{\LIV}
+\end{EntriesTable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Student Supervision}
+
+\begin{EntriesTable}
+  \Duration{2021}{\Ongoing}  &
+  India Uppal, \textbf{PhD}, \LIV, UK
+  \\
+  \Duration{2017}{2022}  &
+  Santiago R. Soler, \textbf{PhD}, Universidad Nacional de San Juan, Argentina
+\end{EntriesTable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Recent Invited Talks}
+
+\begin{EntriesTable}
+\Year{2021}  &
+  \Me, \LLi, \Santiago, \Agustina.
+  Design useful tools that do one thing well and work together: rediscovering
+  the UNIX philosophy while building the Fatiando a Terra project,
+  \emph{AGU 2021},
+  Online.
+  \\
+  ~ &
+  \Me, \Santiago.
+  Python-based workflows for small-to-medium sized data: what works, what
+  doesn't, and what can be improved,
+  \emph{AGU 2021},
+  Online.
+  \\
+  ~ &
+  \Me, \Santiago, \Agustina.
+  Open-science for gravimetry: tools, challenges, and opportunities,
+  \emph{GFZ Helmholtz Centre Potsdam},
+  Germany.
+  \\
+  ~ &
+  \Me, \Santiago, \Agustina.
+  Fatiando a Terra: Open-source tools for geophysics,
+  \emph{Geophysical Society of Houston},
+  Houston, USA.
+  \\
+\Year{2020}  &
+  \Me.
+  Geophysical research powered by open-source,
+  \emph{various locations}
+  (Christian Albrechts Universität zu Kiel /
+  Departamento de Geofísica, Universidade de São Paulo /
+  Technische Universität Bergakademie Freiberg /
+  Geographic Data Science Lab, University of Liverpool).
+\end{EntriesTable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publication Highlights}
+
+\begin{EntriesTable}
+\Year{2021}  &
+  \Santiago, \Me.
+  Gradient-boosted equivalent sources.
+  \emph{Geophysical Journal International}.
+  \DOI{10.1093/gji/ggab297}.
+  \GitHub{compgeolab/eql-gradient-boosted}
+  \\
+\Year{2020}  &
+  \OA
+  \Me, \Santiago, \Remi, \Hugo, \MattTurk, \Shapero, \Anderson, \Leeman.
+  Pooch: A friend to fetch your data files.
+  \emph{Journal of Open Source Software}.
+  \DOI{10.21105/joss.01943}.
+  \GitHub{fatiando/pooch}
+  \\
+\Year{2019}  &
+  \OA
+  \Paul, \Joaquim, \Me, \Remko, \Florian, \Walter, \Dongdong.
+  The Generic Mapping Tools, Version 6.
+  \emph{Geochemistry, Geophysics, Geosystems}.
+  \DOI{10.1029/2019GC008515}.
+  \\
+\Year{2018}  &
+  \OA
+  \Me. Verde: Processing and gridding spatial data using Green's functions.
+  \emph{Journal of Open Source Software}.
+  \DOI{10.21105/joss.00957}.
+  \GitHub{fatiando/verde}
+  \\
+\Year{2017}  &
+  \Me, \Val.
+  Fast non-linear gravity inversion in spherical coordinates with application
+  to the South American Moho,
+  \emph{Geophysical Journal International},
+  \DOI{10.1093/gji/ggw390}.
+  \GitHub{pinga-lab/paper-moho-inversion-tesseroids}
+  \\
+\Year{2016}  &
+  \Me, \Val, \Carla.
+  Tesseroids: forward modeling gravitational fields in spherical coordinates,
+  \emph{Geophysics},
+  \DOI{10.1190/geo2015-0204.1}.
+  \GitHub{pinga-lab/paper-tesseroids}
+  \\
+\Year{2015}  &
+  \OA
+  \Bi, \Dai, \Val, \Me.
+  Estimation of the total magnetization direction of approximately spherical
+  bodies,
+  \emph{Nonlinear Processes in Geophysics},
+  \DOI{10.5194/npg-22-215-2015}.
+  \GitHub{pinga-lab/Total-magnetization-of-spherical-bodies}
+  \\
+\Year{2013}  &
+  \Figura, \Val, \Me, \Bi, \JB.
+  Estimating the nature and the horizontal and vertical positions of 3D
+  magnetic sources using Euler deconvolution,
+  \emph{Geophysics},
+  \DOI{10.1190/geo2012-0515.1}.
+\end{EntriesTable}
+
+\end{document}
