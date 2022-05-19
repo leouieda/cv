@@ -23,13 +23,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup caching for tectonic
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.cache/Tectonic
           key: tectonic-${{ runner.os }}
 
       - name: Setup caching for conda packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/conda_pkgs_dir
           key: conda-${{ runner.os }}-${{ hashFiles('environment.yml') }}
@@ -59,7 +59,7 @@ jobs:
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
         # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
-        uses: peaceiris/actions-gh-pages@8a36f3edfc5d1cbae6b09e6f5a7d7b19e5b7a73b
+        uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
