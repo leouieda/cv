@@ -6,7 +6,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[9pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
 % Useful aliases
 \newcommand{\UERJ}{Universidade do Estado do Rio de Janeiro}
@@ -115,21 +115,22 @@
 
 % Full Unicode support for non-ASCII characters
 \usepackage[utf8]{inputenc}
-\usepackage[TU]{fontenc}
 \usepackage[english]{babel}
+\usepackage[TU]{fontenc}
 
-% Set main font
-\usepackage[]{notomath}
+% Set main fonts
+\usepackage[sfdefault]{atkinson}
+\usepackage[ttdefault]{sourcecodepro}
+
+% Icon fonts
+\usepackage{fontawesome5}
+\usepackage{academicons}
 
 % Disable hyphenation
 \usepackage[none]{hyphenat}
 
 % Control the font size
 \usepackage{anyfontsize}
-
-% Icon fonts
-\usepackage{fontawesome5}
-\usepackage{academicons}
 
 % For fancy and multipage tables
 \usepackage{tabularx}
@@ -142,7 +143,7 @@
 \usepackage{datetime}
 
 % Set the page margins
-\usepackage[a4paper,margin=1.5cm,includehead,headsep=5mm]{geometry}
+\usepackage{geometry}
 
 % To get the total page numbers (\pageref{LastPage})
 \usepackage{lastpage}
@@ -166,61 +167,43 @@
 % Template configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Template variables for styling
-\newcommand{\TablePad}{\vspace{-0.7cm}}
-\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
-\newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
-
-% Define a new environment to place all CV entries in a 2-column table.
-% Left column are the dates, right column the entries.
-\NewEnviron{EntriesTableDuration}{
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}@{\hspace{0.01\textwidth}}p{0.89\textwidth}@{}}
-  \BODY
-\end{tabularx}
-}
-\NewEnviron{EntriesTableYear}{
-\TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.05\textwidth}@{\hspace{0.01\textwidth}}p{0.94\textwidth}@{}}
-  \BODY
-\end{tabularx}
+\geometry{%
+  margin=15mm,
+  headsep=0mm,
+  headheight=0mm,
+  footskip=5mm,
+  includehead=true,
+  includefoot=true
 }
 
-% Macros to add links and mark publications
-\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-\newcommand{\Website}[1]{\href{https://#1}{#1}}
-\newcommand{\Preprint}[1]{\faFilePdf{} EarthArXiv: \href{https://doi.org/#1}{#1}}
-\newcommand{\GitHub}[1]{\faGithub{} GitHub: \href{https://github.com/#1}{#1}}
-\newcommand{\OA}{\aiOpenAccess{}\ }
-
-% Macros to set the year and duration on the left column
-\newcommand{\Duration}[2]{\fontsize{9pt}{0}\selectfont #1 -- #2}
-\newcommand{\Year}[1]{\fontsize{9pt}{0}\selectfont #1}
-\newcommand{\Ongoing}{on}
-\newcommand{\Future}{future}
-\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
-
-% Define command to insert month name and year as date
-\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+% Custom colors
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{mediumblue}{HTML}{2060c2}
+\definecolor{lightblue}{HTML}{a0c3ff}
 
 % No indentation
 \setlength\parindent{0cm}
 
 % Increase the line spacing
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{1.1}
 % and the spacing between rows in tables
 \renewcommand{\arraystretch}{1.25}
 
 % Remove space between items in itemize and enumerate
 \setlist{nosep}
 
-% Set the spacing for sections
+% Set the spacing and format of sections
 \titleformat{\section}
-  {\normalfont\large\mdseries} % format
+  {\normalfont\Large\mdseries} % format
   {} % label
   {0pt} % separation (left separation for hang)
   {} % text before title
   [\titlerule] % text after title
+\titlespacing*{\section}
+  {0pt} % left pad
+  {0.1cm} % before
+  {0cm} % after
 
 % Disable number of sections. Use this instead of "section*" so that the sections still
 % appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
@@ -229,63 +212,96 @@
 \renewcommand{\@seccntformat}[1]{}
 \makeatother
 
-% Set fancy headers
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\newcommand{\TablePad}{\vspace{-0.2cm}}
+\NewEnviron{EntriesTableDuration}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+  \BODY
+\end{tabularx}
+\TablePad
+}
+\NewEnviron{EntriesTableYear}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.05\textwidth}@{\hspace{0.01\textwidth}}p{0.94\textwidth}@{}}
+  \BODY
+\end{tabularx}
+\TablePad
+}
+
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont \texttt{#1-#2}}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont \texttt{#1}}
+\newcommand{\Ongoing}{on}
+\newcommand{\Future}{future}
+
+% Macros to add links and mark publications
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+\newcommand{\Website}[1]{\href{https://#1}{#1}}
+\newcommand{\Preprint}[1]{\faFilePdf{} EarthArXiv: \href{https://doi.org/#1}{#1}}
+\newcommand{\GitHub}[1]{\faGithub{} GitHub: \href{https://github.com/#1}{#1}}
+\newcommand{\OA}{\aiOpenAccess{}\ }
+
+% Define command to insert month name and year as date
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+
+% Configure a fancy footer
+\newcommand{\Separator}{\hspace{3pt}|\hspace{3pt}}
+\newcommand{\FooterFont}{\footnotesize\color{mediumgray}}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\fontsize{9pt}{10pt}\selectfont
-  \monthyear\today
+\lfoot{%
+  \FooterFont{}
+  \MyName{}
+  \Separator{}
+  \Title{}
 }
-\chead{
-  \fontsize{9pt}{10pt}\selectfont
-  \MyName
-  \hspace{0.2cm} -- \hspace{0.2cm}
-  \Title
+\rfoot{%
+  \FooterFont{}
+  Last updated: \monthyear\today{}
+  \Separator{}
+  \thepage\space of\space \pageref*{LastPage}
 }
-\rhead{\fontsize{9pt}{10pt}\selectfont \thepage{} of \pageref*{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+\preto{\footrule}{\color{lightgray}}
 
 % Metadata for the PDF output and control of hyperlinks
 \hypersetup{
-  pdftitle={\MyName\ - \Title},
+  colorlinks,
+  allcolors=mediumblue,
+  breaklinks=true,
+  pdftitle={\Title{} - \MyName},
   pdfauthor={\MyName},
-  linkcolor=blue,
-  citecolor=blue,
-  filecolor=black,
-  urlcolor=MidnightBlue
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% No header for the first page
-\thispagestyle{empty}
-
-% Remove extra header space
-\vspace*{-2.75\baselineskip}
-
-\begin{minipage}[t]{0.7\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
   {\fontsize{20pt}{0}\selectfont\MyName}
 \end{minipage}
-\begin{minipage}[t]{0.3\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
   \begin{flushright}
-    Last updated: \monthyear\today
+    \Title{}
   \end{flushright}
 \end{minipage}
 \\[-0.1cm]
-\rule{\textwidth}{2pt}
-\vspace{-0.75cm}
-\begin{center}
-  Email: \href{mailto:\Email}{\Email} |
-  ORCID: \href{https://orcid.org/\ORCID}{\ORCID} |
-  GitHub: \Website{github.com/\GitHubProfile}
+\textcolor{lightgray}{\rule{\textwidth}{3pt}}
+\begin{minipage}[t]{0.5\textwidth}
+  Email: \href{mailto:\Email}{\Email}
   \\
-  Website: \Website{\PersonalWebsite} |
+  ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+  \begin{flushright}
+  Website: \Website{\PersonalWebsite}
+  \\
   Research Group: \Website{\LabWebsite}
-\end{center}
-\vspace{-0.5cm}
+  \end{flushright}
+\end{minipage}
+\vspace{0.3cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Professional Appointments}
@@ -317,6 +333,19 @@
   \Duration{2004}{2009}  &
   \textbf{BSc in Geophysics}, Universidade de São Paulo, Brazil.
   \DOI{10.6084/m9.figshare.963547}
+\end{EntriesTableDuration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Community Service}
+
+\begin{EntriesTableDuration}
+  \Duration{2022}{\Ongoing} & \textbf{Advisory Committee Member}, pyOpenSci, \Website{www.pyopensci.org}
+  \\
+  \Duration{2022}{\Ongoing} & \textbf{Board Member}, Software Underground, \Website{softwareunderground.org}
+  \\
+  \Duration{2019}{2022} & \textbf{Topic Editor}, Journal of Open Source Software, \Website{joss.theoj.org}
+  \\
+  \Duration{2019}{2022} & \textbf{Advisory Council Member}, EarthArXiv, \Website{eartharxiv.org}
 \end{EntriesTableDuration}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -363,34 +392,20 @@
 \section{Open Educational Resources}
 
 \begin{EntriesTableDuration}
-  \Duration{2020}{\Ongoing} & \textbf{Lithosphere Dynamics with Python}. \GitHub{leouieda/lithosphere}
+  \Duration{2021}{\Ongoing} & \textbf{A Quick Introduction to Machine Learning}. \GitHub{leouieda/ml-intro}
   \\
   \Duration{2020}{\Ongoing} & \textbf{Remote Sensing with Python}. \GitHub{leouieda/remote-sensing}
   \\
-  \Duration{2020}{\Ongoing} & \textbf{Terrestrial Gravimetry with Python}. \GitHub{leouieda/gravity-processing}
+  \Duration{2020}{\Ongoing} & \textbf{Lithosphere Dynamics with Python}. \GitHub{leouieda/lithosphere}
   \\
-  \Duration{2021}{\Ongoing} & \textbf{A Quick Introduction to Machine Learning}. \GitHub{leouieda/ml-intro}
+  \Duration{2020}{\Ongoing} & \textbf{Terrestrial Gravimetry with Python}. \GitHub{leouieda/gravity-processing}
 \end{EntriesTableDuration}
 
 Resources for older courses and short workshops are available from: \Website{leouieda.com/teaching}
+\vspace{0.1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Community Service}
-
-\begin{EntriesTableDuration}
-  \Duration{2022}{\Ongoing} & \textbf{Steering Council Member}, Fatiando a Terra, \Website{www.fatiando.org}
-  \\
-  \Duration{2022}{\Ongoing} & \textbf{Advisory Committee Member}, pyOpenSci, \Website{www.pyopensci.org}
-  \\
-  \Duration{2022}{\Ongoing} & \textbf{Board Member}, Software Underground, \Website{softwareunderground.org}
-  \\
-  \Duration{2019}{2022} & \textbf{Topic Editor}, Journal of Open Source Software, \Website{joss.theoj.org}
-  \\
-  \Duration{2019}{2022} & \textbf{Advisory Council Member}, EarthArXiv, \Website{eartharxiv.org}
-\end{EntriesTableDuration}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Grants \& Fellowships}
+\section{Grants and Fellowships}
 
 \begin{EntriesTableDuration}
   \Duration{2022}{2024}  &
