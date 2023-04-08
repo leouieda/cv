@@ -52,9 +52,9 @@ jobs:
       - name: Compile the PDF
         run: |
           make
-          mkdir output
-          touch output/.nojekyll
-          cp *.pdf output/
+          mkdir -p output/pdf
+          touch output/pdf/.nojekyll
+          cp *.pdf output/pdf/
 
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
