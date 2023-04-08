@@ -52,9 +52,8 @@ jobs:
       - name: Compile the PDF
         run: |
           make
-          mkdir -p output/pdf
-          touch output/pdf/.nojekyll
-          cp *.pdf output/pdf/
+          mkdir output
+          cp *.pdf output/
 
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
@@ -63,5 +62,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
+          publish_branch: pdf
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
