@@ -5,7 +5,7 @@
 These are the Latex sources for my academic CV.
 
 **Download** the latest compiled PDF:
-[leonardo_uieda_cv.pdf](https://www.leouieda.com/cv/leonardo_uieda_cv.pdf)
+[leonardo_uieda_cv.pdf](https://github.com/leouieda/cv/raw/pdf/leonardo_uieda_cv.pdf)
 
 ## Template
 
@@ -21,8 +21,8 @@ To use it:
 * Rename `leonardo_uieda_cv.tex`.
 * Fill out the variables and fields in the `.tex` file.
 * Compile the PDF to check the results with `make show`.
-* Push your changes and GitHub Actions should do it's magic and serve the PDF
-  at `https://YOURUSERNAME.github.io/cv/YOURNAME_cv.pdf`.
+* Push your changes and GitHub Actions should do it's magic and make the PDF
+  available at `https://github.com/YOURUSERNAME/cv/raw/pdf/YOURNAME_cv.pdf`.
 
 ### About
 
@@ -50,8 +50,8 @@ I highly recommend using the `Makefile`:
 ## Deploying
 
 A PDF is compiled automatically by GitHub Actions with every commit to the
-`main` branch and uploaded to the `gh-pages` branch.
-This way, the compiled PDF is updated and served automatically.
+`main` branch and uploaded to the `pdf` branch.
+This way, the compiled PDF is updated and made available on the internet automatically.
 
 ## License
 
