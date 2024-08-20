@@ -107,7 +107,7 @@
 \newcommand{\MWieczorek}{Wieczorek, MA}
 \newcommand{\LLi}{Li, L}
 \newcommand{\Ricardo}{Trindade, RIF}
-\newcommand{\Gelson}{Souza Junior, GF}
+\newcommand{\Gelson}{Souza-Junior, GF}
 \newcommand{\Janine}{Carmo, J}
 \newcommand{\Roger}{Fu, R}
 
@@ -238,10 +238,11 @@
 \newcommand{\Future}{future}
 
 % Macros to add links and mark publications
-\newcommand{\DOI}[1]{DOI: \href{https://doi.org/#1}{#1}}
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\Website}[1]{\href{https://#1}{#1}}
 \newcommand{\Preprint}[1]{Preprint: \href{https://doi.org/#1}{#1}}
-\newcommand{\GitHub}[1]{GitHub: \href{https://github.com/#1}{#1}}
+\newcommand{\GitHub}[1]{\faGithub{} \href{https://github.com/#1}{#1}}
+\newcommand{\Data}[1]{\faChartBar{} doi:\href{https://doi.org/#1}{#1}}
 
 % Define command to insert month name and year as date
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
@@ -292,21 +293,21 @@
 \begin{minipage}[t]{0.5\textwidth}
   ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
   \\
-  Research Group: \Website{\LabWebsite}
+  Email: \href{mailto:\Email}{\Email}
   \\
   Website: \Website{\PersonalWebsite}
   \\
-  Email: \href{mailto:\Email}{\Email}
+  Research Group: \Website{\LabWebsite}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
   \begin{flushright}
-  Departamento de Geofísica
+  Rua do Matão, 1226. São Paulo - SP. Brazil. 05508-090
   \\
   Instituto de Astronomia, Geofísica e Ciências Atmosféricas
   \\
-  Universidade de São Paulo
+  Departamento de Geofísica
   \\
-  Rua do Matão, 1226. São Paulo - SP. Brazil. 05508-090
+  Universidade de São Paulo
   \end{flushright}
 \end{minipage}
 \vspace{0.3cm}
@@ -370,20 +371,20 @@
   Role: Project founder, core developer, Steering Council Member
   \\
   \Duration{2017}{\Ongoing} &
-  \textbf{PyGMT} | \Website{www.pygmt.org}
-  \newline
-  \textit{A Python interface for the Generic Mapping Tools}
-  \newline
-  Role: Project founder, developer, advisor
-  \\
-  \Duration{2017}{\Ongoing} &
   \textbf{The Generic Mapping Tools (GMT)} | \Website{www.generic-mapping-tools.org}
   \newline
   \textit{A data processing and mapping toolbox for the Earth, Ocean, and Planetary Science}
   \newline
   Role: Community stewardship advisor, set up the website + forum + GitHub workflow
   \\
-  \Duration{2022}2024} &
+  \Duration{2017}{2021} &
+  \textbf{PyGMT} | \Website{www.pygmt.org}
+  \newline
+  \textit{A Python interface for the Generic Mapping Tools}
+  \newline
+  Role: Project founder, developer, advisor
+  \\
+  \Duration{2022}{2024} &
   \textbf{xlandsat} | \Website{compgeolab.org/xlandsat}
   \newline
   \textit{Load Landsat remote sensing scenes in Python and xarray}
@@ -489,88 +490,111 @@
 \section{Publication Highlights}
 
 \begin{EntriesTableYear}
-\Year{2023}  &
-  \textbf{Full vector inversion of magnetic microscopy images using Euler deconvolution as a priori information}.
+\Year{2024}  &
+  \textbf{Full vector inversion of magnetic microscopy images using Euler deconvolution as prior information}.
   \newline
-  EarthArXiv.
-  \DOI{10.31223/X5QD5Z}.
+  \Gelson; \Me; \emph{et al}.
+  Geochemistry, Geophysics, Geosystems.
+  \DOI{10.1029/2023GC011082}
   \newline
-  \Gelson; \Me; \Ricardo; \Janine; \Roger.
-  \GitHub{compgeolab/micromag-euler-dipole}.
+  Open science:
+  \GitHub{compgeolab/micromag-euler-dipole}
+  |
+  \Data{10.6084/m9.figshare.22672978}
   \\
 \Year{2021}  &
   \textbf{Gradient-boosted equivalent sources}.
   \newline
-  Geophysical Journal International.
-  \DOI{10.1093/gji/ggab297}.
-  \Preprint{10.31223/X58G7C}.
-  \newline
   \Santiago; \Me.
-  \GitHub{compgeolab/eql-gradient-boosted}.
+  Geophysical Journal International.
+  \DOI{10.1093/gji/ggab297}
+  \newline
+  Open science:
+  \GitHub{compgeolab/eql-gradient-boosted}
+  |
+  \Data{10.6084/m9.figshare.13604360}
   \\
 \Year{2020}  &
   \textbf{Pooch: A friend to fetch your data files}.
   \newline
+  \Me; \Santiago; \Remi; \Hugo; \emph{et al}.
   Journal of Open Source Software.
-  \DOI{10.21105/joss.01943}.
+  \DOI{10.21105/joss.01943}
   \newline
-  \Me; \Santiago; \Remi; \Hugo; \MattTurk; \emph{et al}.
-  \GitHub{fatiando/pooch}.
+  Open science:
+  \GitHub{fatiando/pooch}
+  |
+  \Data{10.5281/zenodo.3515030}
   \\
 \Year{2019}  &
   \textbf{The Generic Mapping Tools, Version 6}.
   \newline
+  \Paul; \Joaquim; \Me; \emph{et al}.
   Geochemistry, Geophysics, Geosystems.
-  \DOI{10.1029/2019GC008515}.
+  \DOI{10.1029/2019GC008515}
   \newline
-  \Paul; \Joaquim; \Me; \Remko; \Florian; \Walter; \Dongdong.
+  Open science:
+  \GitHub{GenericMappingTools/gmt}
   \\
-\Year{2019}  &
+  \Year{2019}  &
   \textbf{Gravitational field calculation in spherical coordinates using variable densities in depth}.
   \newline
-  Geophysical Journal International.
-  \DOI{10.1093/gji/ggz277}.
-  \Preprint{10.31223/osf.io/3548g}.
-  \newline
   \Santiago; \Agustina; \Gimenez; \Me.
-  \GitHub{pinga-lab/tesseroid-variable-density}.
-  \\
-\Year{2019}  &
-  \textbf{Efficient 3D large-scale forward-modeling and inversion of gravitational fields in spherical coordinates with application to lunar mascons}.
+  Geophysical Journal International.
+  \DOI{10.1093/gji/ggz277}
   \newline
-  Journal of Geophysical Research: Solid Earth.
-  \DOI{10.1029/2019JB017691}.
-  \Preprint{10.31223/osf.io/dzf9j}.
-  \newline
-  \Guangdong; \Bo; \Me; \JLiu; \MKaban; \LChen; \RGuo.
+  Open science:
+  \GitHub{pinga-lab/tesseroid-variable-density}
+  |
+  \Data{10.6084/m9.figshare.8239622}
   \\
 \Year{2018}  &
   \textbf{Verde: Processing and gridding spatial data using Green's functions}.
   \newline
-  Journal of Open Source Software.
-  \DOI{10.21105/joss.00957}.
-  \newline
   \Me.
-  \GitHub{fatiando/verde}.
+  Journal of Open Source Software.
+  \DOI{10.21105/joss.00957}
+  \newline
+  Open science:
+  \GitHub{fatiando/verde}
+  |
+  \Data{10.5281/zenodo.1478244}
   \\
 \Year{2017}  &
   \textbf{Fast non-linear gravity inversion in spherical coordinates with application to the South American Moho}.
   \newline
-  Geophysical Journal International.
-  \DOI{10.1093/gji/ggw390}.
-  \Preprint{10.31223/osf.io/9ba4m}.
-  \newline
   \Me; \Val.
-  \GitHub{pinga-lab/paper-moho-inversion-tesseroids}.
+  Geophysical Journal International.
+  \DOI{10.1093/gji/ggw390}
+  \newline
+  Open science:
+  \GitHub{pinga-lab/paper-moho-inversion-tesseroids}
+  |
+  \Data{10.6084/m9.figshare.3987267}
   \\
 \Year{2016}  &
   \textbf{Tesseroids: forward modeling gravitational fields in spherical coordinates}.
   \newline
-  Geophysics.
-  \DOI{10.1190/geo2015-0204.1}.
-  \newline
   \Me; \Val; \Carla.
-  \GitHub{pinga-lab/paper-tesseroids}.
+  Geophysics.
+  \DOI{10.1190/geo2015-0204.1}
+  \newline
+  Open science:
+  \GitHub{pinga-lab/paper-tesseroids}
+  |
+  \Data{10.6084/m9.figshare.786514}
+  \\
+\Year{2012}  &
+  \textbf{Robust 3D gravity gradient inversion by planting anomalous densities}.
+  \newline
+  Geophysics.
+  \Me; \Val.
+  \DOI{10.1190/geo2011-0388.1}
+  \newline
+  Open science:
+  \GitHub{pinga-lab/paper-planting-densities}
+  |
+  \Data{10.6084/m9.figshare.91574}
 \end{EntriesTableYear}
 
 \end{document}
