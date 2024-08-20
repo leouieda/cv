@@ -42,9 +42,6 @@ jobs:
           miniforge-variant: Mambaforge
           miniforge-version: "latest"
           use-mamba: true
-          channel-priority: strict
-          # Needed for caching
-          use-only-tar-bz2: true
 
       - name: List installed packages
         run: mamba list
