@@ -29,7 +29,7 @@ jobs:
           key: tectonic-${{ runner.os }}
 
       - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v2.1.1
+        uses: conda-incubator/setup-miniconda@v3.0.4
         with:
           environment-file: environment.yml
           activate-environment: cv
