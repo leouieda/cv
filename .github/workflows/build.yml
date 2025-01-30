@@ -33,7 +33,6 @@ jobs:
         with:
           environment-file: environment.yml
           activate-environment: cv
-          miniforge-variant: Mambaforge
           miniforge-version: "latest"
           use-mamba: true
 
