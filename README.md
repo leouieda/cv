@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **This repository has moved to Codeberg** and will no longer be updated here: https://codeberg.org/leouieda/cv
+
+---
+
 # Curriculum Vitae
 
 These are the LaTeX sources for my academic CV.
